@@ -13,3 +13,7 @@ Las referencias bibliográficas identifican obras consultadas; no atribuyen a su
 Las tipografías TeX Gyre Pagella, TeX Gyre Heros, TeX Gyre Pagella Math y Latin Modern Mono empleadas en el PDF conservan su licencia GUST Font License (GFL, basada en LPPL). No se relicencian como contenido propio de la obra. Información y términos: https://ctan.org/license/gfl. No se distribuyen los paquetes de fuentes por separado.
 
 La licencia MIT se aplica exclusivamente a `computation/mallas.py`. Los programas tipográficos incrustados conservan GFL y quedan fuera de CC BY-SA y MIT.
+
+## Hero del README
+
+`assets/readme-hero-ec-diff.png` es el banner del README; `assets/cover-preview.png` es la vista de la cubierta del libro. Son activos distintos. El banner fue generado mediante generación de imágenes de OpenAI bajo dirección y selección de los autores. Utiliza simbolismo computacional genérico. La licencia CC BY-SA 4.0 se concede únicamente sobre los derechos disponibles, sin afirmar exclusividad jurídica sobre la imagen generada.

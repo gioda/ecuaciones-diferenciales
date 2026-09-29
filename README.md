@@ -1,12 +1,20 @@
 # Ecuaciones diferenciales: problemas, modelos y métodos
 
+<p align="center">
+  <img src="assets/readme-hero-ec-diff.png"
+       alt="Ecuaciones diferenciales: problemas, modelos y métodos"
+       width="100%">
+</p>
+
+<p align="center"><sub>Imagen generada con inteligencia artificial bajo dirección de los autores.</sub></p>
+
 **Giovanni Dalmasso · Joaquín Menacho**
 
 Edición del estudiante · v1.0.0.
 
 Preparación provisional para Biblioteca IQS. El repositorio permanece privado mientras se completa el registro institucional DAU.
 
-![Cubierta del libro](assets/cover-preview.png)
+[Vista de la cubierta del libro](assets/cover-preview.png)
 
 Libro de problemas para el aprendizaje y la práctica autónoma de las ecuaciones diferenciales, con aplicaciones en ciencias e ingeniería. La edición del estudiante reúne 370 ejercicios, respuestas de comprobación, 51 soluciones desarrolladas seleccionadas y nueve pistas.
 
