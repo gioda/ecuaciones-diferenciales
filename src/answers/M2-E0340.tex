@@ -1,0 +1,13 @@
+Con \(r=e^{-1}\) y \(D=1+r+r^2\), la corriente inicial periódica es
+\[
+i_* =\frac{6r^2}{D}=\frac6{e^2+e+1}\quad\mathrm A.
+\]
+El balance es \(i'+i=E(t)\), con \(E=6\) durante el primer segundo de cada ciclo y cero durante los dos siguientes. Una resolución por tramos da, en el primer ciclo,
+\[
+i(t)=
+\begin{cases}
+6+(i_*-6)e^{-t},&0\le t\le1,\\
+\dfrac6D e^{-(t-1)},&1\le t\le3.
+\end{cases}
+\]
+La corriente se repite cada tres segundos y su media es \(2\) A. Con otra corriente inicial \(i_0\), la diferencia respecto de esta solución es \((i_0-i_*)e^{-t}\), por lo que la periodicidad sólo se alcanza asintóticamente.

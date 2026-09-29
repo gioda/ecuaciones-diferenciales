@@ -1,0 +1,9 @@
+Para \(y'=t-y\), \(y(0)=1\), se quiere dar un paso de RK4 clásico de tamaño \(h=1\). Se usa la convención de pendientes, sin incluir \(h\) en \(k_i\):
+\[
+\begin{aligned}
+k_1&=f(t_0,y_0),&k_2&=f(t_0+h/2,y_0+hk_1/2),\\
+k_3&=f(t_0+h/2,y_0+hk_2/2),&k_4&=f(t_0+h,y_0+hk_3),\\
+y_1&=y_0+\frac h6(k_1+2k_2+2k_3+k_4).
+\end{aligned}
+\]
+Una tabla propone \(k_1=-1\), \(k_2=0\), \(k_3=-1/2\), \(k_4=0\), y \(y_1=2/3\). Reconstruya los pares \((t,y)\) en que se evalúa cada pendiente y corrija la tabla. Explique por qué los dos estados intermedios no tienen que coincidir, aunque sus tiempos coincidan. Obtenga la solución exacta y compare los errores absolutos de la aproximación corregida y de la propuesta.

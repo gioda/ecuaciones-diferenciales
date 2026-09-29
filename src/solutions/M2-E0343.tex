@@ -1,0 +1,67 @@
+\noindent\textbf{Resultado.} Escribiendo \(M_i=V_ic_i\), los balances son
+\[
+M_1'=5+5c_2-15c_1-k_1M_1,\qquad
+M_2'=10+5c_1-25c_2-k_2M_2.
+\]
+Con los datos iniciales de limpieza,
+\[
+c_1'=0.1-0.4c_1+0.1c_2,\qquad
+c_2'=0.1+0.05c_1-0.25c_2.
+\]
+En la concentración inicial común, las pendientes son \(0.04\) y \(0.06\,\mathrm{mg/(m^3\,min)}\), por lo que la igualdad no persiste. Para que persista desde cualquier valor común se necesitan
+\[
+\frac{s_1}{V_1}=\frac{s_2}{V_2},\qquad
+\frac{Q_1}{V_1}+k_1=\frac{Q_2}{V_2}+k_2.
+\]
+Aquí basta establecer \(k_2=0.10\,\mathrm{min}^{-1}\). La concentración común satisface entonces \(c'=0.1-0.3c\), con \(c(0)=0.20\).
+
+\noindent\textit{Desarrollo.} Sean \(M_i\) las cantidades de aerosol en miligramos y \(c_i=M_i/V_i\) sus concentraciones. Denotemos por \(s_i\) las fuentes, por \(Q_i\) los caudales exteriores de cada recinto y por \(q=5\,\mathrm{m^3/min}\) el caudal en cada sentido entre recintos. El aire exterior que entra no aporta aerosol. La extracción exterior lleva la concentración del recinto del que sale, y el intercambio entre recintos lleva la concentración del emisor.
+
+Los balances de cantidad son
+\[
+M_1'=s_1+q c_2-(q+Q_1)c_1-k_1M_1,
+\]
+\[
+M_2'=s_2+q c_1-(q+Q_2)c_2-k_2M_2.
+\]
+Todos los términos tienen unidades \(\mathrm{mg/min}\). Los limpiadores retiran cantidad y no alteran los volúmenes; los caudales entrantes y salientes se compensan por separado en cada recinto.
+
+Como los volúmenes son constantes, dividir por \(V_i\) da
+\[
+c_1'=\frac{s_1}{V_1}+\frac q{V_1}(c_2-c_1)
+-\left(\frac{Q_1}{V_1}+k_1\right)c_1,
+\]
+\[
+c_2'=\frac{s_2}{V_2}+\frac q{V_2}(c_1-c_2)
+-\left(\frac{Q_2}{V_2}+k_2\right)c_2.
+\]
+Con los datos del enunciado y los coeficientes de limpieza iniciales,
+\[
+c_1'=0.1-0.4c_1+0.1c_2,\qquad
+c_2'=0.1+0.05c_1-0.25c_2.
+\]
+Los coeficientes de concentración tienen unidades \(\mathrm{min}^{-1}\), y la fuente normalizada, \(\mathrm{mg/(m^3\,min)}\). En \(c_1=c_2=0.20\), resultan
+\[
+c_1'(0)=0.04,\qquad c_2'(0)=0.06
+\quad\mathrm{mg/(m^3\,min)}.
+\]
+Las concentraciones se separan desde el inicio. Que empiecen iguales y exista intercambio no permite imponer una única concentración exacta.
+
+Para estudiar cuándo sí sería válida la reducción desde cualquier valor común, sustituimos \(c_1=c_2=c\). El intercambio interno se anula en ambas ecuaciones. Las pendientes sobre esa igualdad son
+\[
+\frac{s_1}{V_1}-\left(\frac{Q_1}{V_1}+k_1\right)c,
+\qquad
+\frac{s_2}{V_2}-\left(\frac{Q_2}{V_2}+k_2\right)c.
+\]
+Son iguales para todo \(c\) exactamente cuando coinciden sus términos constantes y sus coeficientes:
+\[
+\frac{s_1}{V_1}=\frac{s_2}{V_2},\qquad
+\frac{Q_1}{V_1}+k_1=\frac{Q_2}{V_2}+k_2.
+\]
+Con esas igualdades, una solución común de la EDO escalar satisface las dos ecuaciones y los datos iniciales; la unicidad del sistema lineal garantiza que las concentraciones permanezcan iguales. La condición se refiere a cualquier inicio común, no sólo a un posible equilibrio particular.
+
+En este caso, las fuentes normalizadas ya son iguales a \(0.1\). La eliminación exterior normalizada vale \(0.2\,\mathrm{min}^{-1}\) en ambos recintos, pero el primero añade \(0.1\,\mathrm{min}^{-1}\) de limpieza. Elegir \(k_2=0.1\,\mathrm{min}^{-1}\) iguala las tasas totales a \(0.3\,\mathrm{min}^{-1}\). La reducción exacta queda
+\[
+c'=0.1-0.3c,\qquad c(0)=0.20.
+\]
+No fue necesario aumentar el intercambio ni suponer mezcla instantánea entre recintos; fue necesario hacer compatibles las fuentes y las pérdidas por volumen.

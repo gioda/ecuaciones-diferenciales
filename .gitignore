@@ -1,3 +1,9 @@
 .DS_Store
+src/build*/
 __pycache__/
-*.pyc
+*.py[cod]
+*.aux
+*.fls
+*.log
+*.out
+*.toc

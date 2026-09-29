@@ -1,0 +1,71 @@
+%
+\subsection*{Tasas, soluciones y datos iniciales}
+\label{CH01-B01}
+En una EDO, la variable independiente suele ser el tiempo $t$; $y(t)$ es el
+estado y los parámetros describen la ley adoptada. Si $y$ se mide en una
+unidad $U$, $y'$ se mide en $U$/tiempo. Una solución satisface la ecuación
+en todo un intervalo y, en un PVI, también el dato $y(t_0)=y_0$.
+Compruébense ambos por sustitución. El orden es el de la mayor derivada.
+La ecuación es lineal si la incógnita y sus derivadas aparecen en primer
+grado, sin productos entre ellas, con coeficientes que dependen sólo de la
+variable independiente.
+
+Derivar una familia para eliminar constantes produce una ecuación que
+debe comprobarse; puede admitir más soluciones que la familia de partida.
+Recuérdense la regla de la cadena y los dominios de las funciones.
+En $y'=ky$, $k$ es una tasa continua: en un tiempo $T$, el factor de
+crecimiento es $e^{kT}$, no $1+kT$ salvo como aproximación cuando $|kT|$
+es pequeño.
+
+%
+\subsection*{Separación, equilibrios y dominio}
+\label{CH01-B02}
+Si $y'=f(t)g(y)$, los ceros de $g$ dan soluciones constantes admisibles
+cuando la ecuación está definida. En una región donde $g(y)\ne0$,
+\[
+ \int\frac{dy}{g(y)}=\int f(t)\,dt+C.
+\]
+El dato inicial fija la constante y ayuda a elegir la rama real. Antes de
+dividir, anótese qué valores se excluyen y compruébense después en la
+ecuación original. Son útiles las fracciones simples y
+$\int dz/z=\log|z|+C$ en intervalos que no contienen cero.
+El intervalo máximo debe contener el dato inicial y respetar tanto la
+ecuación como la fórmula: no se atraviesa un polo ni se toma una raíz fuera
+de su dominio real. Una expresión implícita también puede ser una solución.
+Consulta: solución del ejercicio \exref{M2-E0103}.
+
+%
+\subsection*{Campo de pendientes y unicidad}
+\label{CH01-B03}
+Para $y'=F(t,y)$, el signo de $F$ indica ascenso o descenso y $F=0$
+indica tangente horizontal. Una solución de equilibrio $y=c$ exige
+$F(t,c)=0$ para todos los tiempos del intervalo; una tangente horizontal
+aislada no basta.
+
+Si $F$ es continua en un entorno de $(t_0,y_0)$, existe una solución local.
+Si además $\partial F/\partial y$ es continua allí, la solución local es
+única. Son criterios suficientes: cuando sus hipótesis fallan hay que
+examinar la ecuación. Para demostrar no unicidad se necesitan soluciones
+distintas con el mismo dato, no sólo el fallo de un criterio. En un empalme
+de ramas deben coincidir valor y derivada, y la ecuación debe cumplirse
+también en el punto de unión. Continuidad y límites laterales permiten
+comprobarlo. Consulta: solución del ejercicio \exref{M2-E0191}.
+
+%
+\subsection*{Balance y final físico del modelo}
+\label{CH01-B04}
+El balance de una cantidad almacenada $Q$ tiene la forma
+\[
+ Q'=\text{entrada}-\text{salida}+\text{producción}-\text{consumo}.
+\]
+Todos sus términos deben tener unidades de cantidad por tiempo. Defínanse
+estado, parámetros, signos e hipótesis antes de elegir una técnica.
+Si el volumen depende de una altura, $V'=\frac{dV}{dh}h'$; esta regla de
+la cadena permite cambiar de estado sin confundir altura y volumen.
+El equilibrio se obtiene del balance, no de omitir un término incómodo.
+
+Calibrar una constante con un dato no confirma la ley completa. Una
+capacidad nominal tampoco fija el caudal real. Al vaciarse un recipiente o
+alcanzarse un límite, el modelo puede terminar: continuar exige una regla
+de borde o una nueva hipótesis física. Compruébense proporciones, geometría
+y unidades. Consultas: soluciones de \exref{M2-E0025} y \exref{M2-E0032}.

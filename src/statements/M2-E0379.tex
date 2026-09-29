@@ -1,0 +1,8 @@
+En una barra con extremos a temperatura de referencia, \(U_j^n\) representa el exceso de temperatura, en kelvin. Hay sólo dos nodos interiores, separados por \(\Delta x=1\,\mathrm{cm}\), con \(U_0^n=U_3^n=0\). Para \(\kappa=1\,\mathrm{cm^2/s}\) se usa
+\[
+U_j^{n+1}=(1-2r)U_j^n+r(U_{j-1}^n+U_{j+1}^n),\qquad
+r=\frac{\kappa\Delta t}{(\Delta x)^2}.
+\]
+Desde \((U_1^0,U_2^0)=(10,0)\), calcule un paso con \(\Delta t=0.6\,\mathrm{s}\). Halle el mayor paso que garantice temperaturas no negativas para \emph{cualquier} par inicial no negativo en esta malla.
+
+Para el paso propuesto de \(0.6\,\mathrm{s}\), estudie también cómo se multiplican las perturbaciones proporcionales a \((1,1)\) y a \((1,-1)\). Decida si toda perturbación inicial decae al repetir pasos en esta malla fija. Explique por qué esa conclusión y la conservación de temperaturas no negativas son garantías distintas, y si alguna establece por sí sola la precisión del cálculo.

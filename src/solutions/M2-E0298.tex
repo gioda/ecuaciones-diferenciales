@@ -1,0 +1,13 @@
+\noindent\textbf{Resultado.} La referencia es $y(x)=e^{0.1(x^2-1)}$. En $x=1.5$, Euler da $1.1258784321$ con $h=0.1$ y $1.1294668360$ con $h=0.05$, frente a $1.1331484531$.
+
+\noindent\textit{Desarrollo.} Separar la ecuación, o aplicar un factor integrante, da $y=e^{0.1(x^2-1)}$. La recurrencia de Euler es
+\[x_n=1+nh,\qquad y_{n+1}=y_n(1+0.2hx_n),\quad y_0=1.\]
+No se redondean los pasos intermedios. Los valores comparables son:
+\[\begin{array}{c|rrr}x&h=0.1&h=0.05&\text{exacta}\\\hline
+1.1&1.02000000&1.02060500&1.02122205\\
+1.2&1.04244000&1.04369772&1.04498235\\
+1.3&1.06745856&1.06942487&1.07143621\\
+1.4&1.09521248&1.09795231&1.10075906\\
+1.5&1.12587843&1.12946684&1.13314845
+\end{array}\]
+Los errores Euler menos exacta en el extremo son $-0.0072700210$ y $-0.0036816170$. Reducir el paso a la mitad reduce aproximadamente a la mitad este error, coherente con el orden global uno, sin convertir esta única comparación en una prueba general del orden. En este intervalo la solución positiva es convexa, pues $y''=(0.2+0.04x^2)y>0$, lo que concuerda con la subestimación observada. La referencia resuelve la EDO y el dato de forma exacta.

@@ -1,0 +1,45 @@
+\noindent\textbf{Resultado.} Las condiciones físicas son
+\[
+k_0u_x(0,t)=h_0u(0,t),\qquad
+-2k_0u_x(L,t)=h_Lu(L,t).
+\]
+El problema espacial queda
+\[
+-\left[k_0\left(1+\frac{x}{L}\right)X'\right]'=\lambda c_0X,
+\qquad k_0X'(0)=h_0X(0),\quad
+2k_0X'(L)=-h_LX(L).
+\]
+Por tanto, \(p(x)=k_0(1+x/L)\), \(r(x)=0\), \(w(x)=c_0\). El problema es regular en \([0,L]\): \(p\) es continuamente derivable y positivo, y \(r,w\) son continuos con \(w>0\). El parámetro \(\lambda\) tiene unidades de tiempo inverso.
+
+\noindent\textit{Desarrollo.} El flujo \(q\) se mide respecto de la dirección positiva del eje, que apunta a la derecha. En el extremo izquierdo, la dirección saliente es la contraria: el flujo saliente es \(-q(0,t)\). En el derecho coincide con el eje: el flujo saliente es \(q(L,t)\). Las leyes de transferencia dan
+\[
+-q(0,t)=h_0u(0,t),\qquad q(L,t)=h_Lu(L,t).
+\]
+Al usar \(q=-ku_x\), \(k(0)=k_0\) y \(k(L)=2k_0\), resultan
+\[
+k_0u_x(0,t)=h_0u(0,t),\qquad
+-2k_0u_x(L,t)=h_Lu(L,t).
+\]
+Los signos de las derivadas son distintos porque lo son las direcciones salientes. Las relaciones siguen siendo válidas para un exceso negativo: el flujo saliente firmado puede entonces ser negativo.
+
+El balance interior y la ley de flujo proporcionan
+\[
+c_0u_t=(ku_x)_x.
+\]
+Sustituyendo \(u=Xe^{-\lambda t}\) y dividiendo por el factor exponencial,
+\[
+-\lambda c_0X=(kX')',
+\]
+es decir,
+\[
+-(pX')'+rX=\lambda wX,
+\qquad p=k_0(1+x/L),\quad r=0,\quad w=c_0.
+\]
+Las condiciones espaciales son homogéneas y separadas:
+\[
+h_0X(0)-k_0X'(0)=0,\qquad
+h_LX(L)+2k_0X'(L)=0.
+\]
+En cada extremo los dos coeficientes no son simultáneamente nulos. En el intervalo finito cerrado, \(p\) es continuamente derivable y satisface \(k_0\le p\le2k_0\); \(w=c_0>0\) y \(r=0\) son continuos. Por tanto, se cumplen las condiciones de regularidad. La positividad exigida es la de \(p\) y \(w\); no hace falta que \(r\) sea estrictamente positivo.
+
+Como \(\lambda t\) debe ser adimensional, \(\lambda\) tiene unidades de tiempo inverso. También se obtiene del balance: \(kX''\) representa potencia por unidad de volumen, mientras \(c_0X\) representa energía por unidad de volumen. La identificación no requiere calcular autovalores.

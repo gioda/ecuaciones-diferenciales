@@ -1,0 +1,16 @@
+Sea la señal \(2\pi\)-periódica definida en un periodo por
+\[
+f(t)=
+\begin{cases}
+-1,&-\pi\le t<0,\\
+1,&0\le t<\pi.
+\end{cases}
+\]
+Considere sus sumas de \(N\ge1\) armónicos impares,
+\[
+S_N(t)=\frac4\pi\sum_{j=0}^{N-1}
+\frac{\sin((2j+1)t)}{2j+1},
+\qquad
+E_N=\frac1{2\pi}\int_{-\pi}^{\pi}|f(t)-S_N(t)|^2\,dt.
+\]
+Usando Parseval y una comparación de series positivas con integrales, exprese \(E_N\) como una cola y dé un número suficiente de términos para garantizar \(E_N\le0.01\). Contraste esa garantía con el error en \(t=0\). Explique qué cambiaría si se reasignara únicamente \(f(0)=0\), y si esa reasignación permitiría obtener un error uniformemente pequeño en un entorno que contenga puntos a ambos lados del salto.

@@ -1,0 +1,14 @@
+En un ensayo simulado, una concentración normalizada \(c\), adimensional, satisface
+\[
+c'=-kc^2,\qquad c(0)=1,\qquad k=1\,\mathrm{min}^{-1}.
+\]
+Se desea aproximar \(c(1\,\mathrm{min})\) mediante un único paso de RK4 clásico de tamaño \(h=1\,\mathrm{min}\). Use la convención de pendientes
+\[
+k_1=f(t_0,y_0),\quad k_2=f(t_0+h/2,y_0+hk_1/2),\quad
+k_3=f(t_0+h/2,y_0+hk_2/2),\quad k_4=f(t_0+h,y_0+hk_3),
+\]
+\[
+y_1=y_0+\frac h6(k_1+2k_2+2k_3+k_4).
+\]
+
+Haga el cálculo directamente para \(c\). Después, deduzca la ecuación de \(z=1/c\), aplique a \(z\) el mismo algoritmo y transforme el resultado de vuelta a \(c\). Obtenga una referencia exacta y compare ambos resultados. Explique si, en este ejemplo, cambiar de variable antes de discretizar equivale a hacerlo después, y qué propiedad de la ecuación de \(z\) explica la diferencia. Puede usar una calculadora; conserve al menos seis cifras decimales en los cálculos intermedios.

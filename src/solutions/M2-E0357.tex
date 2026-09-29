@@ -1,0 +1,65 @@
+\noindent\textbf{Resultado.} Si \(a=\kappa\pi^2/L^2\), el problema transformado es
+\[
+\kappa U_{xx}-sU=-\Theta\left[3\sin(\pi x/L)-\sin(2\pi x/L)\right],
+\qquad U(0,s)=U(L,s)=0.
+\]
+Para cada \(s>0\), su solución única es
+\[
+U(x,s)=\frac{3\Theta}{s+a}\sin(\pi x/L)
+-\frac{\Theta}{s+4a}\sin(2\pi x/L).
+\]
+La inversión da
+\[
+u(x,t)=3\Theta e^{-at}\sin(\pi x/L)
+-\Theta e^{-4at}\sin(2\pi x/L).
+\]
+Esta función satisface la EDP y todos los datos; sus transformadas y las de las derivadas utilizadas existen para \(s>0\).
+
+\noindent\textit{Desarrollo.} Denotemos el perfil inicial por
+\[
+f(x)=\Theta[3\sin(\pi x/L)-\sin(2\pi x/L)].
+\]
+Al transformar la EDP respecto del tiempo, la derivada temporal produce el término inicial:
+\[
+\mathcal L_t[u_t]=sU(x,s)-f(x).
+\]
+Bajo el intercambio de operaciones permitido, \(\mathcal L_t[u_{xx}]=U_{xx}\). Por tanto,
+\[
+sU-f=\kappa U_{xx}.
+\]
+Las funciones de contorno son cero para todo tiempo positivo, así que sus transformadas también son cero. El problema espacial que hay que resolver es
+\[
+\kappa U_{xx}-sU=-f(x),\qquad U(0,s)=U(L,s)=0.
+\]
+Se ha transformado la ecuación distribuida y sus datos, conservando el campo inicial como término de la EDO espacial.
+
+Sea \(a=\kappa\pi^2/L^2\). Buscamos una solución particular de esa EDO como combinación de los dos senos presentes en \(f\). Al sustituir
+\[
+U_p=A\sin(\pi x/L)+B\sin(2\pi x/L),
+\]
+se obtiene
+\[
+-(s+a)A=-3\Theta,\qquad -(s+4a)B=\Theta.
+\]
+Así,
+\[
+U_p=\frac{3\Theta}{s+a}\sin(\pi x/L)
+-\frac{\Theta}{s+4a}\sin(2\pi x/L),
+\]
+que ya cumple ambos contornos. Los denominadores son positivos para \(s>0\).
+
+Para justificar la unicidad, la diferencia \(W\) entre dos soluciones cumpliría \(\kappa W''-sW=0\) y \(W(0)=W(L)=0\). Multiplicando por \(W\), integrando y usando los contornos,
+\[
+0=\int_0^L W(\kappa W''-sW)\,dx
+=-\kappa\int_0^L(W')^2\,dx-s\int_0^L W^2\,dx.
+\]
+Como \(\kappa,s>0\), necesariamente \(W=0\). Por tanto, \(U=U_p\) es la única solución del problema transformado.
+
+La pareja elemental \(\mathcal L^{-1}[1/(s+b)]=e^{-bt}\), para \(b>0\), proporciona
+\[
+u(x,t)=3\Theta e^{-at}\sin(\pi x/L)
+-\Theta e^{-4at}\sin(2\pi x/L).
+\]
+Cada derivada temporal multiplica el primer término por \(-a\) y el segundo por \(-4a\); \(\kappa\) veces sus segundas derivadas espaciales introduce esos mismos factores. Se verifica así la EDP. Ambos senos se anulan en los extremos, y al poner \(t=0\) se recupera exactamente \(f(x)\).
+
+Finalmente, la función y las derivadas utilizadas son sumas finitas de senos o cosenos multiplicados por exponenciales decrecientes. En todo \([0,L]\) están acotadas por una constante multiplicada por \(e^{-at}\). Para cualquier \(s>0\), sus integrales contra \(e^{-st}\) convergen; esa misma cota permite intercambiar la integración y las derivadas espaciales de esta función. El término temporal de borde en infinito también se anula. El parámetro \(a\), como \(s\), tiene unidades de tiempo inverso, y \(U\) tiene unidades de temperatura multiplicada por tiempo.

@@ -1,0 +1,78 @@
+%
+\subsection*{Ecuación lineal y respuesta a una entrada}
+\label{CH02-B01}
+En un intervalo donde pueda escribirse $y'+p(t)y=q(t)$, con $p,q$
+continuas, el factor integrante convierte el miembro izquierdo en una
+derivada de producto. Con
+$P(t)=\int_{t_0}^{t}p(s)\,ds$, el PVI tiene la representación
+\[
+ y(t)=e^{-P(t)}\left[y_0+\int_{t_0}^{t}e^{P(s)}q(s)\,ds\right].
+\]
+Así se separan la contribución del dato inicial y la de la entrada, aunque
+no haya primitivas elementales. La regla del producto y el teorema
+fundamental del cálculo permiten verificarla. Si antes se ha dividido por
+el coeficiente de $y'$, sus ceros se estudian en la ecuación original;
+el factor integrante no amplía su dominio.
+Consultas: soluciones de \exref{M2-E0196} y \exref{M2-E0232}.
+
+%
+\subsection*{Exactitud, potencial y factor integrante}
+\label{CH02-B02}
+Al derivar parcialmente se mantiene fija la otra variable. El diferencial
+de $\Phi(x,y)$ es $d\Phi=\Phi_x\,dx+\Phi_y\,dy$. Para
+$M\,dx+N\,dy=0$, con $M,N$ de clase $C^1$ en un rectángulo, la igualdad
+$M_y=N_x$ permite buscar $\Phi_x=M$, $\Phi_y=N$ y escribir
+$\Phi=C$. Al integrar respecto de $x$, la constante es una función de $y$.
+Si $\Phi_y\ne0$, el nivel define localmente un gráfico $y(x)$.
+
+Donde los cocientes estén definidos, se pueden ensayar
+\[
+ \frac{\mu'(x)}{\mu(x)}=\frac{M_y-N_x}{N},\qquad
+ \frac{\mu'(y)}{\mu(y)}=\frac{N_x-M_y}{M},
+\]
+si cada miembro derecho depende sólo de la variable indicada.
+Para un factor $\mu(z(x,y))$, la regla de la cadena exige
+$\mu'(z)(M z_y-N z_x)=\mu(z)(N_x-M_y)$.
+Trabájese donde el factor esté definido y sea no nulo; revísense los
+valores excluidos. Un ángulo definido por arctangente requiere una rama
+local. La exactitud local no prueba por sí sola exactitud global en un
+dominio con huecos. Consulta: solución de \exref{M2-E0021}.
+
+%
+\subsection*{Sustituciones y soluciones recuperadas}
+\label{CH02-B03}
+Derívese primero la variable nueva. Si $z=ax+by+c$, entonces
+$z'=a+by'$; si $y=xv$, entonces $y'=v+xv'$ y se trabaja con $x\ne0$.
+La ecuación de Bernoulli
+\[
+ y'+py=qy^n,\qquad z=y^{1-n},\qquad
+ z'+(1-n)pz=(1-n)q
+\]
+se reduce así cuando $n\ne0,1$ y las potencias y divisiones son válidas.
+Los casos $n=0,1$ son lineales. Al invertir el cambio, deben recuperarse
+signos, ramas y posibles soluciones nulas de la ecuación original.
+Una raíz continua no garantiza una solución derivable.
+
+En trayectorias ortogonales, dos pendientes finitas satisfacen
+$m_1m_2=-1$; una tangente horizontal corresponde a una vertical, que no se
+describe mediante una pendiente finita. Recuérdense la regla de la cadena
+y el dominio de las potencias reales. Consultas: soluciones de
+\exref{M2-E0019} y \exref{M2-E0207}.
+
+%
+\subsection*{Balances por fases y parámetros}
+\label{CH02-B04}
+En una mezcla homogénea, cantidad de soluto y concentración cumplen
+$Q=Vc$. Por tanto, $Q'=Vc'+V'c$: sólo con volumen constante puede
+sustituirse $Q'$ por $Vc'$. Un caudal volumétrico multiplicado por una
+concentración es una tasa de transporte de soluto. En balances eléctricos
+o energéticos, utilícese la ley suministrada y compruébense las dimensiones
+de cada constante.
+
+Si una operación cambia en $t=a$ sin aporte instantáneo, el estado
+almacenado es continuo y su valor final inicia la fase siguiente; su
+derivada puede saltar. Distinguir las fases evita imponer condiciones
+incompatibles. Para identificar parámetros hacen falta datos
+independientes suficientes. Tratar un reactivo como constante exige que
+su variación sea despreciable en el intervalo estudiado, no sólo que
+inicialmente sea abundante. Consulta: solución de \exref{M2-E0030}.

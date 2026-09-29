@@ -1,0 +1,18 @@
+Hace falta conocer la temperatura y si el calefactor está encendido o apagado. Con \(t\) en segundos, sean
+\[
+t_1=60\log(3/2),\qquad
+t_2=60\log2,\qquad P=t_1+t_2=60\log3.
+\]
+Durante el primer ciclo,
+\[
+T(t)=
+\begin{cases}
+60-30e^{-t/60},&0\le t<t_1,\\
+20+20e^{-(t-t_1)/60},&t_1\le t<P,
+\end{cases}
+\]
+en grados Celsius; en \(t=P\) vuelve a \(30\,{}^\circ\mathrm C\) y se enciende de nuevo. La evolución se repite con periodo \(P\). La fracción encendida es \(\log(3/2)/\log3\), y
+\[
+\overline T=20+40\frac{\log(3/2)}{\log3}\quad{}^\circ\mathrm C.
+\]
+En \(T=35\,{}^\circ\mathrm C\), la derivada temporal es \(5/12\,\mathrm{K/s}\) con el calefactor encendido y \(-1/4\,\mathrm{K/s}\) con él apagado.

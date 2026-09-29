@@ -1,0 +1,18 @@
+\noindent\textbf{(a) Resultado.} \(mx''+kx=F_0\sin(\omega t)\), con \(x(0)\)=\(x'(0)\)=0.
+
+\noindent\textit{Desarrollo.} La gravedad ya está compensada por la extensión estática. La fuerza incremental del resorte es \(-kx\) y Newton da \(mx''=F-kx\). El signo y las unidades se comprueban: para x positivo sin fuerza externa la aceleración es restauradora; todos los términos son fuerzas.
+
+\medskip
+
+\noindent\textbf{(b) Resultado.} \[x(t)=\frac{F_0}{k-m\omega^2}\left[\sin\omega t-\frac{\omega}{\omega_0}\sin\omega_0t\right].\]
+
+\noindent\textit{Desarrollo.} La particular \(A\sin\omega t\) exige \((k-m\omega^2)A=F_0\). La homogénea es \(C\cos\omega_0t+D\sin\omega_0t\). \(x(0)\)=0 impone \(C=0\) y \(x'(0)\)=0 impone \(D=-A\omega/\omega_0\). Sustituir cada término verifica la ecuación y los datos. La respuesta es global y acotada para cada frecuencia distinta de la natural, aunque el denominador de esta expresión tiende a cero cuando las frecuencias se aproximan; el límite debe calcularse sobre la combinación completa.
+
+\medskip
+
+\noindent\textbf{(c) Resultado.} \[x(t)=\frac{F_0}{2m\omega_0^2}[\sin\omega_0t-\omega_0t\cos\omega_0t].\]
+Es una respuesta resonante cuya oscilación crece sin cota en el modelo lineal.
+
+\noindent\textit{Desarrollo.} Se puede tomar el límite en la expresión anterior por l'Hôpital o buscar una particular proporcional a \(t\cos\omega_0t\). Puesto que
+\[(D^2+\omega_0^2)(t\cos\omega_0t)=-2\omega_0\sin\omega_0t,\]
+la particular es \(-F_0t\cos\omega_0t/(2m\omega_0)\). Añadir \(F_0\sin\omega_0t/(2m\omega_0^2)\) impone velocidad inicial cero. Posición y velocidad se anulan en 0, y el residuo es la fuerza dividida por m. En \(t_n=2\pi n/\omega_0\), el módulo es \(F_0t_n/(2m\omega_0)\), que crece sin límite. En una suspensión real, el supuesto de linealidad y desplazamientos pequeños dejaría de ser válido antes de amplitudes arbitrarias.

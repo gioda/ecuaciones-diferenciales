@@ -1,0 +1,53 @@
+\noindent\textbf{Resultado.} Se tiene \(r=1/4\). En orden \(j=1,2,3\), los valores interiores, en kelvin de exceso, son
+\[
+(U_1^1,U_2^1,U_3^1)=(2+2\sqrt2,\ 4+2\sqrt2,\ 2+2\sqrt2),
+\]
+\[
+(U_1^2,U_2^2,U_3^2)=\left(2+\frac{3\sqrt2}{2},\ 3+2\sqrt2,\ 2+\frac{3\sqrt2}{2}\right).
+\]
+En el segundo paso, los valores exactos son aproximadamente \((4.155542,\ 5.876824,\ 4.155542)\,\mathrm K\). El máximo error nodal absoluto es \(0.04839643\,\mathrm K\), en el nodo central.
+
+\noindent\textit{Desarrollo.} El cociente de pasos es adimensional:
+\[
+r=\frac{(1\,\mathrm{cm^2/s})(0.25\,\mathrm s)}{(1\,\mathrm{cm})^2}=\frac14.
+\]
+Los datos interiores iniciales, en kelvin de exceso, son
+\[
+(U_1^0,U_2^0,U_3^0)=(4\sqrt2,8,4\sqrt2).
+\]
+El esquema toma la forma
+\[
+U_j^{n+1}=\frac12U_j^n+\frac14U_{j-1}^n+\frac14U_{j+1}^n.
+\]
+En cada paso todos los valores del segundo miembro pertenecen al mismo nivel anterior. Para el primero,
+\[
+U_1^1=\tfrac12(4\sqrt2)+\tfrac14(0+8)=2+2\sqrt2,
+\]
+\[
+U_2^1=\tfrac12(8)+\tfrac14(4\sqrt2+4\sqrt2)=4+2\sqrt2,
+\]
+y \(U_3^1=U_1^1\) por simetría. Para el segundo, usando únicamente ese vector ya completado,
+\[
+U_1^2=\tfrac12(2+2\sqrt2)+\tfrac14(0+4+2\sqrt2)
+=2+\frac{3\sqrt2}{2},
+\]
+\[
+U_2^2=\tfrac12(4+2\sqrt2)+\tfrac14[2(2+2\sqrt2)]
+=3+2\sqrt2,
+\]
+y \(U_3^2=U_1^2\). El vector aproximado final es
+\[
+(4.12132034,\ 5.82842712,\ 4.12132034)\,\mathrm K.
+\]
+En \(t=0.5\,\mathrm s\), el factor temporal exacto es \(e^{-\pi^2/32}\). Por tanto, el vector de referencia es
+\[
+e^{-\pi^2/32}(4\sqrt2,8,4\sqrt2)\,\mathrm K
+\approx(4.15554179,\ 5.87682355,\ 4.15554179)\,\mathrm K.
+\]
+Los errores absolutos son aproximadamente
+\[
+(0.03422144,\ 0.04839643,\ 0.03422144)\,\mathrm K,
+\]
+por lo que el máximo solicitado es el central. El esquema atenúa este modo algo más que la solución exacta durante los dos pasos calculados.
+
+La comparación concierne a esos nodos, ese tiempo y ese dato inicial. No establece un orden general de convergencia ni una garantía de precisión para tiempos o perfiles diferentes.

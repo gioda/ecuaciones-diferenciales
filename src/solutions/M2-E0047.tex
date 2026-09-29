@@ -1,0 +1,20 @@
+\noindent\textbf{Resultado.} Con \(t\) en minutos y cantidades en kg,
+\[A(t)=3e^{-0.04t}+2e^{-0.12t},\qquad B(t)=6e^{-0.04t}-4e^{-0.12t}.\]
+
+\noindent\textit{Desarrollo.} Las variables de estado son las masas \(A(t),B(t)\) de sal, en kg. Los balances
+de volumen son \(6+2-8=0\) y \(8-2-6=0\), por lo que ambos volúmenes permanecen en 100 L.
+La mezcla uniforme permite usar concentraciones \(A/100\) y \(B/100\), en kg/L.
+El balance entrada menos salida proporciona
+\[A'=-0.08A+0.02B,\qquad B'=0.08A-0.08B,\qquad A(0)=5,\ B(0)=2.\]
+Los coeficientes tienen unidades min\(^{-1}\). Antes de resolver,
+\((A+B)'=-0.06B\): solo la salida externa elimina sal.
+
+Los autovalores son \(-0.04\) y \(-0.12\), con vectores \((1,2)^T\) y \((1,-2)^T\).
+Así, \((A,B)^T=c_1e^{-0.04t}(1,2)^T+c_2e^{-0.12t}(1,-2)^T\).
+Las condiciones iniciales dan \(c_1=3,c_2=2\).
+La sustitución verifica las dos ecuaciones y las condiciones.
+Para \(t\ge0\), \(A>0\) y \(B=2e^{-0.04t}(3-2e^{-0.08t})>0\).
+La sal total decrece hacia cero, aunque B crece inicialmente porque \(B'(0)=0.24\) kg/min.
+Ambas masas tienden a cero, como corresponde a la renovación con agua pura.
+El resultado presupone caudales constantes, ausencia de pérdidas de sal distintas de las descritas
+y mezcla instantánea; no representa gradientes locales ni tiempos de agitación.

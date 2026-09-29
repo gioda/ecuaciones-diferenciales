@@ -1,0 +1,16 @@
+Una barra idealizada tiene longitud \(L>0\), difusividad constante \(\kappa>0\) y extremos mantenidos a la temperatura de referencia. Para la temperatura en exceso,
+\[
+u_t=\kappa u_{xx},\qquad 0<x<L,\quad t>0,
+\qquad u(0,t)=u(L,t)=0,
+\]
+\[
+u(x,0)=\Theta\left[3\sin\left(\frac{\pi x}{L}\right)
+-\sin\left(\frac{2\pi x}{L}\right)\right],\qquad \Theta>0.
+\]
+La difusividad tiene unidades de longitud al cuadrado por unidad de tiempo y \(\Theta\) tiene unidades de temperatura.
+
+Aplique la transformada de Laplace respecto de \(t\) a la PDE y a sus datos. Obtenga y resuelva el problema de contorno espacial para
+\[
+U(x,s)=\int_0^{\infty}e^{-st}u(x,t)\,dt,\qquad s>0,
+\]
+justifique su unicidad para cada \(s>0\) e invierta la transformada. Puede suponer inicialmente que las operaciones de transformación y las dos derivadas espaciales son intercambiables. Verifique en la función recuperada la ecuación, los datos y la existencia de las transformadas utilizadas.

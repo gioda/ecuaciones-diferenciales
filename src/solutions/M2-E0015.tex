@@ -1,0 +1,8 @@
+\noindent\textbf{Resultado.} \(y(x)=[a+(b-\alpha a)x]e^{\alpha x}\), \(x\in\mathbb R\).
+
+\noindent\textit{Desarrollo.} El polinomio característico es \((r-\alpha)^2\). La raíz doble conduce a \(y=(C_1+C_2x)e^{\alpha x}\).
+Las condiciones iniciales dan \(C_1=a\) y \(\alpha C_1+C_2=b\), por lo que
+\[y=[a+(b-\alpha a)x]e^{\alpha x}.\]
+Para comprobarlo sin expandir tres términos, poner \(y=e^{\alpha x}u\): entonces
+\((D-\alpha)y=e^{\alpha x}u'\) y \((D-\alpha)^2y=e^{\alpha x}u''=0\), porque \(u\) es afín.
+En cero, \(y=a\), \(y'=\alpha a+b-\alpha a=b\). Los coeficientes constantes garantizan unicidad global. Si \(\alpha=0\), se obtiene \(y=a+bx\), sin excepción ni división por cero.

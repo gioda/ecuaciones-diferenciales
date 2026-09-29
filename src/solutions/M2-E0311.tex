@@ -1,0 +1,23 @@
+\noindent\textbf{Resultado.} Estabilidad: \(0<h<0.50\,\mathrm s\). Valores no negativos y no crecientes: \(0<h\le0.25\,\mathrm s\). De los cuatro candidatos sólo \(h=0.05\,\mathrm s\) cumple además el error exigido: \(v_{12}=0.8^{12}\approx0.06872\), frente a \(e^{-2.4}\approx0.09072\), con error relativo cercano al \(24.25\%\).
+
+\noindent\textit{Desarrollo.} La recurrencia de Euler es \(v_{n+1}=(1-4h)v_n\), por lo que \(v_n=(1-4h)^n\). Una perturbación inicial se multiplica por la misma potencia. Tiende a cero exactamente cuando \(|1-4h|<1\), es decir, \(0<h<1/2\). En \(h=1/2\) alterna sin disminuir, por lo que no satisface la definición dada.
+
+Para que la sucesión que empieza en 1 sea no negativa y no creciente hace falta y basta \(0\le1-4h<1\): \(0<h\le1/4\). Si el factor es negativo, ya \(v_1<0\). Si es cero, la sucesión llega a cero en un paso y permanece allí; pasa el criterio cualitativo discreto aunque no reproduce el decaimiento exacto.
+
+La solución exacta es \(v(t)=e^{-4t}>0\), estrictamente decreciente para \(t\ge0\). Usamos como error relativo
+\[
+E_h=\frac{|v_{0.60/h}-e^{-2.4}|}{e^{-2.4}}.
+\]
+Los cuatro cocientes \(0.60/h\) son enteros. Se obtiene
+\[
+\begin{array}{c|c|c|c}
+h\ (\mathrm s)&n&v_n&E_h\ (\text{aprox.})\\\hline
+0.30&2&(-0.2)^2=0.04&55.91\%\\
+0.20&3&(0.2)^3=0.008&91.18\%\\
+0.10&6&(0.6)^6=0.046656&48.57\%\\
+0.05&12&(0.8)^{12}=0.06871948&24.25\%
+\end{array}
+\]
+Todos son estables, pero \(h=0.30\) viola la no negatividad desde el primer paso. Los otros tres respetan el criterio cualitativo y sólo \(0.05\) alcanza la tolerancia pedida. La decisión se restringe a la lista; no afirma que \(0.05\) sea el mayor paso posible entre todos los reales.
+
+Con \(h=0.30\), \(v_1=-0.2\) y \(v_2=0.04\). Observar sólo el segundo dato oculta la alternancia no física. Estabilidad, comportamiento cualitativo y precisión son requisitos distintos incluso en esta ecuación elemental.

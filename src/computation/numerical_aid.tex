@@ -1,0 +1,24 @@
+En los ejercicios \exref{M2-E0049} y \exref{M2-E0068}, las mallas largas pueden calcularse con una hoja de cálculo o con el programa opcional \href{https://github.com/gioda/ecuaciones-diferenciales/blob/main/scripts/mallas.py}{\texttt{scripts/mallas.py}}, que usa Python 3 sin paquetes adicionales. El programa escribe tablas de valores; no hace falta desarrollar a mano todas las actualizaciones. Conviene comprobar primero una de ellas y conservar todos los decimales durante el cálculo.
+
+Para un sistema \(Y'=F(t,Y)\), Euler explícito utiliza
+\[
+Y_{n+1}=Y_n+hF(t_n,Y_n).
+\]
+El esquema clásico de Runge--Kutta de cuarto orden, con pendientes sin incluir el paso, es
+\[
+\begin{aligned}
+K_1&=F(t_n,Y_n),\\
+K_2&=F(t_n+h/2,Y_n+hK_1/2),\\
+K_3&=F(t_n+h/2,Y_n+hK_2/2),\\
+K_4&=F(t_n+h,Y_n+hK_3),\\
+Y_{n+1}&=Y_n+\frac h6(K_1+2K_2+2K_3+K_4).
+\end{aligned}
+\]
+Cada etapa usa un vector completo: no se mezcla una componente ya actualizada con otra del paso anterior.
+
+Desde la carpeta de fuentes del libro, las órdenes son:
+\begin{verbatim}
+python3 scripts/mallas.py E0049
+python3 scripts/mallas.py E0068
+\end{verbatim}
+La primera produce 40 pasos con \(h=0.025\). La segunda genera las tres mallas pedidas hasta \(t=2\); para representar \(y\), se utilizan las columnas \texttt{t} e \texttt{y} de cada malla. La comparación entre pasos informa del efecto del refinamiento, pero por sí sola no certifica una cota del error respecto de la solución exacta.

@@ -1,0 +1,41 @@
+%
+\documentclass[11pt,a4paper,oneside,openany]{book}
+\usepackage[spanish,es-nodecimaldot,es-noquoting]{babel}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\usepackage{amsmath,amssymb}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[left=24mm,right=24mm,top=24mm,bottom=25mm,headheight=15pt]{geometry}
+\usepackage{graphicx,xcolor,enumitem,needspace,microtype,fancyhdr}
+\setkeys{Gin}{width=\linewidth,height=.42\textheight,keepaspectratio}
+\definecolor{ink}{HTML}{183A48}
+\definecolor{linkblue}{HTML}{286C91}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue,bookmarksnumbered=true,pdfencoding=auto,psdextra]{hyperref}
+\hypersetup{pdftitle={Ecuaciones diferenciales: problemas, modelos y métodos},pdfauthor={Giovanni Dalmasso; Joaquín Menacho},pdflang={es-ES},pdfsubject={Edición del estudiante; v1.0.0}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{1}
+\allowdisplaybreaks[2]
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily Ecuaciones diferenciales}
+\fancyhead[R]{\small\sffamily Edición del estudiante}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\newcommand{\displaynumber}[1]{\csname display@#1\endcsname}
+\newcommand{\exref}[1]{\hyperref[ex:#1]{\displaynumber{#1}}}
+\newcommand{\exercise}[2]{\par\addvspace{11pt}\Needspace{5\baselineskip}\phantomsection\label{ex:#1}\noindent{\large\sffamily\bfseries\color{ink}Ejercicio \displaynumber{#1}}\hfill{\small\sffamily #2}\par\nobreak}
+\newcommand{\supportlinks}[3]{\par\nobreak{\footnotesize\sffamily\hyperref[answer:#1]{Respuesta}\ifnum#2=1\quad\hyperref[solution:#1]{Solución}\fi\ifnum#3=1\quad\hyperref[hint:#1]{Pista}\fi}\par}
+\newcommand{\supportheading}[2]{\par\addvspace{9pt}\Needspace{4\baselineskip}\phantomsection\label{#1:#2}{\sffamily\bfseries\color{ink}Ejercicio \exref{#2}}\par\nobreak}
+
+\usepackage{tikz}
+\definecolor{covernavy}{HTML}{183A48}
+\definecolor{covercream}{HTML}{F5EDDF}
+\definecolor{covergold}{HTML}{D4B07A}

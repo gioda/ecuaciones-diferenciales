@@ -1,0 +1,95 @@
+%
+\subsection*{Estructura lineal y condiciones}
+\label{CH04-B01}
+En un intervalo donde el coeficiente principal no se anula y los
+coeficientes normalizados son continuos, una EDO lineal de orden $n$
+tiene solución general $y=y_h+y_p$. Las soluciones homogéneas forman un
+espacio de dimensión $n$. Para segundo orden,
+$W(y_1,y_2)=y_1y_2'-y_1'y_2$; si ambas resuelven la homogénea, un
+wronskiano no nulo en un punto del intervalo prueba independencia.
+Las $n$ condiciones iniciales en un mismo punto fijan una única solución.
+
+Las condiciones en extremos distintos forman un problema de contorno y
+pueden dar ninguna, una o varias soluciones. Al imponerlas se obtiene un
+sistema algebraico cuya compatibilidad debe comprobarse. Un cero en una
+fórmula auxiliar no prueba que la ecuación sea singular: revísense sus
+coeficientes antes de concluir. Bastan derivación y sistemas lineales
+elementales para estas comprobaciones.
+
+%
+\subsection*{Raíces características y bases reales}
+\label{CH04-B02}
+Para coeficientes constantes, se sustituye $y=e^{rt}$ y se resuelve el
+polinomio característico. Una raíz real $r$ de multiplicidad $m$ aporta
+$e^{rt},te^{rt},\ldots,t^{m-1}e^{rt}$. Un par
+$\alpha\pm i\beta$, $\beta>0$, de multiplicidad $m$ aporta
+\[
+ t^j e^{\alpha t}\cos(\beta t),\quad
+ t^j e^{\alpha t}\sin(\beta t),\qquad j=0,\ldots,m-1.
+\]
+Estas expresiones se obtienen de
+$e^{i\theta}=\cos\theta+i\sin\theta$ y permiten trabajar con constantes
+reales. Derívese la combinación antes de imponer los datos y compruébese
+el PVI completo. No se divida por un parámetro sin tratar sus posibles
+ceros; una raíz repetida exige todas las potencias indicadas.
+Consulta: solución de \exref{M2-E0015}.
+
+%
+\subsection*{Reducción de orden y dominio}
+\label{CH04-B03}
+Si una ecuación no contiene $y$, poner $v=y'$ reduce el orden en una
+unidad; al recuperar $y$ aparece una constante de integración adicional.
+Si se conoce una solución $y_1$ de
+$y''+p y'+q y=0$, el cambio $y=y_1v$, en un intervalo donde $y_1\ne0$,
+da
+\[
+ y_1v''+(2y_1'+p y_1)v'=0.
+\]
+La sustitución $w=v'$ deja una ecuación de primer orden. La regla del
+producto explica qué términos se cancelan; no basta memorizar el cambio.
+
+La reducción es local: que una expresión intermedia se divida por
+$y_1$ no decide si la solución final puede atravesar un cero de $y_1$.
+Una posible prolongación se comprueba en la ecuación original, con la
+regularidad y los datos correspondientes. Consulta: solución de
+\exref{M2-E0224}.
+
+%
+\subsection*{Cómo construir una particular}
+\label{CH04-B04}
+Con coeficientes constantes, un forzamiento
+$e^{\alpha t}[P(t)\cos\beta t+Q(t)\sin\beta t]$ admite un ensayo del
+mismo tipo, con ambos polinomios de grado suficiente. Multiplíquese por
+$t^m$ si $\alpha+i\beta$ es raíz característica de multiplicidad $m$
+($\beta=0$ incluye exponenciales y polinomios). Un anulador puede ampliar
+la ecuación; las constantes de la particular se fijan volviendo a la
+ecuación original.
+
+Para $y''+p y'+q y=r$, con una base homogénea $y_1,y_2$ y $W\ne0$,
+una particular es
+\[
+ y_p=-y_1(t)\int_{t_*}^{t}\frac{y_2(s)r(s)}{W(s)}\,ds
+      +y_2(t)\int_{t_*}^{t}\frac{y_1(s)r(s)}{W(s)}\,ds.
+\]
+Normalícese primero el coeficiente de $y''$. Las cuadraturas definidas son
+válidas aunque no sean elementales. El fallo de un ensayo en un parámetro
+no prueba inexistencia. Consultas: soluciones de \exref{M2-E0016} y
+\exref{M2-E0303}.
+
+%
+\subsection*{Recuperar estados, datos y escalas}
+\label{CH04-B05}
+Al eliminar una variable de un balance acoplado, consérvese la relación
+que permite reconstruirla. El valor inicial de la derivada de la variable
+retenida se obtiene del balance original, no se elige libremente. Tras
+resolver, reconstruya el estado eliminado con las mismas constantes y
+compruebe ambas ecuaciones. Las condiciones de los extremos se traducen
+del mismo modo y se revisa si son independientes.
+
+En familias con un parámetro, distínganse un tiempo fijo, un tiempo que
+varía con ese parámetro y una garantía para todos los tiempos.
+Una cota uniforme $|y_\varepsilon-y|\le B(\varepsilon)$ exige controlar
+todo el intervalo considerado. Aproximar el estado no garantiza aproximar
+su derivada; ésta requiere su propia comprobación. Son útiles los balances
+y las desigualdades elementales. Consultas: soluciones de
+\exref{M2-E0313} y \exref{M2-E0334}.

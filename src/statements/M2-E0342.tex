@@ -1,0 +1,8 @@
+En un modelo sintético, una población normalizada se divide en fracciones susceptible \(S\), activa \(I\) y retirada \(R\). Sólo se producen transferencias de \(S\) a \(I\), a tasa \(2SI\), y de \(I\) a \(R\), a tasa \(I\). Con \(t\) en días, los dos estados que se calculan satisfacen
+\[
+S'=-2SI,\qquad I'=2SI-I,
+\qquad S(0)=0.8,\quad I(0)=0.1,\quad R(0)=0.1.
+\]
+Los coeficientes de las tasas tienen unidades \(\mathrm{día}^{-1}\).
+
+Realice un paso de Heun de tamaño \(h=0.5\) días, formando el vector predictor completo antes de corregir sus componentes. Determine qué incremento debe registrar la fracción retirada si se usan las mismas dos evaluaciones de tasa y los mismos pesos de Heun. Relacione ese incremento con la disminución calculada de \(S+I\), y compruebe que los estados de este paso permiten esa interpretación como transferencias de fracciones.

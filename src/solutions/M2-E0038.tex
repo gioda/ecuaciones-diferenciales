@@ -1,0 +1,21 @@
+\noindent\textbf{(a) Resultado.} \(k=27\pi^2/5\,\mathrm{N/m}\), \(c=2\pi\sqrt{14}/5\,\mathrm{N\,s/m}\).
+
+\noindent\textit{Desarrollo.} El modelo es \(mx''+cx'+kx=0\), con \(x\) medido desde el equilibrio estático. La frecuencia angular observada en régimen subamortiguado cumple
+\[\omega^2=\frac{k}{m}-\frac{c^2}{4m^2},\qquad\omega=2\pi f.\]
+Con los valores numéricos de las masas en kg, \(k-c^2/4=(2.2\pi)^2\) y \(2k-c^2/4=4(1.6\pi)^2\). Restar da \(k=(10.24-4.84)\pi^2=5.4\pi^2\); sustituir da \(c^2=2.24\pi^2\). Ambas frecuencias se recuperan exactamente con estos parámetros positivos.
+
+\medskip
+
+\noindent\textbf{(b) Resultado.} \[m_\pm=\frac{k\pm\sqrt{k^2-c^2(2\pi f)^2}}{2(2\pi f)^2}.\]
+Hay dos masas si \(0<f<k/(2\pi c)\), una si hay igualdad y ninguna por encima del límite.
+
+\noindent\textit{Desarrollo.} Multiplicar la relación de frecuencia por \(m^2\) produce \(\omega^2m^2-km+c^2/4=0\). La fórmula cuadrática da las dos ramas. Para \(\omega>0\), el discriminante no negativo exige \(\omega\le k/c\); con \(c>0\), ambas raíces son positivas cuando son distintas. Satisfacen \(m>c^2/(4k)\), condición de subamortiguamiento.
+La frecuencia no es monótona en toda la región: \(\omega^2=k/m-c^2/(4m^2)\) alcanza su máximo en \(m=c^2/(2k)\), donde \(\omega=k/c\). Una frecuencia sola puede no identificar la masa. El caso \(f=0\) no es una oscilación y no se obtiene sustituyendo en una fórmula que divide por \(f^2\).
+Explícitamente, \(m_\pm=[k\pm\sqrt{k^2-c^2(2\pi f)^2}]/[2(2\pi f)^2]\), con los casos de existencia descritos arriba.
+
+\medskip
+
+\noindent\textbf{(c) Resultado.} \(m=(135+\sqrt{18001})/8\,\mathrm{kg}\simeq33.646\,\mathrm{kg}\).
+
+\noindent\textit{Desarrollo.} Con los parámetros inferidos, la ecuación es \(0.16m^2-5.4m+0.56=0\), o \(4m^2-135m+14=0\). Sus raíces son \((135\pm\sqrt{18001})/8\,\mathrm{kg}\), aproximadamente \(0.10403\) y \(33.64597\). La información \(m>1\) selecciona la segunda.
+Las unidades en \(k/m\) y \(c^2/(4m^2)\) son \(\mathrm{s^{-2}}\). Los resultados suponen datos exactos, rigidez y amortiguamiento viscoso independientes de la masa, y oscilaciones de amplitud pequeña; una calibración experimental real necesitaría tratar incertidumbre y la sensibilidad de la inversión cerca de su frecuencia máxima.

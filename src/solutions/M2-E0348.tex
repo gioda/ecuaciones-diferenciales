@@ -1,0 +1,38 @@
+\noindent\textbf{Resultado.} El error cuadrático medio es
+\[
+E_N=\frac8{\pi^2}\sum_{j=N}^{\infty}\frac1{(2j+1)^2}
+\le\frac4{\pi^2(2N-1)}.
+\]
+Por tanto, \(N=21\) términos garantizan \(E_N\le0.01\). En cambio, \(S_N(0)=0\) y \(f(0)=1\), así que el error puntual en cero siempre es uno. Reasignar \(f(0)=0\) anula ese error aislado sin alterar coeficientes ni \(E_N\), pero no produce un error uniformemente pequeño cerca del salto: en cualquier entorno de cero, el supremo del error sigue siendo al menos uno.
+
+\noindent\textit{Desarrollo.} En esta normalización, un seno de amplitud \(b_n\) aporta \(b_n^2/2\) a la media del cuadrado. Los únicos coeficientes no nulos de la señal son los de seno de índice impar, \(b_{2j+1}=4/[\pi(2j+1)]\). La identidad de Parseval aplicada al residuo da
+\[
+E_N=\frac12\sum_{j=N}^{\infty}
+\left(\frac4{\pi(2j+1)}\right)^2
+=\frac8{\pi^2}\sum_{j=N}^{\infty}\frac1{(2j+1)^2}.
+\]
+El valor elegido en un punto aislado no interviene en estos coeficientes ni en la integral del error.
+
+La función \(g(x)=(2x+1)^{-2}\) es positiva y decreciente para \(x\ge0\). Para \(N\ge1\), cada término de la cola se puede acotar por la integral del intervalo inmediatamente anterior:
+\[
+\sum_{j=N}^{\infty}\frac1{(2j+1)^2}
+\le\int_{N-1}^{\infty}\frac{dx}{(2x+1)^2}
+=\frac1{2(2N-1)}.
+\]
+En consecuencia,
+\[
+E_N\le\frac4{\pi^2(2N-1)}\longrightarrow0.
+\]
+Para garantizar \(E_N\le0.01\) mediante esta cota basta imponer
+\[
+2N-1\ge\frac{400}{\pi^2}.
+\]
+El entero \(N=21\) satisface la condición y da la cota \(4/(41\pi^2)\approx0.009884994\). Es un número suficiente obtenido del error integrado; no se ha deducido una cota puntual del mismo tamaño.
+
+En el salto, todos los senos valen cero, de modo que \(S_N(0)=0\) para cualquier \(N\). El valor del enunciado es \(f(0)=1\), y por tanto
+\[
+|f(0)-S_N(0)|=1.
+\]
+No hay contradicción: una discrepancia en un punto no contribuye a una integral. Si se cambia sólo ese valor a cero en el periodo de cálculo, el error puntual allí desaparece, pero las integrales y los coeficientes permanecen iguales.
+
+La reasignación tampoco resuelve la aproximación uniforme en un entorno del salto. Cada \(S_N\) es continua y vale cero en cero. Al acercarnos desde la derecha sin tomar el punto cero, \(f(t)=1\) mientras \(S_N(t)\to0\), por lo que el error se aproxima a uno. Lo mismo sucede desde la izquierda, donde \(f(t)=-1\). Así, en cualquier entorno que contenga ambos lados de cero, el supremo del error de cada suma es al menos uno, aun después de la reasignación. Este argumento no necesita cuantificar las oscilaciones de Gibbs: basta la continuidad de la suma finita frente a los dos límites del salto.

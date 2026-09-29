@@ -1,0 +1,50 @@
+\noindent\textbf{Resultado.} La forma regular es
+\[
+-(xy')'=\lambda\frac1x y,
+\qquad p=x,\quad r=0,\quad w=\frac1x.
+\]
+El producto adecuado es \(\langle f,g\rangle_w=\int_1^e fg\,dx/x\). Para el par dado,
+\[
+\int_1^e\frac{uv}{x}\,dx=0,\qquad
+\int_1^e uv\,dx
+=-\frac{4\pi^2(e+1)}{(1+\pi^2)(1+9\pi^2)}\ne0.
+\]
+Con \(z=\log x\), la medida ponderada se convierte en \(dz\); la no ponderada conserva el factor \(e^z\).
+
+\noindent\textit{Desarrollo.} Dividir la ecuación por \(x>0\) da
+\[
+xy''+y'+\lambda\frac{y}{x}=0.
+\]
+Los dos primeros términos forman \((xy')'\), por lo que
+\[
+-(xy')'=\lambda\frac1x y.
+\]
+En \([1,e]\), \(p=x\) es continuamente derivable y positivo, \(r=0\) es continuo y \(w=1/x\) es continuo y positivo. Los contornos son Dirichlet homogéneos, de modo que el problema es regular.
+
+Para interpretar el peso, ponemos \(z=\log x\) y \(Y(z)=y(e^z)\). Entonces \(xy'=Y_z\) y \(x^2y''+xy'=Y_{zz}\). El intervalo pasa a \([0,1]\) y la ecuación a
+\[
+-Y_{zz}=\lambda Y,\qquad Y(0)=Y(1)=0.
+\]
+Los perfiles dados corresponden a \(\sin(\pi z)\) y \(\sin(2\pi z)\), con autovalores \(\pi^2\) y \(4\pi^2\). Como \(dx/x=dz\), su producto ponderado es
+\[
+\int_1^e\frac{u(x)v(x)}x\,dx
+=\int_0^1\sin(\pi z)\sin(2\pi z)\,dz=0.
+\]
+Esta es la ortogonalidad asociada al peso del problema.
+
+Sin peso, \(dx=e^z\,dz\), y queda
+\[
+I=\int_0^1e^z\sin(\pi z)\sin(2\pi z)\,dz
+=\frac12\int_0^1e^z[\cos(\pi z)-\cos(3\pi z)]\,dz.
+\]
+La primitiva
+\[
+\int e^z\cos(az)\,dz
+=\frac{e^z[\cos(az)+a\sin(az)]}{1+a^2}
+\]
+se comprueba por derivación. Para \(a=\pi\) o \(a=3\pi\), los valores de borde proporcionan \(-(e+1)/(1+a^2)\). Por tanto,
+\[
+I=-\frac{e+1}{2}\left(\frac1{1+\pi^2}-\frac1{1+9\pi^2}\right)
+=-\frac{4\pi^2(e+1)}{(1+\pi^2)(1+9\pi^2)}<0.
+\]
+No hay contradicción entre ambos resultados: se han usado medidas distintas. El cambio de variable conserva la ortogonalidad ordinaria en \(z\) al incluir el peso \(1/x\), no al omitirlo.

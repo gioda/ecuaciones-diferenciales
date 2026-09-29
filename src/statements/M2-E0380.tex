@@ -1,0 +1,15 @@
+Se comprueba un cálculo idealizado de enfriamiento de una tira de longitud \(L=2\,\mathrm{cm}\), difusividad \(\kappa=1\,\mathrm{cm^2/s}\) y exceso de temperatura nulo en sus extremos. El perfil inicial es \(u(x,0)=10\sin(\pi x/L)\,\mathrm K\); la solución de referencia es
+\[
+u(x,t)=10e^{-\kappa\pi^2t/L^2}\sin(\pi x/L)\,\mathrm K.
+\]
+Se exige un error numérico en el centro no mayor que \(0.10\,\mathrm K\) en \(T=0.50\,\mathrm s\). Use el esquema explícito
+\[
+U_j^{n+1}=(1-2r)U_j^n+r(U_{j-1}^n+U_{j+1}^n),\qquad r=\kappa\Delta t/(\Delta x)^2.
+\]
+Primero tome \(\Delta x=1\,\mathrm{cm}\), \(\Delta t=0.25\,\mathrm s\), y avance el único nodo interior hasta \(T\). Después reduzca \(\Delta x\) a la mitad: decida si conservar el paso temporal garantiza estabilidad frente a perturbaciones y elija un nuevo paso que conserve \(r\).
+
+Puede usar la condición suficiente \(0\le r\le1/2\) y que un modo discreto \(\sin(m\pi x/L)\) se multiplica por
+\[
+g_m=1-4r\sin^2\!\left(\frac{m\pi\Delta x}{2L}\right).
+\]
+En la malla fina, \(m=1,2,3\). Calcule la temperatura central refinada mediante una potencia de \(g_1\), sin hacer todos los pasos a mano. Compare ambos errores con la tolerancia. Explique por qué un paso estable no asegura precisión y por qué examinar sólo el perfil inicial puede ocultar una perturbación que crece. Se permite calculadora.

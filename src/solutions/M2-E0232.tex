@@ -1,0 +1,9 @@
+\noindent\textbf{(a) Resultado.} $I(t)=1.2(1-e^{-20t})\,\mathrm A$, $t\ge0$, con $t$ en segundos.
+
+\noindent\textit{Desarrollo.} La ley de tensiones da $LI^{\prime}+RI=12$. Con los valores suministrados resulta $I^{\prime}+20I=24$. El factor integrante $e^{20t}$ conduce a $I=6/5+Ke^{-20t}$; $I(0)=0$ fija $K=-6/5$. La fórmula satisface el dato y la EDO. El cociente $R/L=20\,\mathrm{s^{-1}}$ hace adimensional el exponente, y $L/R=0.05\,\mathrm s$ es la escala de relajación.
+
+\medskip
+
+\noindent\textbf{(b) Resultado.} La fórmula integral satisface $LI^{\prime}+RI=E(t)$ e $I(0)=C$. Si $E(t)=E_0$, \[I(t)=\frac{E_0}{R}+\left(C-\frac{E_0}{R}\right)e^{-Rt/L},\qquad \lim_{t\to\infty}I(t)=\frac{E_0}{R}.\] El segundo sumando es el transitorio; el límite se afirma para tensión constante.
+
+\noindent\textit{Desarrollo.} Sea $a=R/L$ y $J(t)=\int_0^t e^{as}E(s)\,ds$. Como $E$ es continua, el teorema fundamental del cálculo da $J^{\prime}(t)=e^{at}E(t)$. Al derivar $I=e^{-at}(C+J/L)$ resulta $I^{\prime}=-aI+E(t)/L$, luego $LI^{\prime}+RI=E(t)$ e $I(0)=C$. Recíprocamente, multiplicar cualquier solución por $e^{at}$ da $(e^{at}I)^{\prime}=e^{at}E(t)/L$; integrar desde cero demuestra que la fórmula contiene todas las soluciones. Para $E(t)=E_0$, $J(t)=E_0(e^{at}-1)/a$ y se obtiene la expresión de la respuesta. Puesto que $a>0$, el transitorio tiende a cero y el régimen es $E_0/R$. La corriente de régimen satisface la ley de Ohm $RI_\infty=E_0$. Para una tensión variable general no se deduce de esta fórmula un límite constante sin hipótesis adicionales sobre $E$. Dimensionalmente $E(s)\,ds/L$ tiene unidades de corriente y $as$ es adimensional.

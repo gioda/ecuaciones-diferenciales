@@ -1,0 +1,77 @@
+%
+\subsection*{Estados y sistemas equivalentes}
+\label{CH07-B01}
+Una EDO de segundo orden $y''=f(t,y,y')$ se escribe como
+$x_1'=x_2$, $x_2'=f(t,x_1,x_2)$, con $x_1=y$, $x_2=y'$ y ambos
+datos iniciales. El producto matriz-vector se calcula por filas:
+$(A\mathbf x)_i=\sum_j a_{ij}x_j$.
+
+Eliminar una componente puede producir una EDO escalar, pero la
+equivalencia exige reconstruirla con las mismas constantes y comprobar
+todo el sistema. Las condiciones iniciales de la ecuación eliminada
+proceden del sistema original. Si éste tiene forma
+$B\mathbf x'=A\mathbf x+\mathbf f$, sólo puede despejarse
+$\mathbf x'$ mediante $B^{-1}$ cuando $B$ es invertible. Una matriz
+$B$ singular puede imponer una relación algebraica entre estados y datos.
+Recuérdense sistemas lineales y determinantes.
+Consulta: solución de \exref{M2-E0238}.
+
+%
+\subsection*{Evolución lineal y autovectores}
+\label{CH07-B02}
+En $\mathbf x'=A\mathbf x$, con $A$ constante, un autovector no nulo
+$\mathbf v$ de autovalor $\lambda$ produce
+$e^{\lambda t}\mathbf v$. Calcúlense los autovalores con
+$\det(A-\lambda I)=0$ y los autovectores resolviendo
+$(A-\lambda I)\mathbf v=0$. Para una matriz real, las partes real e
+imaginaria de un modo complejo conjugado dan soluciones reales.
+
+Una raíz repetida no garantiza suficientes autovectores independientes.
+En el caso concreto $A=\lambda I+N$, $N^2=0$, se puede comprobar por
+derivación que
+\[
+ \mathbf x(t)=e^{\lambda(t-t_0)}
+ [I+(t-t_0)N]\mathbf x(t_0).
+\]
+Para $\mathbf x'=A\mathbf x+\mathbf f(t)$, la solución es homogénea
+más particular. Una entrada constante sugiere una particular constante
+sólo si $A\mathbf x_p+\mathbf f=0$ es compatible; otras entradas
+pueden requerir otro ensayo. Verifíquense todas las componentes y datos.
+Consultas: soluciones de \exref{M2-E0047} y \exref{M2-E0065}.
+
+%
+\subsection*{Balances, reducción y observación}
+\label{CH07-B03}
+Escríbase un balance por cada cantidad almacenada. En una mezcla,
+$Q_i=V_i c_i$; si cambia $V_i$, también interviene $V_i'c_i$.
+Al sumar balances, los intercambios internos se cancelan y quedan los
+intercambios con el exterior y las fuentes o consumos. Que aumente una
+componente no implica que aumente el total.
+
+Las variables suma y diferencia pueden separar evolución conjunta y
+desequilibrio. Para justificar que dos estados permanecen iguales,
+compruébese que sus derivadas coinciden cuando los estados coinciden;
+con datos iguales y unicidad, esa igualdad se conserva. No basta imponerla
+en una sola ecuación. Distínganse el estado físico, la salida de un sensor
+$H(\mathbf x)$ y un registro acumulado
+$z'=H(\mathbf x)$: miden objetos distintos y pueden tener unidades
+distintas. Consulta: solución de \exref{M2-E0343}.
+
+%
+\subsection*{Etapas vectoriales y límites de la aproximación}
+\label{CH07-B04}
+Euler, Heun y RK4 se aplican a $\mathbf x'=\mathbf f(t,\mathbf x)$
+con las mismas fórmulas del capítulo 3, sustituyendo números por vectores.
+Cada etapa utiliza todas las componentes del mismo estado provisional;
+actualizar una componente y usarla de inmediato para calcular otra cambia
+el método.
+
+Compruébense invariantes, signos, unidades y balances. Conservar una suma
+no garantiza aproximar bien cada componente. Las primeras etapas manuales
+permiten entender el algoritmo; cuando se pide una malla larga, puede usarse
+la ayuda de cálculo de esta edición para las repeticiones.
+La concordancia entre mallas es evidencia numérica, no una tolerancia
+certificada ni una validación empírica de las leyes. Para una decisión
+garantizada, búsquense cotas justificadas mediante balances y
+desigualdades, e indíquense las hipótesis del modelo.
+Consultas: soluciones de \exref{M2-E0315} y \exref{M2-E0362}.

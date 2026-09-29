@@ -1,0 +1,39 @@
+\noindent\textbf{Resultado.} El sistema es
+\[
+4A-B-C=23,\qquad 4B-A-D=43,
+\]
+\[
+4C-A-D=15,\qquad 4D-B-C=35.
+\]
+Su solución es \((A,B,C,D)=(13,18,11,16)\). Son los valores de \(H\) en los cuatro nodos interiores. El polinomio es armónico, coincide con los datos de contorno de la tabla y sus diferencias segundas son exactas. Este acuerdo es propio de la referencia y la malla dadas; no establece error nulo en problemas generales ni determina valores de contorno entre los nodos.
+
+\noindent\textit{Desarrollo.} Con paso uno en ambas direcciones, la suma de las dos diferencias centradas aproxima la ecuación de equilibrio por
+\[
+4U_{i,j}=U_{i+1,j}+U_{i-1,j}+U_{i,j+1}+U_{i,j-1}.
+\]
+Cada incógnita se relaciona con sus cuatro vecinos inmediatos. Para \(A\), los vecinos conocidos son \(10\) y \(13\), mientras los interiores son \(B,C\). Para \(B\), los conocidos son \(25,18\), y los interiores \(A,D\). Las otras dos filas se construyen del mismo modo:
+\[
+\begin{aligned}
+4A&=B+C+10+13,\\
+4B&=A+D+25+18,\\
+4C&=A+D+8+7,\\
+4D&=B+C+23+12.
+\end{aligned}
+\]
+Restar la cuarta ecuación de la primera da \(A-D=-3\), y restar la tercera de la segunda da \(B-C=7\). Así, \(D=A+3\) y \(B=C+7\). Las ecuaciones primera y tercera se reducen a
+\[
+2A-C=15,\qquad 2C-A=9.
+\]
+De ellas se obtiene \(A=13\), \(C=11\), y después \(B=18\), \(D=16\). Estas eliminaciones reversibles también muestran la unicidad de la solución del sistema.
+
+Para la referencia,
+\[
+H_{xx}=2,\qquad H_{yy}=-2,
+\]
+por lo que \(H\) es armónico. Sus valores en los nodos de cada lado reproducen la tabla: abajo son \(10,13,18,25\); arriba, \(4,7,12,19\); los valores intermedios izquierdos son \(10,8\), y los derechos, \(25,23\). En el interior,
+\[
+H(1,1)=13,\quad H(2,1)=18,\quad H(1,2)=11,\quad H(2,2)=16.
+\]
+El acuerdo tiene una explicación adicional al cálculo numérico: las diferencias centradas segundas reproducen exactamente la segunda derivada de un polinomio cuadrático. Aplicadas a \(H\), sus contribuciones horizontal y vertical son \(2\) y \(-2\), que se cancelan. Los valores de \(H\) satisfacen, por tanto, el mismo sistema discreto.
+
+Los datos suministrados son valores en nodos de contorno. No fijan por sí solos una función en todos los puntos de los lados. \(H\) es una referencia armónica que interpola esos nodos; afirmar que es la única solución de un problema continuo exigiría prescribir, además, sus trazas completas en la frontera. Tampoco el acuerdo exacto de esta referencia implica que el esquema carezca de error para otros campos.

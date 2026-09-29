@@ -1,0 +1,88 @@
+%
+\subsection*{Problema regular y parámetro espectral}
+\label{CH09-B01}
+Usamos la forma
+\[
+ -(p y')'+q y=\lambda w y\quad (a<x<b),
+\]
+con intervalo finito, $p$ de clase $C^1$, $q,w$ continuas y reales,
+y $p,w>0$ en $[a,b]$. Se añaden condiciones homogéneas separadas
+de valor, derivada o Robin; en cada extremo,
+$\alpha y+\beta y'=0$, con constantes reales no simultáneamente nulas
+e independientes de $\lambda$. Un autovalor admite una autofunción
+\emph{no idénticamente nula}.
+
+Al resolver, sepárense los casos $\lambda<0$, $\lambda=0$ y
+$\lambda>0$ cuando den formas distintas de la EDO. La función constante
+no nula puede ser un modo admisible; no debe confundirse con la función
+nula. Tampoco cualquier condición de Robin garantiza autovalores
+positivos. Recuérdense EDO lineales e integración por partes.
+Consulta: solución de \exref{M2-E0054}.
+
+%
+\subsection*{Peso, normalización y expansión}
+\label{CH09-B02}
+El producto escalar correspondiente al problema es
+$\langle f,g\rangle_w=\int_a^b wfg\,dx$.
+Las autofunciones de autovalores distintos son ortogonales con este peso.
+Con $N_n^2=\int_a^b w\phi_n^2\,dx$, la función normalizada es
+$e_n=\phi_n/N_n$, y
+\[
+ f\sim\sum_n c_n\phi_n,\qquad
+ c_n=\frac{\int_a^b wf\phi_n\,dx}{N_n^2}.
+\]
+En la base normalizada, el coeficiente es
+$\langle f,e_n\rangle_w=c_nN_n$. Cambiar la normalización cambia los
+coeficientes, pero no cada producto coeficiente por autofunción.
+
+Para los problemas regulares y las bases completas aquí utilizadas,
+la expansión converge en norma cuadrática ponderada para datos de
+cuadrado integrable. Las afirmaciones puntuales necesitan regularidad
+adicional. Una representación interior no impone automáticamente los
+valores ni las derivadas del dato en los extremos; no se derive la serie
+sin justificarlo. Consulta: solución de \exref{M2-E0297}.
+
+%
+\subsection*{Contornos físicos y cambio de medida}
+\label{CH09-B03}
+Si el flujo en la dirección positiva es $J=-k u_x$, con $k>0$, el
+flujo saliente del intervalo es $-J(a)=k u_x(a)$ a la izquierda y
+$J(b)=-k u_x(b)$ a la derecha. Esos signos deben introducirse antes de
+traducir una ley de intercambio a una condición Robin.
+Identifíquense $p,q,w$ en la ecuación escrita y compruébense las unidades
+de $\lambda$; el peso no es un añadido de notación.
+
+En un cambio monótono y regular $x=\chi(\xi)$, la medida también cambia:
+\[
+ \int w(x)f(x)g(x)\,dx
+ =\int w(\chi(\xi))f(\chi(\xi))g(\chi(\xi))
+        |\chi'(\xi)|\,d\xi,
+\]
+con los límites ordenados de menor a mayor en ambos intervalos.
+Transformar las funciones sin el jacobiano puede destruir la
+ortogonalidad. Revísense regularidad y positividad en todo el intervalo
+cerrado, incluidos los extremos. Consultas: soluciones de
+\exref{M2-E0350} y \exref{M2-E0351}.
+
+%
+\subsection*{Forzamiento, compatibilidad y límites}
+\label{CH09-B04}
+Con los mismos contornos homogéneos, escribamos
+$-(py')'+qy-\lambda wy=wf$. Proyectar sobre un modo $\phi_n$ da
+\[
+ (\lambda_n-\lambda)c_n
+ =\frac{\langle f,\phi_n\rangle_w}{\|\phi_n\|_w^2}.
+\]
+Si $\lambda=\lambda_n$, el miembro derecho debe anularse. En los
+problemas regulares elementales tratados, con forzamiento regular, la
+compatibilidad con el modo resonante permite resolver y deja libre su
+coeficiente homogéneo. La resonancia puede dar inexistencia o no
+unicidad: compruébese cuál ocurre, antes de calcular una particular.
+
+Si los autovalores se obtienen como raíces, indíquese el intervalo y el
+índice de cada raíz. Una aproximación relativa
+$\lambda_n/\widetilde\lambda_n\to1$ no obliga al error absoluto a
+tender a cero. En límites de familias, úsense cotas con el dominio y los
+parámetros especificados; el problema límite puede conservar libertad
+sin seleccionar una única solución. Consulta: solución de
+\exref{M2-E0088}.

@@ -1,0 +1,8 @@
+En una simulación, dos cuerpos de temperaturas uniformes \(T_1,T_2\) intercambian calor entre sí y están aislados del exterior. Sus capacidades térmicas son \(C_1=2\,\mathrm{kJ/K}\) y \(C_2=3\,\mathrm{kJ/K}\). La potencia que pasa del primero al segundo es \(K(T_1-T_2)\), con \(K=1\,\mathrm{kJ/(min\,K)}\). Inicialmente están a \(80\) y \(20\,{}^\circ\mathrm C\).
+
+Formule los balances y aplique un paso de Heun de \(h=0.6\,\mathrm{min}\). Use el trapecio explícito vectorial:
+\[
+\widetilde{\mathbf T}=\mathbf T_0+h\mathbf f(\mathbf T_0),\qquad
+\mathbf T_1=\mathbf T_0+\frac h2[\mathbf f(\mathbf T_0)+\mathbf f(\widetilde{\mathbf T})].
+\]
+Identifique, a partir de los balances, una magnitud conservada y compruebe qué ocurre con ella en el predictor y en la corrección de Heun. Obtenga también una referencia analítica usando la diferencia de temperaturas y la conservación. Compare las temperaturas aproximadas con esa referencia y explique qué información aporta cada una de las dos comprobaciones: conservación y error de temperatura.

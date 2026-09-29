@@ -1,0 +1,23 @@
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\fill[covernavy] (current page.north west) rectangle (current page.south east);
+\node[anchor=north west,inner sep=0pt,text=white,text width=176mm]
+at ([xshift=18mm,yshift=-17mm]current page.north west)
+{\sffamily\bfseries\fontsize{35}{38}\selectfont Ecuaciones\\diferenciales};
+\node[anchor=north west,inner sep=0pt,text=covercream,text width=176mm]
+at ([xshift=18mm,yshift=-49mm]current page.north west)
+{\sffamily\fontsize{17}{22}\selectfont problemas, modelos y métodos};
+\draw[covergold,line width=.6pt] ([xshift=18mm,yshift=-68mm]current page.north west)
+-- ([xshift=192mm,yshift=-68mm]current page.north west);
+\node[anchor=north west,inner sep=0pt] at ([xshift=66mm,yshift=-81mm]current page.north west)
+{\includegraphics[width=144mm,height=216mm,keepaspectratio]{publication_assets/cover_art_v1.png}};
+\node[anchor=north west,inner sep=0pt,text=white,text width=45mm]
+at ([xshift=15mm,yshift=-103mm]current page.north west)
+{\sffamily\fontsize{14}{18}\selectfont Giovanni\\Dalmasso\par\vspace{9mm}Joaquín\\Menacho};
+\node[anchor=north west,inner sep=0pt,text=covercream,text width=45mm]
+at ([xshift=15mm,yshift=-216mm]current page.north west)
+{\sffamily\fontsize{9}{13}\selectfont EDICIÓN DEL\\ESTUDIANTE\par\vspace{5mm}Primera edición\\2026\par\vspace{7mm}\fontsize{8}{11}\selectfont VERSIÓN\\1.0.0};
+\end{tikzpicture}
+\null
+\end{titlepage}

@@ -1,0 +1,116 @@
+%
+\subsection*{Variables, datos y flujo}
+\label{CH10-B01}
+En $u(x,t)$, $u_t$ deriva con $x$ fijo y $u_x$ con $t$ fijo. Al integrar
+respecto de $x$, la constante puede depender de $t$. Los modelos básicos
+son
+\[
+ u_t=\kappa u_{xx}\quad\text{(calor)},\qquad
+ u_{tt}=c^2u_{xx}\quad\text{(onda)},\qquad
+ u_{xx}+u_{yy}=0\quad\text{(equilibrio)}.
+\]
+La difusividad $\kappa>0$ tiene unidades de longitud$^2$/tiempo y
+$c>0$ es una velocidad. Calor requiere un dato inicial temporal; onda,
+desplazamiento y velocidad. Los contornos restringen el estado o su
+derivada en el borde espacial.
+
+Con densidad volumétrica de energía $e$ y flujo $J$ hacia la derecha,
+$e_t+J_x=0$ implica
+$\frac{d}{dt}\int_a^b e\,dx=J(a)-J(b)$, sin fuentes y por unidad de
+sección. La ley de Fourier es $J=-k u_x$; el flujo saliente cambia de
+signo entre extremos. Temperatura prescrita y potencia prescrita son
+datos distintos; para pasar de flujo a potencia se necesita la sección.
+
+%
+\subsection*{Separación y perfiles de evolución}
+\label{CH10-B02}
+Con extremos homogéneos, se ensaya $u=X(x)T(t)$ y se elige la base
+espacial a partir de los contornos. Para $X''=-\lambda X$, cada modo
+de calor tiene amplitud $T'= -\kappa\lambda T$ y cada modo de onda
+$T''=-c^2\lambda T$. Los coeficientes se obtienen proyectando los datos
+iniciales con la norma de la base. Para $\lambda>0$ y
+$\omega=c\sqrt\lambda$, la onda usa
+$T=A\cos\omega t+(B/\omega)\sin\omega t$, donde $A$ procede del
+desplazamiento y $B$ de la velocidad. Si se admite un modo cero,
+su amplitud es constante en calor y afín en el tiempo en onda.
+
+En la recta, la fórmula de d'Alembert para datos $f=u(\cdot,0)$ y
+$g=u_t(\cdot,0)$ es
+\[
+ u(x,t)=\frac{f(x-ct)+f(x+ct)}2
+       +\frac1{2c}\int_{x-ct}^{x+ct}g(s)\,ds.
+\]
+Con datos suficientemente regulares satisface la ecuación clásica; los
+perfiles a trozos requieren precisar los puntos de regularidad.
+En un intervalo no se ignoran las reflexiones en los extremos.
+Una cuerda recta puede tener velocidad no nula. Distínganse perfil a
+tiempo fijo e historia de un punto, y compruébese si el eje representa
+$u$, $cu$ u otra escala. Consultas: soluciones de \exref{M2-E0264} y
+\exref{M2-E0107}.
+
+%
+\subsection*{Equilibrio y homogeneización del contorno}
+\label{CH10-B03}
+Con temperaturas de borde constantes, búsquese primero un perfil
+estacionario $v(x)$ que satisfaga esos contornos; para calor sin fuentes,
+$v''=0$. Entonces $w=u-v$ tiene contornos homogéneos y dato inicial
+$u(x,0)-v(x)$. Con aislamiento en ambos extremos se admite un modo
+constante y se conserva la temperatura media en el modelo homogéneo.
+
+En un rectángulo $0<x<L$, $0<y<H$, con tres lados a cero y dato en
+$y=H$, los modos de Laplace utilizan
+\[
+ \sin\frac{n\pi x}{L}\,
+ \frac{\sinh(n\pi y/L)}{\sinh(n\pi H/L)},\qquad n\ge1.
+\]
+El cociente normaliza el valor en el lado que aporta el dato.
+La continuidad hasta una esquina exige que los valores de sus lados
+coincidan. Del mismo modo, un dato inicial incompatible con el contorno
+puede impedir continuidad en la esquina inicial sin impedir una solución
+para $t>0$ que recupere el dato interior o en norma cuadrática.
+Consultas: soluciones de \exref{M2-E0109} y \exref{M2-E0268}.
+
+%
+\subsection*{Mallas pequeñas y alcance de las garantías}
+\label{CH10-B04}
+En calor, sean $x_i=i\Delta x$, $t_n=n\Delta t$ y
+$r=\kappa\Delta t/(\Delta x)^2$. El esquema explícito es
+\[
+ U_i^{n+1}=rU_{i-1}^n+(1-2r)U_i^n+rU_{i+1}^n.
+\]
+Todos los valores de la derecha pertenecen al mismo nivel temporal.
+Si $0\le r\le1/2$, es un promedio convexo: preserva no negatividad
+con datos y contornos no negativos y controla perturbaciones en la norma
+máxima con los mismos contornos. Esa propiedad no asegura precisión.
+En una malla cuadrada de paso igual en ambas direcciones, Laplace da
+$4U_{i,j}=U_{i-1,j}+U_{i+1,j}+U_{i,j-1}+U_{i,j+1}$.
+
+Compárense nodos y tiempos coincidentes con una referencia. Si un modo
+tiene multiplicador de un paso $G$, después de $N$ pasos su amplitud se
+multiplica por $G^N$; no hacen falta $N$ actualizaciones manuales.
+Al refinar, revísese la razón $r$. La coincidencia nodal no demuestra
+exactitud continua, y observar un modo decreciente no prueba estabilidad
+para todos los modos. Consultas: soluciones de \exref{M2-E0355},
+\exref{M2-E0356} y \exref{M2-E0380}.
+
+%
+\subsection*{Transformar el tiempo en un problema de calor}
+\label{CH10-B05}
+Sea $U(x,s)=\mathcal L_t\{u(x,t)\}(s)$ y $f(x)=u(x,0)$.
+Cuando se pueden intercambiar la transformación y las derivadas
+espaciales, $u_t=\kappa u_{xx}$ se convierte en
+\[
+ \kappa U_{xx}-sU=-f(x).
+\]
+El dato inicial permanece en la EDO espacial. Transfórmense también
+los contornos y resuélvase el problema completo antes de invertir.
+Para contornos homogéneos de valor y $s>0$, la unicidad puede comprobarse
+restando dos soluciones. Si $W$ es su diferencia, se multiplica
+$\kappa W''-sW=0$ por $W$ y se integra por partes: los términos de borde desaparecen y
+las integrales de los cuadrados obligan a que la diferencia sea cero.
+
+Después de invertir, verifíquense ecuación, datos y convergencia de la
+transformada. Esta conexión utiliza EDO de contorno y Laplace del
+capítulo 6; no proporciona por sí sola una teoría para dominios no
+acotados o para estabilidad de EDP. Consulta: solución de
+\exref{M2-E0357}.

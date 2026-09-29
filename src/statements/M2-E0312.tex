@@ -1,0 +1,10 @@
+En un ensayo simulado se estudia la actividad relativa \(A(t)>0\) de un catalizador. Se propone \(A'=-kA\), \(A(0)=1\), con \(k\ge0\) constante y \(t\) en horas. El instrumento informa de la pérdida logarítmica \(z=-\ln A\), adimensional. Cada lectura de \(z\) puede diferir de su valor verdadero en, como máximo, \(0.02\); esta cota se considera garantizada dentro de la simulación.
+\[
+\begin{array}{c|ccc|c}
+t\ (\mathrm h)&1&2&3&4\\\hline
+z\ \text{observado}&0.11&0.19&0.31&0.56\\
+\text{uso}&\text{calibración}&\text{calibración}&\text{calibración}&\text{reservado}
+\end{array}
+\]
+Ajuste \(k\) sólo con las tres primeras lecturas minimizando
+\(J(k)=\sum_{i=1}^3(kt_i-z_i)^2\), donde \((t_i,z_i)\) son esas lecturas. Compruebe sus residuos y prediga el cuarto dato. Determine después si existe algún \(k\ge0\) que respete simultáneamente la cota de error de las cuatro lecturas y explique qué aporta el contraste con el dato reservado. Distinga qué se ha detectado y qué causa concreta no se puede identificar con estos datos.

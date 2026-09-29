@@ -1,0 +1,85 @@
+%
+\subsection*{Un paso de Euler, Heun y RK4}
+\label{CH03-B01}
+Para $y'=f(t,y)$, $t_{n+1}=t_n+h$, Euler usa
+$y_{n+1}=y_n+h f(t_n,y_n)$. Heun calcula un predictor y promedia dos
+pendientes:
+\[
+ k_1=f(t_n,y_n),\quad \widetilde y=y_n+hk_1,\quad
+ k_2=f(t_n+h,\widetilde y),\quad
+ y_{n+1}=y_n+\tfrac h2(k_1+k_2).
+\]
+En RK4, con la convención de que $k_i$ es una pendiente,
+\[
+\begin{aligned}
+ k_1&=f(t_n,y_n),& k_2&=f(t_n+h/2,y_n+hk_1/2),\\
+ k_3&=f(t_n+h/2,y_n+hk_2/2),&
+ k_4&=f(t_n+h,y_n+hk_3),\\
+ y_{n+1}&=y_n+\tfrac h6(k_1+2k_2+2k_3+k_4).
+\end{aligned}
+\]
+Cada evaluación tiene un tiempo y un estado propios. La pendiente no es
+el incremento $hk_i$. Compárense resultados en el mismo instante y,
+si se compara coste, cuéntense las evaluaciones de $f$; redondéese al final.
+Un caso particular no establece una superioridad universal.
+Consultas: soluciones de \exref{M2-E0323} y \exref{M2-E0298}.
+
+%
+\subsection*{Error, estabilidad y restricciones del paso}
+\label{CH03-B02}
+Frente a un valor de referencia $y_*$, el error absoluto es
+$|y_n-y_*|$; el relativo es $|y_n-y_*|/|y_*|$ cuando $y_*\ne0$.
+En $y'=-ay$, $a>0$, Euler da $y_{n+1}=(1-ah)y_n$.
+El módulo del multiplicador controla la amplificación; su signo afecta
+a la no negatividad. Ninguna de esas propiedades garantiza precisión.
+Para conservar un intervalo $I$, compruébese que el mapa de un paso lleva
+\emph{todo} $I$ dentro de $I$.
+
+Si en un nodo común el error tiene un patrón $Ch^p$ con términos restantes
+menores, la diferencia entre pasos $h$ y $h/2$ permite estimar el error de
+la malla fina por $|y_{h/2}-y_h|/(2^p-1)$. Es una estimación condicionada
+al patrón, no una cota certificada. Un valor final plausible o dos cifras
+impresas iguales no verifican la trayectoria. Recuérdense desigualdades y
+potencias. Consulta: solución de \exref{M2-E0311}.
+
+%
+\subsection*{Qué se observa y qué se contrasta}
+\label{CH03-B03}
+Un sensor puede medir un estado, una transformación o una media
+$\frac1{b-a}\int_a^b y(t)\,dt$. Escríbase esa relación antes de ajustar
+parámetros. Si un dato $d_i$ tiene una cota absoluta garantizada
+$\varepsilon_i$, los parámetros admisibles satisfacen
+\[
+ |H_i(\theta)-d_i|\le\varepsilon_i
+ \quad\text{para todos los datos de calibración }i.
+\]
+Se intersectan estas restricciones con el dominio físico de $\theta$.
+Una cota determinista no es una desviación típica.
+
+El dato reservado para contraste se compara con las predicciones de
+\emph{todo} el conjunto compatible. Usarlo para recalibrar elimina su
+independencia. Sepárense el error numérico, la incertidumbre de medida y
+la discrepancia entre modelo y realidad: un rechazo se refiere al conjunto
+de hipótesis utilizado. Recuérdense intervalos, logaritmos y media integral.
+Consulta: solución de \exref{M2-E0312}.
+
+%
+\subsection*{Comparar entradas mediante integrales}
+\label{CH03-B04}
+La fórmula lineal del capítulo 2 sigue siendo válida, por tramos, para
+entradas continuas a trozos y estado continuo. Con datos iniciales iguales,
+la diferencia de respuestas a $q_1,q_2$ es
+\[
+ y_1(t)-y_2(t)=\int_{t_0}^{t}
+ \exp\!\left(-\int_s^t p(r)\,dr\right)
+ [q_1(s)-q_2(s)]\,ds.
+\]
+Para $t\ge t_0$, el peso es positivo. El signo del integrando permite
+comparar respuestas cuando las entradas están ordenadas; otras
+restricciones sobre ellas requieren un argumento adicional.
+
+Una entrada admisible da un ejemplo, no una cota universal. Para establecer
+un extremo, pruébese primero la cota y después que se alcanza. Si el
+conjunto de entradas es convexo y el observable depende linealmente de
+ellas, las combinaciones convexas permiten obtener valores intermedios.
+Compruébese cada hipótesis. Consulta: solución de \exref{M2-E0375}.

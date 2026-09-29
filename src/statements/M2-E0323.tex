@@ -1,0 +1,15 @@
+Para el PVI
+\[
+y'=2-t-y,\qquad y(0)=0,
+\]
+se quiere aproximar \(y(1)\) con un presupuesto de dos evaluaciones del segundo miembro. Se consideran dos opciones:
+\[
+\begin{aligned}
+\text{Heun, un paso de }h=1:\quad
+&\widetilde y=y_0+h f(t_0,y_0),\\[-2pt]
+&y_H=y_0+\frac h2\big[f(t_0,y_0)+f(t_0+h,\widetilde y)\big];\\
+\text{Euler, dos pasos de }h=\tfrac12:\quad
+&y_{j+1}=y_j+h f(t_j,y_j),\qquad j=0,1.
+\end{aligned}
+\]
+Calcule ambas aproximaciones, indicando los dos puntos \((t,y)\) donde cada opción evalúa \(f\). Obtenga la solución exacta y decida cuál elegiría para esta tarea si el único criterio fuese el menor error absoluto con ese presupuesto. Explique por qué esta comparación concreta no establece una ordenación general de los dos métodos.

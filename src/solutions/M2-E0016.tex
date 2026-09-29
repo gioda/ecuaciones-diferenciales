@@ -1,0 +1,6 @@
+\noindent\textbf{Resultado.} \[y_p=\begin{cases}e^{cx}/(c^2-1),&c\ne\pm1,\\ xe^x/2,&c=1,\\-xe^{-x}/2,&c=-1.\end{cases}\] Todas las expresiones valen en \(\mathbb R\).
+
+\noindent\textit{Desarrollo.} Para \(c^2\ne1\), ensayar \(Ae^{cx}\) da \((D^2-1)(Ae^{cx})=A(c^2-1)e^{cx}\), de modo que \(A=(c^2-1)^{-1}\).
+Si \(c=1\) o \(-1\), el término exponencial es solución homogénea y ese ensayo no puede generar la fuerza. Se ensaya \(Axe^{cx}\); una derivación directa da
+\[(D^2-1)(Axe^{cx})=A[(c^2-1)x+2c]e^{cx}=2cAe^{cx}.\]
+Por tanto \(A=1/(2c)\), lo que produce los dos casos indicados. Esto verifica el residuo en toda la recta. No hay condiciones iniciales que fijen la parte homogénea: sumar \(C_1e^x+C_2e^{-x}\) produce otras soluciones particulares válidas, pero basta una por cada parámetro. La divergencia de la primera fórmula al acercarse a \(c=\pm1\) refleja el fallo del ensayo, no la inexistencia de solución.

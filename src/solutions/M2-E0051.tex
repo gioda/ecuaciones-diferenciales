@@ -1,0 +1,14 @@
+\noindent\textbf{Resultado.} \[|x|=\frac12-\frac4{\pi^2}\sum_{k=0}^{\infty}
+\frac{\cos((2k+1)\pi x)}{(2k+1)^2},\qquad -1\le x\le1.\]
+La suma es la extensión continua de período 2; en \(x=\pm1\) vale 1.
+
+\noindent\textit{Desarrollo.} La función es par, por lo que \(b_n=0\). Con semiperíodo 1,
+\(a_0=2\int_0^1x\,dx=1\). Para \(n\ge1\),
+\[a_n=2\int_0^1x\cos(n\pi x)\,dx
+=2\left[\frac{x\sin(n\pi x)}{n\pi}+\frac{\cos(n\pi x)}{n^2\pi^2}\right]_0^1
+=\frac{2((-1)^n-1)}{n^2\pi^2}.\]
+Solo quedan \(n=2k+1\), con coeficientes \(-4/((2k+1)^2\pi^2)\).
+La extensión periódica es continua y suave por tramos, de modo que la serie converge
+a ella, incluido el vértice \(x=0\) y las uniones \(\pm1\). Además, la suma de valores
+absolutos de los coeficientes es finita, lo que prueba convergencia uniforme.
+La esquina afecta a la derivada, no obliga a promediar valores distintos de la función.

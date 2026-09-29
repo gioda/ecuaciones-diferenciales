@@ -1,0 +1,84 @@
+%
+\subsection*{Transformada unilateral y existencia}
+\label{CH06-B01}
+La transformada de Laplace es
+$\mathcal L\{f\}(s)=\int_0^\infty e^{-st}f(t)\,dt$.
+La continuidad a trozos en cada intervalo finito y una cota
+$|f(t)|\le M e^{at}$ para $t$ suficientemente grande son condiciones
+suficientes de convergencia para $s>a$. Hay que comprobar por separado
+el origen y la cola: el factor exponencial no corrige una singularidad
+no integrable en $t=0$.
+\[
+\begin{array}{c|c|c}
+ f(t)&\mathcal L\{f\}(s)&\text{condición suficiente}\\\hline
+ t^n&n!/s^{n+1}&s>0,\ n=0,1,\ldots\\
+ e^{at}&1/(s-a)&s>a\\
+ \cos\omega t&s/(s^2+\omega^2)&s>0\\
+ \sin\omega t&\omega/(s^2+\omega^2)&s>0
+\end{array}
+\]
+En las dos últimas filas, $\omega>0$. Las condiciones indicadas se
+refieren a $s$, no al tiempo. Recuérdense integrales impropias y
+exponenciales.
+
+%
+\subsection*{Propiedades y reloj de la señal}
+\label{CH06-B02}
+Si $F=\mathcal L\{f\}$, la transformación es lineal y
+$\mathcal L\{e^{at}f(t)\}(s)=F(s-a)$. Para $a\ge0$, el escalón
+$H(t-a)$ vale cero antes de $a$ y uno después; su valor aislado en $a$
+no altera la transformada. La traslación temporal se escribe
+\[
+ \mathcal L\{H(t-a)f(t-a)\}(s)=e^{-as}F(s).
+\]
+Para transformar $H(t-a)g(t)$, póngase primero
+$f(\tau)=g(a+\tau)$: $\tau$ mide el tiempo transcurrido desde la
+activación. Reexpresar sólo una parte de la señal cambia el problema.
+
+Si $b>0$, $\mathcal L\{f(bt)\}(s)=F(s/b)/b$. Para una señal de periodo
+$T>0$, integrable y continua a trozos en un periodo,
+\[
+ \mathcal L\{f\}(s)=\frac{\int_0^T e^{-st}f(t)\,dt}{1-e^{-sT}},
+ \qquad s>0.
+\]
+Una señal que alcanza una meseta no es por ello periódica.
+Consulta: solución de \exref{M2-E0378}.
+
+%
+\subsection*{Transformar los datos e invertir}
+\label{CH06-B03}
+Con regularidad y crecimiento suficientes para integrar por partes,
+\[
+ \mathcal L\{y'\}=sY-y(0),\qquad
+ \mathcal L\{y''\}=s^2Y-sy(0)-y'(0).
+\]
+En orden $n$, se restan todos los términos
+$s^{n-1-j}y^{(j)}(0)$, $j=0,\ldots,n-1$. Sustitúyanse los datos con
+sus signos antes de despejar $Y$. Las fracciones parciales y completar
+cuadrados permiten reconocer la tabla; los factores $e^{-as}$ requieren
+una traslación temporal.
+
+Sepárese la respuesta debida a los datos de la debida a la entrada y
+compruébese después la función recuperada en la ecuación y en el PVI.
+Una solución puede existir para todo $t\ge0$ y crecer exponencialmente;
+su transformada sólo convergerá para ciertos valores de $s$. Esta región
+de convergencia no es un intervalo temporal. Consulta: solución de
+\exref{M2-E0122}.
+
+%
+\subsection*{Cambios de operación y continuidad}
+\label{CH06-B04}
+Una señal que cambia de ley en $a$ puede escribirse como ley anterior
+más $H(t-a)$ por la diferencia de leyes, expresada con el reloj adecuado.
+Para varios cambios se suman las correcciones. Si una fuerza es finita
+y continua a trozos, en el oscilador con masa no nula se conservan
+posición y velocidad al cambiar la fuerza; la aceleración puede saltar.
+Estas condiciones también enlazan las soluciones obtenidas por tramos.
+
+Laplace resulta útil para reunir entradas activadas; resolver por tramos
+puede ser más breve si hay pocos eventos. En ambos casos deben
+comprobarse los empalmes, los datos y el cierre de un ciclo cuando se
+pida. Que $x'(a)=0$ no demuestra que $a$ sea la primera parada, ni que
+el cuerpo permanezca detenido. Apagar la fuerza tampoco añade
+amortiguamiento. Consultas: soluciones de \exref{M2-E0043} y
+\exref{M2-E0314}.

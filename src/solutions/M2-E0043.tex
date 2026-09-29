@@ -1,0 +1,7 @@
+\noindent\textbf{Resultado.} \(x(t)=H(t-1)[1-\cos(t-1)]-H(t-5)[1-\cos(t-5)]\).
+
+\noindent\textit{Desarrollo.} La entrada es \(H(t-1)-H(t-5)\). Con condiciones nulas,
+\[X=\frac{e^{-s}-e^{-5s}}{s(s^2+1)}.\]
+La identidad \(1/[s(s^2+1)]=1/s-s/(s^2+1)\) corresponde a \(g(t)=1-\cos t\). Trasladar \(g\) a cada evento da la solución.
+Antes de uno, \(x=0\); entre uno y cinco, \(x=1-\cos(t-1)\); después de cinco, \(x=\cos(t-5)-\cos(t-1)\). Cada rama satisface la ecuación con su entrada. Como \(g(0)=g'(0)=0\), posición y velocidad son continuas en ambos cambios, mientras que la aceleración tiene el salto impuesto por la fuerza. Esta es la solución \(C^1\), \(C^2\) por tramos; no se exige una segunda derivada continua en los cambios de fuerza.
+Al apagarse la fuerza queda una oscilación libre acotada. No se deduce amortiguamiento de un modelo que no lo contiene. Laplace converge, por ejemplo, en \(\Re s>0\). El modelo se ha dado normalizado; no se inventa una conversión de sus unidades a un dispositivo físico particular.

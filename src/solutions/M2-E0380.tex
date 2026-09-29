@@ -1,0 +1,29 @@
+\noindent\textbf{Resultado.} La malla gruesa da \(2.50000\,\mathrm K\) en el centro. Al refinar, conservar \(\Delta t=0.25\,\mathrm s\) da \(r=1\) y un modo con multiplicador de módulo mayor que uno. Para conservar \(r=1/4\), tome \(\Delta t=0.0625\,\mathrm s\); ocho pasos dan \(2.81738\,\mathrm K\). La referencia es \(2.91213\,\mathrm K\): los errores son aproximadamente \(0.41213\,\mathrm K\) y \(0.09475\,\mathrm K\). Sólo el cálculo refinado satisface la tolerancia dada.
+
+\noindent\textit{Desarrollo.} La solución de referencia satisface los extremos, el perfil inicial y \(u_t=\kappa u_{xx}\): las dos derivadas aportan el mismo factor \(-\kappa\pi^2/L^2\). En el centro \(\sin(\pi/2)=1\), de modo que
+\[
+u(L/2,T)=10e^{-\pi^2/8}\,\mathrm K\simeq2.912129332\,\mathrm K.
+\]
+
+En la malla gruesa r=1/4. Hay un solo nodo interior y sus vecinos son extremos nulos, así que cada paso multiplica por \(1-2r=1/2\). Dos pasos hasta T dan \(10(1/2)^2=2.5\,\mathrm K\). El error absoluto es \(0.412129332\,\mathrm K\), aunque el paso cumple el criterio de estabilidad suministrado.
+
+Al dividir \(\Delta x\) por dos y conservar \(\Delta t\), r se multiplica por cuatro: sería uno. La pérdida de una condición suficiente por sí sola no demostraría inestabilidad, pero aquí se puede comprobar un modo concreto. Para la malla fina, \(\Delta x=0.5\) y \(m=3\),
+\[
+g_3=1-4\sin^2(3\pi/8)=-1-\sqrt2,
+\]
+con módulo mayor que uno. Una perturbación de ese modo crece. El perfil inicial exacto es sólo el modo m=1, para el que \(g_1=\sqrt2-1\) con r=1: observar únicamente ese modo ocultaría la inestabilidad frente a otras perturbaciones admisibles.
+
+Para conservar r=1/4, se divide \(\Delta t\) por cuatro: \(0.0625\,\mathrm s\). Se necesitan ocho pasos. La identidad
+\(\sin(a-b)+\sin(a+b)=2\sin a\cos b\)
+comprueba el multiplicador dado al introducir un modo en el esquema. Para m=1,
+\[
+g_1=1-\sin^2(\pi/8)=\frac{2+\sqrt2}{4}.
+\]
+En el centro el modo vale uno, por lo que la respuesta refinada es
+\[
+10\left(\frac{2+\sqrt2}{4}\right)^8\,\mathrm K
+\simeq2.817380697\,\mathrm K.
+\]
+Su error \(0.094748635\,\mathrm K\) es menor que \(0.10\,\mathrm K\). La malla fina supera el requisito estipulado; la gruesa no. Se han comparado el mismo punto y el mismo tiempo final, con precisión numérica suficiente para decidir una tolerancia próxima.
+
+La estabilidad controla crecimiento de perturbaciones, no el tamaño del error de discretización. Refinar sólo el tiempo mantiene un error espacial que no tiene por qué cumplir el requisito. Esta comparación de un modo y dos mallas tampoco demuestra un orden general de convergencia para cualquier dato inicial.

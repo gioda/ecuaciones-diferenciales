@@ -1,0 +1,49 @@
+\noindent\textbf{Resultado.} Se obtiene
+\[
+y_\varepsilon(t)=a+\varepsilon b(1-e^{-t/\varepsilon}),\qquad
+ y_\varepsilon'(t)=b e^{-t/\varepsilon}.
+\]
+La ecuación reducida tiene la solución \(y=a\), compatible con el otro dato inicial sólo si \(b=0\). Para todo \(t\ge0\),
+\[
+|y_\varepsilon(t)-a|\le\varepsilon|b|\longrightarrow0.
+\]
+La derivada vale \(b\) en cero, tiende a cero en cada tiempo positivo fijo y vale \(b/e\) en \(t=\varepsilon\). Si \(b\ne0\), su máximo error respecto de la derivada reducida en toda la semirrecta es \(|b|\), que no tiende a cero. Si \(b=0\), ambas soluciones y sus derivadas coinciden exactamente.
+
+\noindent\textit{Desarrollo.} Introducimos \(v_\varepsilon=y_\varepsilon'\). La ecuación y el dato de la derivada dan
+\[
+\varepsilon v_\varepsilon'+v_\varepsilon=0,\qquad
+ v_\varepsilon(0)=b,
+\]
+por lo que \(v_\varepsilon(t)=b e^{-t/\varepsilon}\). Integrando desde cero y usando \(y_\varepsilon(0)=a\), obtenemos
+\[
+y_\varepsilon(t)=a+\varepsilon b(1-e^{-t/\varepsilon}).
+\]
+Su segunda derivada es \(-b e^{-t/\varepsilon}/\varepsilon\); así se verifican tanto la EDO como los dos datos iniciales para cada \(\varepsilon>0\).
+
+Al poner \(\varepsilon=0\), la ecuación se reduce a \(y'=0\). El dato \(y(0)=a\) determina \(y(t)=a\), cuya derivada es cero. El dato adicional \(y'(0)=b\) sólo puede conservarse si \(b=0\). Si \(b\ne0\), la ecuación reducida y ese dato son incompatibles; no existe otra constante de integración con la que ajustarlo.
+
+Para todo \(t\ge0\), se cumple \(0\le1-e^{-t/\varepsilon}<1\), de modo que
+\[
+|y_\varepsilon(t)-a|\le\varepsilon|b|.
+\]
+La cota no depende de \(t\) y tiende a cero porque \(b\) es fijo. Por tanto, el desplazamiento se aproxima al de la solución reducida simultáneamente en toda la semirrecta. Si \(b\ne0\), el supremo del error es \(\varepsilon|b|\); se aproxima a ese valor cuando \(t\) aumenta, aunque no se alcance en tiempo finito.
+
+Las derivadas tienen un comportamiento distinto. En el instante inicial,
+\[
+y_\varepsilon'(0)=b
+\]
+para todo \(\varepsilon\). En un tiempo positivo fijo \(t\),
+\[
+y_\varepsilon'(t)=b e^{-t/\varepsilon}\longrightarrow0.
+\]
+Pero el tiempo \(t=\varepsilon\) se acerca a cero junto con el parámetro y satisface
+\[
+y_\varepsilon'(\varepsilon)=b/e.
+\]
+Para \(b\ne0\), esa diferencia con la derivada reducida no desaparece. De hecho,
+\[
+\sup_{t\ge0}|y_\varepsilon'(t)-0|=|b|,
+\]
+y el máximo ocurre en cero. No puede existir una cota del error de las derivadas válida para todos esos tiempos que tienda a cero con \(\varepsilon\). Si se empieza en cualquier \(t_0>0\) fijo, sí se tiene la cota \(|b|e^{-t_0/\varepsilon}\) para todos los tiempos posteriores, que tiende a cero.
+
+En el caso excepcional \(b=0\), \(y_\varepsilon=a\) y \(y_\varepsilon'=0\) para todo \(\varepsilon\); no existe discrepancia. Con datos fijos no hay un cambio de desplazamiento de amplitud persistente cerca de cero: es la derivada la que conserva una diferencia inicial, mientras el desplazamiento permanece a distancia no mayor que \(\varepsilon|b|\) de \(a\).

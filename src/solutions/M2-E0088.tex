@@ -1,0 +1,14 @@
+\noindent\textbf{Resultado.} Solo \(a=0\). En ese caso,
+\[y(x)=C\sin\pi x-\frac{x}{2\pi}\sin\pi x,\quad C\in\mathbb R.\]
+
+\noindent\textit{Desarrollo.} El problema homogéneo tiene núcleo generado por \(\sin(\pi x)\).
+Multiplicando por ese modo e integrando, dos integraciones por partes anulan el lado izquierdo:
+los términos de frontera se anulan por \(y(0)=y(1)=0\) y \(\sin0=\sin\pi=0\).
+La condición necesaria es
+\[0=\int_0^1(a-\cos\pi x)\sin\pi x\,dx=\frac{2a}\pi.\]
+Luego \(a=0\). Como \((D^2+\pi^2)(x\sin\pi x)=2\pi\cos\pi x\), una particular es
+\(-x\sin\pi x/(2\pi)\), que se anula en ambos extremos. Toda solución difiere de ella
+en una solución homogénea con ambas condiciones; el término \(\cos(\pi x)\) se excluye en 0 y queda \(C\sin(\pi x)\).
+La fórmula verifica directamente la ecuación y prueba suficiencia, además de la no unicidad.
+La presencia de una frecuencia coincidente no implica por sí sola imposibilidad: la compatibilidad
+se decide por la proyección sobre el modo con las condiciones dadas.

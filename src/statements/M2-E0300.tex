@@ -1,0 +1,22 @@
+Considere la ecuación de Laplace $u_{xx}+u_{yy}=0$ en el rectángulo
+$0<x<a$, $0<y<b$, con $a,b>0$ y lados verticales aislados:
+\[
+u_x(0,y)=u_x(a,y)=0,\qquad 0<y<b.
+\]
+Resuelva los tres apartados en el orden indicado.
+
+Los datos $f,g$ pertenecen a $C^2[0,a]$. Se busca una función continua
+en el rectángulo cerrado, armónica en su interior y con derivadas hasta
+orden dos continuas junto a los lados verticales para $0<y<b$.
+Las condiciones Neumann se imponen en esos lados abiertos. No se impone
+regularidad de las derivadas en los cuatro vértices; exigirla añadiría
+compatibilidades a los datos.
+
+\begin{enumerate}[label=(\alph*),ref=\alph*,leftmargin=*]
+\item Obtenga por separación de variables la solución con $u(x,0)=f(x)$ y
+$u(x,b)=0$. Incluya todos los modos espaciales admisibles.
+\item Utilice el resultado del apartado anterior para resolver el problema con
+$u(x,0)=f(x)$ y $u(x,b)=g(x)$.
+\item Aplique el apartado anterior a $a=\pi$, $b=1$,
+$f(x)=\cos x-\cos3x$ y $g(x)=\cos2x$.
+\end{enumerate}

@@ -1,0 +1,20 @@
+\noindent\textbf{Resultado.} Con \(H\) el escalón, \(u_A(t)=tH(t-2)\) y \(u_B(t)=(t-2)H(t-2)\). Para \(s>0\),
+\[
+U_A(s)=e^{-2s}\left(\frac1{s^2}+\frac2s\right),\qquad
+U_B(s)=\frac{e^{-2s}}{s^2}.
+\]
+No existen para \(s\le0\). Justo después de conectar, A empieza en dos y B en cero. Un salto finito y la elección de un valor aislado no impiden estas transformadas.
+
+\noindent\textit{Desarrollo.} El reloj absoluto marca \(t\) y el reiniciado marca \(t-2\) a partir de la conexión. Antes de ella ambas órdenes son cero. El valor exacto que se asigne en \(t=2\) no afecta a la transformada.
+
+En el programa A hay que expresar la orden mediante el tiempo transcurrido: \(t=(t-2)+2\). Por tanto se traslada la función \(g_A(v)=v+2\), no sólo \(v\). En B se traslada \(g_B(v)=v\). Con \(v=t-2\),
+\[
+U_A(s)=\int_2^\infty te^{-st}\,dt
+=e^{-2s}\int_0^\infty(v+2)e^{-sv}\,dv,
+\]
+\[
+U_B(s)=e^{-2s}\int_0^\infty ve^{-sv}\,dv.
+\]
+Para \(s>0\), integración por partes da \(\int_0^\infty ve^{-sv}dv=1/s^2\), mientras que \(\int_0^\infty e^{-sv}dv=1/s\). Se obtienen las dos expresiones indicadas. Para \(s=0\) divergen las integrales de rampas positivas; para \(s<0\) el núcleo crece y tampoco convergen.
+
+Los límites derechos en la conexión son dos y cero. A produce un salto de orden dos respecto de la orden anterior; B arranca de forma continua, aunque cambia su pendiente. Esto puede importar al actuador incluso cuando ambos programas tengan después la misma pendiente. Las señales son continuas a trozos, con crecimiento lineal, y satisfacen las hipótesis habituales para \(s>0\). Un salto finito es compatible con esas hipótesis. El factor \(e^{-2s}\) sólo expresa correctamente el retraso cuando se transforma la función adecuada del tiempo transcurrido. Los valores están normalizados: no se confunden voltios u otra unidad de mando con segundos físicos.

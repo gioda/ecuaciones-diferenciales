@@ -1,0 +1,77 @@
+%
+\subsection*{Desplazamiento, equilibrio y energía}
+\label{CH05-B01}
+Fijado el sentido positivo, $m x''$ es la suma de fuerzas. Medido desde
+el equilibrio estático, el oscilador lineal habitual cumple
+\[
+ m x''+c x'+kx=F(t),\qquad m>0,\quad k>0,\quad c\ge0.
+\]
+Aquí $k$ se mide en fuerza/longitud y $c$ en fuerza/velocidad. Si el
+equilibrio ya incorpora el peso, no se añade éste de nuevo. Un evento
+inicial exige precisar los datos inmediatamente después de él.
+
+La frecuencia natural angular es $\omega_0=\sqrt{k/m}$, en radianes por
+unidad de tiempo; la frecuencia ordinaria es $f_0=\omega_0/(2\pi)$, en
+hercios si el tiempo se mide en segundos. La energía
+$E=mx'^2/2+kx^2/2$ satisface $E'=F x'-c x'^2$.
+Esta identidad comprueba signos y disipación. Recuérdense la segunda ley
+de Newton y la derivación de productos. Consulta: solución de
+\exref{M2-E0017}.
+
+%
+\subsection*{Regímenes, amplitud y envolvente}
+\label{CH05-B02}
+Las raíces de $mr^2+cr+k=0$ clasifican la respuesta libre. Con $c>0$,
+$c^2<4mk$ da oscilación amortiguada; $c^2=4mk$, amortiguamiento crítico;
+$c^2>4mk$, sobreamortiguamiento. En el primer caso,
+\[
+ x(t)=R e^{-ct/(2m)}\cos(\omega_d t-\phi),\qquad
+ \omega_d=\sqrt{k/m-c^2/(4m^2)}.
+\]
+Las curvas $\pm R e^{-ct/(2m)}$ acotan la respuesta; sus valores no son
+automáticamente máximos de la trayectoria, que se localizan con $x'=0$.
+Tampoco una envolvente de una familia es necesariamente una trayectoria
+de esa familia.
+
+En un RLC serie ideal, la carga $q$ y la corriente $i=q'$ cumplen
+$Lq''+Rq'+q/C=V(t)$; las relaciones de inductor, resistencia y
+condensador fijan los signos según el circuito. Recuérdense raíces
+complejas y trigonometría. Consulta: solución de \exref{M2-E0374}.
+
+%
+\subsection*{Forzamiento periódico y resonancia}
+\label{CH05-B03}
+Para $F(t)=F_0\cos\omega t$, $F_0>0$, una respuesta periódica puede
+escribirse $A\cos(\omega t-\delta)$, donde
+\[
+ A=\frac{F_0}{\sqrt{(k-m\omega^2)^2+(c\omega)^2}},\qquad
+ \cos\delta=\frac{k-m\omega^2}{D},\quad
+ \sin\delta=\frac{c\omega}{D},
+\]
+con $D$ igual al denominador y $D\ne0$. Ambas razones fijan el cuadrante
+del desfase. Con $c>0$, el transitorio decae. Con $c=0$ y
+$\omega=\omega_0$, se necesita una particular resonante, proporcional
+a $t\sin(\omega_0t)$.
+
+El PVI conserva sus datos: al variar la frecuencia, el límite resonante
+se toma sobre la respuesta completa, incluida la homogénea. En un apoyo
+móvil $b(t)$, la elongación y la velocidad relativa son $x-b$ y $x'-b'$;
+el balance determina dónde aparecen. Consulta: solución de
+\exref{M2-E0117}.
+
+%
+\subsection*{Identificación y garantías}
+\label{CH05-B04}
+Una inversión algebraica puede producir varias ramas. Manténganse todas
+las que respetan unidades, signos y dominio físico hasta aplicar los datos
+que permiten distinguirlas. Ni un dato aislado ni un régimen final
+identifican necesariamente todos los parámetros o la ley resistente.
+
+Un intervalo garantizado describe valores posibles; no asigna
+probabilidades. Para afirmar una propiedad para todos los parámetros
+admisibles hace falta una cota válida en todo el conjunto. Un solo caso
+admisible que la incumpla refuta esa garantía. Al buscar máximos, indíquese
+si se optimiza sobre el tiempo de una trayectoria, sobre parámetros a
+tiempo fijo o sobre ambos: las preguntas son diferentes. Recuérdense
+desigualdades y restricciones físicas. Consultas: soluciones de
+\exref{M2-E0038} y \exref{M2-E0374}.

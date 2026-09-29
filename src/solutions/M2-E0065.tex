@@ -1,0 +1,37 @@
+\noindent\textbf{(a) Resultado.} \[X(t)=(I\cos t+A\sin t)C,\qquad C\in\mathbb R^2.\]
+
+\noindent\textit{Desarrollo.} Se verifica \(A^2=-I\), equivalente a los autovalores \(\pm i\).
+Por tanto la matriz fundamental real \(F=I\cos t+A\sin t\) cumple
+\(F'=A\cos t-I\sin t=AF\) y \(F(0)=I\). Su determinante es \(1\).
+Así \(FC\) es la solución general, con dos constantes libres, global y periódica de período \(2\pi\)
+para todo \(C\ne0\).
+
+\medskip
+
+\noindent\textbf{(b) Resultado.} \[X=C_1e^{-t}(0,1,-1)^T+C_2e^{3t}(2,3,3)^T+C_3e^{-2t}(-1,1,1)^T.\]
+
+\noindent\textit{Desarrollo.} El polinomio característico es \((r+1)(r-3)(r+2)\).
+Multiplicar A por \((0,1,-1)^T,\allowbreak (2,3,3)^T,\allowbreak (-1,1,1)^T\) produce respectivamente
+\(-1,3,-2\) veces cada vector. Al ser autovalores distintos, los vectores son independientes.
+Cada modo satisface \(X'=AX\), y la base completa da la solución general global.
+Solo los datos sin componente del modo \(e^{3t}\) decaen cuando \(t\to\infty\).
+
+\medskip
+
+\noindent\textbf{(c) Resultado.} \[X=C_1e^t(1,1,3)^T+e^{2t}\{C_2(1,0,1)^T+C_3(0,1,1)^T\}.\]
+
+\noindent\textit{Desarrollo.} El polinomio característico es \((r-1)(r-2)^2\).
+Para r=1 sirve \((1,1,3)^T\); para r=2, la condición es \(z=x+y\), de modo que
+\((1,0,1)^T,\allowbreak (0,1,1)^T\) forman una base de ese autoespacio. Los tres vectores
+son independientes. La raíz repetida conserva dos autovectores y no requiere factores t.
+Multiplicar por A verifica cada modo; tres constantes cubren cualquier dato inicial y la solución es global.
+
+\medskip
+
+\noindent\textbf{(d) Resultado.} \[X(t)=e^{2t}(I+tN)C,\qquad N=\begin{pmatrix}2&3&1\\-4&-6&-2\\8&12&4\end{pmatrix},\quad C\in\mathbb R^3.\]
+
+\noindent\textit{Desarrollo.} \(A=2I+N\). Como \(N=(1,-2,4)^T(2,3,1)\) y \(2-6+4=0\), se cumple
+\(N^2=0\), aunque \(N\ne0\). Así todos los autovalores son \(2\) y
+\(e^{At}=e^{2t}(I+tN)\). La derivada coincide con A por esta matriz y en t=0 resulta I.
+Además \((I+tN)^{-1}=I-tN\); la familia nunca pierde rango. El término t refleja
+la falta de tres autovectores independientes, sin exigir construir una forma de Jordan abstracta.

@@ -1,0 +1,30 @@
+\noindent\textbf{Resultado.} \[
+\widehat k=\frac{71}{700}\approx0.10143\,\mathrm h^{-1},\qquad
+\widehat z(4)=\frac{71}{175}\approx0.40571.
+\]
+Los residuos de calibración \(kt_i-z_i\) son aproximadamente \(-0.00857,0.01286,-0.00571\). Todos los parámetros compatibles con la calibración están en \([29/300,21/200]\,\mathrm h^{-1}\); el cuarto dato exige \([0.135,0.145]\,\mathrm h^{-1}\). Son intervalos disjuntos. El modelo constante y la cota de error no explican conjuntamente las cuatro lecturas.
+
+\noindent\textit{Desarrollo.} El PVI propuesto tiene solución \(A(t)=e^{-kt}\), por lo que \(z(t)=kt\). Esto permite trabajar directamente en la escala observada, sin aproximar numéricamente la EDO. Con las tres lecturas de calibración,
+\[
+J'(k)=2\sum_{i=1}^3t_i(kt_i-z_i),\qquad J''(k)=2(1^2+2^2+3^2)=28>0.
+\]
+El mínimo único se alcanza en
+\[
+\widehat k=\frac{1(0.11)+2(0.19)+3(0.31)}{1^2+2^2+3^2}
+=\frac{1.42}{14}=\frac{71}{700}\,\mathrm h^{-1}>0.
+\]
+Los residuos \(\widehat kt_i-z_i\) son \(-3/350\), \(9/700\) y \(-1/175\); sus valores absolutos son menores que \(0.02\). La predicción reservada es \(\widehat z(4)=71/175\), cuya diferencia con \(0.56\) es \(-27/175\approx-0.15429\), muy superior en módulo a la cota de lectura.
+
+El fallo de una estimación puntual no descartaría por sí solo todos los demás valores de \(k\). Para comprobarlos, la condición \(|kt_i-z_i|\le0.02\) equivale a
+\[
+\begin{array}{c|c}
+t_i&\text{intervalo admisible para }k\ (\mathrm h^{-1})\\\hline
+1&[0.09,0.13]\\
+2&[0.085,0.105]\\
+3&[0.29/3,0.33/3]\\
+4&[0.54/4,0.58/4]=[0.135,0.145].
+\end{array}
+\]
+La intersección de los tres primeros es \([29/300,21/200]\), aproximadamente \([0.09667,0.105]\). No intersecta el intervalo exigido por el dato reservado. Equivalentemente, los parámetros compatibles con calibración predicen \(z(4)\in[0.38667,0.42]\), separado de \([0.54,0.58]\).
+
+La cuarta lectura aporta una comprobación que no intervino en la estimación del parámetro. La separación de intervalos demuestra que la discrepancia persiste para todos los parámetros compatibles con las tres lecturas de calibración, no sólo para el mínimo de J. El ensayo rechaza la combinación de tasa constante, condición inicial exacta y error acotado que se ha supuesto. Si las garantías del ensayo son correctas, al menos la descripción mediante una única tasa constante falla. Los datos solos no identifican una causa física concreta: un cambio de condiciones, otro mecanismo de desactivación u otra discrepancia requerirían observaciones adicionales. Como se usó la solución exacta, este resultado no es un error de discretización ni se corrige reduciendo un paso de integración.

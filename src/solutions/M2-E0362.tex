@@ -1,0 +1,84 @@
+\noindent\textbf{Resultado.} El balance es
+\[
+\frac{dV}{dt}=-Q,\qquad \frac{dm}{dt}=c_sQ-\lambda m,
+\qquad Q=\frac{\alpha V}{R_0+\beta m},
+\qquad (V(0),m(0))=(1\,\mathrm L,0),
+\]
+con \(c_s=1\,\mathrm{g/L}\) y \(\alpha=1\,\mathrm{kPa/L}\). Para los valores numéricos \(v=V/(1\,\mathrm L)\), \(z=m/(1\,\mathrm g)\), \(\tau=t/(1\,\mathrm{min})\), se obtiene
+\[
+v'=-\frac{v}{1+z},\qquad z'=\frac{v}{1+z}-z.
+\]
+Durante \(0\le\tau\le1/2\), \(v\ge e^{-\tau}>0.60\) y \(0\le z\le1-e^{-\tau}<0.40\). Sin embargo,
+\[
+v(1/2)\ge\left(\frac3{4e^{1/2}-1}\right)^{3/4}
+=0.626610\ldots,
+\]
+de modo que se recogen como máximo \(0.373390\,\mathrm L<0.38\,\mathrm L\). El filtro de resistencia variable no cumple la producción. Dos pasos de Heun de \(0.25\,\mathrm{min}\) estiman \(0.34614\,\mathrm L\), sin constituir una cota de error.
+
+El cartucho de resistencia constante sí cumple: \(v=e^{-\tau}\), \(z=\tau e^{-\tau}\), y recoge \(1-e^{-1/2}=0.393469\ldots\,\mathrm L\); sus mínimos y máximos relevantes son \(V_{\min}=0.606530\ldots\,\mathrm L\), \(m_{\max}=0.303265\ldots\,\mathrm g\).
+
+\noindent\textit{Desarrollo.} El volumen disminuye por el caudal de filtrado. El sólido retenido aumenta a razón de concentración por caudal, mientras el rascador retira masa sin una pérdida apreciable adicional de líquido. Por tanto
+\[
+V'=-Q,\qquad m'=c_sQ-\lambda m,\qquad
+Q=\frac{\alpha V}{R_0+\beta m},
+\]
+con \(c_s=1\,\mathrm{g/L}\), \(\alpha=1\,\mathrm{kPa/L}\) y las restantes constantes del enunciado. En particular, \(c_sQ\) y \(\lambda m\) están en \(\mathrm{g/min}\); \(\alpha V/(R_0+\beta m)\) está en \(\mathrm{L/min}\). Inicialmente \(V=1\,\mathrm L\) y \(m=0\).
+
+Escribimos los valores numéricos \(v=V/(1\,\mathrm L)\), \(z=m/(1\,\mathrm g)\) y \(\tau=t/(1\,\mathrm{min})\). Las derivadas respecto de \(\tau\) satisfacen
+\[
+v'=-q,\qquad z'=q-z,\qquad q=\frac{v}{1+z},
+\qquad v(0)=1,\quad z(0)=0.
+\]
+La realimentación está en el denominador: una masa depositada mayor reduce el caudal y, a su vez, modifica tanto el vaciado como la entrada de sólido al depósito sobre el filtro.
+
+Primero justificamos las cotas físicas. Mientras \(z\ge0\),
+\[
+v(\tau)=\exp\left(-\int_0^\tau\frac{ds}{1+z(s)}\right)>0.
+\]
+En \(z=0\), se tiene \(z'=v\ge0\), por lo que la solución no sale hacia masas negativas. Así \(0<v\le1\), \(0\le q\le v\le1\) y no se alcanza el denominador singular. De \(v'\ge-v\) y \(z'+z=q\le1\) se obtiene por factores integrantes
+\[
+v(\tau)\ge e^{-\tau},\qquad 0\le z(\tau)\le1-e^{-\tau}.
+\]
+Son cotas para todo el intervalo. En \(0\le\tau\le1/2\) aseguran \(v\ge e^{-1/2}=0.606530\ldots>0.60\) y \(z\le1-e^{-1/2}=0.393469\ldots<0.40\). La solución permanece en una región acotada donde las leyes son regulares.
+
+Para decidir la producción hace falta una cota más informativa que \(v\ge e^{-\tau}\). De \(q\le1\) se deducen \(v\ge1-\tau\) y \(z\le\tau\). Por ello, en este medio minuto,
+\[
+q=\frac{v}{1+z}\ge\frac{1-\tau}{1+\tau}\ge\frac13.
+\]
+La desigualdad \(z'+z\ge1/3\) implica
+\[
+z(\tau)\ge\frac{1-e^{-\tau}}3.
+\]
+En consecuencia,
+\[
+\frac{v'}v=-\frac1{1+z}\ge-\frac3{4-e^{-\tau}}.
+\]
+Integrando desde cero,
+\[
+\log v(\tau)\ge-\frac34\log\left(\frac{4e^\tau-1}{3}\right),
+\qquad
+v(\tau)\ge\left(\frac3{4e^\tau-1}\right)^{3/4}.
+\]
+Al terminar, \(v(1/2)\ge0.6266103485\ldots\). El volumen recogido no supera \(0.3733896515\ldots\,\mathrm L\), menor que el objetivo de \(0.38\,\mathrm L\). Así se demuestra el incumplimiento sin depender de un error numérico desconocido.
+
+Para una estimación breve elegimos Heun con \(h=1/4\) en los valores numéricos. Si \(w=(v,z)\) y \(F(w)=(-v/(1+z),v/(1+z)-z)\), cada paso es
+\[
+\widetilde w=w_n+hF(w_n),\qquad
+w_{n+1}=w_n+\frac h2\bigl(F(w_n)+F(\widetilde w)\bigr).
+\]
+El predictor se forma para las dos componentes antes de evaluar la segunda pendiente. En el primer paso, \(\widetilde w=(0.75,0.25)\) y \(w_1=(0.8,0.16875)\). En el segundo,
+\[
+F(w_1)=(-0.68449198\ldots,\;0.51574198\ldots),
+\]
+\[
+\widetilde w=(0.62887701\ldots,\;0.29768549\ldots),
+\quad F(\widetilde w)=(-0.48461434\ldots,\;0.18692885\ldots).
+\]
+Resulta \(w_2=(0.65386171\ldots,0.25658385\ldots)\), y la producción estimada es \((1-v_2)\,\mathrm L\simeq0.34614\,\mathrm L\). Los cálculos son consistentes con las cotas, pero aquí no se ha establecido una cota del error de Heun. La garantía de incumplimiento procede de las desigualdades anteriores, no de los dos pasos.
+
+Para el cartucho alternativo, \(R=R_0\) hace \(q=v\). Entonces
+\[
+v'=-v,\qquad z'+z=v,
+\qquad v=e^{-\tau},\quad z=\tau e^{-\tau}.
+\]
+El volumen decrece y \(z'=(1-\tau)e^{-\tau}>0\) en el intervalo. Por tanto el mínimo de volumen es \(e^{-1/2}\,\mathrm L>0.60\,\mathrm L\) y el máximo de masa es \(\tfrac12e^{-1/2}\,\mathrm g<0.40\,\mathrm g\). Se recogen \((1-e^{-1/2})\,\mathrm L>0.38\,\mathrm L\). La alternativa cumple los tres requisitos: mantener la resistencia limpia cambia la decisión, aunque las leyes de captura y retirada permanezcan iguales.

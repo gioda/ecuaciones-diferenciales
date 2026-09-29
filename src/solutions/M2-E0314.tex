@@ -1,0 +1,52 @@
+\noindent\textbf{Resultado.} Con valores numéricos en SI, \(x''+2x'+x=F(t)\), \(x(0)=x'(0)=0\). Posición y velocidad son continuas; la aceleración puede saltar.
+\[
+b=1-\frac2e\approx0.26424>0,\qquad
+x(2)=(1-e^{-1})^2\approx0.39958\,\mathrm m.
+\]
+Para \(t\ge2\), con \(\tau=t-2\),
+\[
+x(t)=(1-e^{-1})^2(1+\tau)e^{-\tau}.
+\]
+La pieza retorna hacia el equilibrio para \(t>2\).
+
+\noindent\textit{Desarrollo.} La segunda ley de Newton, con sentido positivo igual al de la fuerza del primer intervalo, da \(mx''=F-cx'-kx\). En las unidades fijadas,
+\[
+x''+2x'+x=F(t),\qquad
+F(t)=\begin{cases}1,&0\le t<1,\\ b,&1\le t<2,\\0,&t\ge2.\end{cases}
+\]
+Cada término del balance original es una fuerza. El desplazamiento y la velocidad no sufren saltos: las fuerzas son finitas, sin impulsos, y se resuelve empalmando los estados de un sistema de primer orden para \((x,x')\). La ecuación permite que \(x''\) cambie instantáneamente al cambiar \(F\). Para la masa unitaria, los saltos de aceleración son \(b-1\) en \(t=1\) y \(-b\) en \(t=2\).
+
+Laplace y traslación temporal aprovechan que hay dos cambios de una fuerza constante. También es válido resolver por tramos conservando \(x\) y \(x'\). Escribimos, con \(H\) el escalón,
+\[
+F(t)=1+(b-1)H(t-1)-bH(t-2),\qquad
+X(s)=\frac{1+(b-1)e^{-s}-be^{-2s}}{s(s+1)^2}.
+\]
+La respuesta desde reposo a un escalón unitario es
+\[
+g(t)=1-(1+t)e^{-t}\quad(t\ge0),\qquad g(t)=0\quad(t<0).
+\]
+Se obtiene de \(1/[s(s+1)^2]=1/s-1/(s+1)-1/(s+1)^2\), o sustituyendo \(g\) en la ecuación. Cumple \(g(0)=g'(0)=0\). La solución completa, para cualquier \(b\), es
+\[
+x(t)=g(t)+(b-1)g(t-1)-bg(t-2).
+\]
+Cada término desplazado incorpora una contribución con posición y velocidad iniciales nulas. Así quedan verificados los empalmes y los datos originales.
+
+Como \(g'(t)=te^{-t}\) para \(t\ge0\),
+\[
+x'(2)=2e^{-2}+(b-1)e^{-1}=0
+\quad\Longleftrightarrow\quad b=1-2/e>0.
+\]
+Para este valor, \(x'(t)=te^{-t}>0\) en \(0<t\le1\) y
+\[
+x'(t)=te^{-t}-\frac2e(t-1)e^{-(t-1)}=(2-t)e^{-t}>0
+\quad(1\le t<2).
+\]
+La primera parada después de arrancar ocurre precisamente en \(t=2\). El desplazamiento allí es
+\[
+x(2)=1-3e^{-2}-\frac2e(1-2e^{-1})=1-2e^{-1}+e^{-2}=(1-e^{-1})^2.
+\]
+Después del apagado se resuelve la ecuación homogénea con esos estados, \(x(2)=x_2>0\) y \(x'(2)=0\). Su raíz doble \(-1\) da \(x(t)=(A+B\tau)e^{-\tau}\), \(\tau=t-2\); los datos fijan \(A=B=x_2\). De ahí
+\[
+x'(t)=-x_2\tau e^{-\tau}<0\quad(t>2),\qquad x''(2^+)=-x_2<0.
+\]
+La pieza retorna hacia el equilibrio. Durante el segundo intervalo, la fuerza externa positiva actúa junto con la fuerza del resorte y la del amortiguador; el balance de las tres determina la aceleración y permite llegar a velocidad cero en el instante previsto.

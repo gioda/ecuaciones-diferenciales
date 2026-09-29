@@ -1,0 +1,41 @@
+\noindent\textbf{Resultado.} \[
+T_1'=-\tfrac12(T_1-T_2),\qquad T_2'=\tfrac13(T_1-T_2),\qquad 2T_1+3T_2=220.
+\]
+El predictor es \((62,32)\) y Heun da \((66.5,29)\,{}^\circ\mathrm C\). La referencia es
+\[
+T_1(t)=44+36e^{-5t/6},\qquad T_2(t)=44-24e^{-5t/6}.
+\]
+En \(t=0.6\), da aproximadamente \((65.8351,29.4433)\,{}^\circ\mathrm C\); conservar calor no elimina el error de aproximación.
+
+\noindent\textit{Desarrollo.} La potencia que sale del cuerpo 1 entra en el 2. Por tanto,
+\[
+2T_1'=-(T_1-T_2),\qquad3T_2'=T_1-T_2.
+\]
+Las potencias se expresan en \(\mathrm{kJ/min}\); las derivadas térmicas en \(\mathrm{K/min}\). Las diferencias en Celsius coinciden numéricamente con las diferencias en kelvin. Sumando los balances,
+\[
+\frac{d}{dt}(2T_1+3T_2)=0,\qquad2T_1(0)+3T_2(0)=220.
+\]
+La energía se mide respecto de un origen térmico común; cambiar ese origen sólo suma una constante a la combinación conservada.
+
+La primera pendiente vectorial es \(\mathbf f(80,20)=(-30,20)\). Ambos componentes usan el mismo estado inicial. Así,
+\[
+\widetilde{\mathbf T}=(80,20)+0.6(-30,20)=(62,32).
+\]
+La diferencia predicha es 30 grados, luego la segunda pendiente es \(\mathbf f(62,32)=(-15,10)\) y
+\[
+\mathbf T_1=(80,20)+0.3[(-30,20)+(-15,10)]=(66.5,29).
+\]
+Se comprueba \(2(62)+3(32)=220\) en el predictor y \(2(66.5)+3(29)=220\) en la corrección.
+
+Para este sistema, cada pendiente cumple \(2f_1+3f_2=0\) para cualquier vector de temperaturas. Cualquier suma ponderada de esas pendientes, incluida la de Heun, mantiene el invariante en aritmética exacta.
+
+Para la referencia, \(D=T_1-T_2\) satisface
+\[
+D'=-\left(\frac12+\frac13\right)D=-\frac56D,\qquad D(0)=60.
+\]
+Así \(D=60e^{-5t/6}\). Resolver junto con \(2T_1+3T_2=220\) da
+\[
+T_1=44+\frac35D=44+36e^{-5t/6},\qquad
+T_2=44-\frac25D=44-24e^{-5t/6}.
+\]
+Cumplen los datos iniciales, los balances y el equilibrio común de \(44\,{}^\circ\mathrm C\). En \(t=0.6\) la exponencial es \(e^{-1/2}\); se obtienen \(65.83510375\) y \(29.44326417\). Los errores de Heun son aproximadamente \(+0.66490\) y \(-0.44326\) grados: su suma ponderada es cero, pero ninguno es cero. Una sola cantidad conservada restringe dos temperaturas y no determina su reparto exacto.

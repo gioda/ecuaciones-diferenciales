@@ -1,0 +1,41 @@
+\noindent\textbf{Resultado.} En \([-L,L]\), las extensiones son
+\[
+F(x)=F_0\frac{x}{L}\left(1-\frac{|x|}{L}\right),\qquad
+M(x)=F_0\frac{|x|}{L}\left(1-\frac{|x|}{L}\right),
+\]
+repetidas con periodo \(2L\). El registro con signo es impar y admite una serie de senos; el módulo es par y admite una serie de cosenos con término medio. Sus medias espaciales son \(0\) y \(F_0/6\), respectivamente. El primer coeficiente no nulo del registro con signo es
+\[
+b_1=\frac{8F_0}{\pi^3}.
+\]
+La reflexión invierte el signo de la componente, pero no el módulo.
+
+\noindent\textit{Desarrollo.} La lectura usa un eje global fijo. Al reflejar una flecha paralela a la guía, se invierte su dirección sobre ese eje. Por tanto, la regla del montaje impone \(F(-x)=-F(x)\). Como todas las fuerzas son paralelas a la guía, su módulo es precisamente \(|F(x)|\), y cumple \(M(-x)=M(x)\).
+
+Usando el perfil de la mitad derecha, las extensiones en un periodo son
+\[
+F(x)=F_0\frac{x}{L}\left(1-\frac{|x|}{L}\right),
+\qquad
+M(x)=F_0\frac{|x|}{L}\left(1-\frac{|x|}{L}\right).
+\]
+Ambas se anulan en cero y en los extremos del periodo, de modo que la repetición no exige un salto de valor en las uniones. La primera es impar y la segunda es par. En la convención indicada, \(F\) sólo necesita senos: sus coeficientes constante y de coseno son cero. Para \(M\), todos los coeficientes de seno son cero y se conservan la constante y los cosenos.
+
+La media espacial de \(F\) es cero por imparidad. Para el módulo,
+\[
+\overline M=\frac1{2L}\int_{-L}^{L}M(x)\,dx
+=\frac{F_0}{L}\int_0^L\frac{x}{L}\left(1-\frac{x}{L}\right)\,dx
+=\frac{F_0}{6}.
+\]
+Una media nula de la componente no implica ausencia de fuerza: las lecturas con sentidos opuestos se cancelan en esa media, mientras el módulo permanece no negativo.
+
+Para el primer coeficiente de seno de \(F\), con \(u=x/L\),
+\[
+b_1=\frac2L\int_0^L F_+(x)\sin\left(\frac{\pi x}{L}\right)\,dx
+=2F_0\int_0^1 u(1-u)\sin(\pi u)\,du.
+\]
+Dos integraciones por partes, cuyos primeros términos de borde se anulan, dan
+\[
+\int_0^1u(1-u)\sin(\pi u)\,du
+=\frac1\pi\int_0^1(1-2u)\cos(\pi u)\,du
+=\frac4{\pi^3}.
+\]
+Así, \(b_1=8F_0/\pi^3>0\), que es el primer coeficiente no nulo. Tiene las mismas unidades de fuerza que \(F_0\). No es necesario calcular las dos series completas para justificar la elección de representación.

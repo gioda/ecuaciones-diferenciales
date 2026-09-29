@@ -1,0 +1,8 @@
+Se quiere determinar dos pesos constantes \(\alpha\) y \(\beta\) en la regla
+\[
+\widetilde y=y_n+h f(t_n,y_n),\qquad
+ y_{n+1}=y_n+h\big[\alpha f(t_n,y_n)+\beta f(t_n+h,\widetilde y)\big].
+\]
+Los pesos no deben depender de \(t_n\), de \(h\) ni del PVI. Se exige que un paso dé el incremento exacto para toda ecuación \(y'=A+Bt\), con \(A,B\in\mathbb R\), desde cualquier \(t_n\) y para cualquier \(h>0\).
+
+Deduzca los pesos a partir de esa exigencia e identifique el método resultante. Aplique después la regla a \(y'=y\), \(y(0)=1\), con \(h=1/2\), y compare con el valor exacto. Explique por qué la exactitud para los segundos miembros \(A+Bt\) no implica exactitud para cualquier EDO lineal de primer orden.

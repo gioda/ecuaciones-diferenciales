@@ -1,0 +1,38 @@
+\noindent\textbf{Resultado.} El intervalo exacto de posibilidades es
+\[
+e^{-3/2}-e^{-2}\le x(2)\le e^{-1}-e^{-3/2}.
+\]
+El extremo inferior se alcanza aportando potencia uno en \([0,1/2]\); el superior, en \([1/2,1]\), con potencia cero fuera del tramo elegido. La temperatura retiene más del aporte tardío porque ha tenido menos tiempo para perderlo.
+
+\noindent\textit{Desarrollo.} El factor integrante \(e^t\) da la solución por tramos, continua,
+\[
+x(t)=e^{-t}\int_0^t e^s u(s)\,ds.
+\]
+Como la entrada se apaga después de uno,
+\[
+x(2)=\int_0^1 e^{s-2}u(s)\,ds.
+\]
+La ponderación \(w(s)=e^{s-2}\) es estrictamente creciente: el aporte tardío sufre menos pérdida antes de medir.
+
+Sea \(u_E=1\) en \([0,1/2]\) y cero en el resto; sea \(u_L=1\) en \([1/2,1]\) y cero en el resto. Sus valores aislados en los extremos no afectan a las integrales. Ambas entradas son continuas a trozos, respetan la cota de potencia y aportan exactamente un medio. Producen
+\[
+x_E(2)=\int_0^{1/2}e^{s-2}ds=e^{-3/2}-e^{-2},
+\qquad
+x_L(2)=\int_{1/2}^1e^{s-2}ds=e^{-1}-e^{-3/2}.
+\]
+
+Para demostrar que no existe una temperatura mayor, usemos que cualquier entrada admisible tiene la misma integral que \(u_L\):
+\[
+\int_0^1w(s)(u-u_L)\,ds
+=\int_0^1\bigl(w(s)-w(1/2)\bigr)(u-u_L)\,ds\le0.
+\]
+En la mitad temprana, el primer factor es no positivo y el segundo es \(u\ge0\). En la mitad tardía, el primero es no negativo y el segundo es \(u-1\le0\). Cada contribución es no positiva. Análogamente,
+\[
+\int_0^1w(s)(u-u_E)\,ds
+=\int_0^1\bigl(w(s)-w(1/2)\bigr)(u-u_E)\,ds\ge0:
+\]
+en la primera mitad ambos factores son no positivos y en la segunda ambos son no negativos. Quedan probadas las dos cotas con un argumento elemental de signos.
+
+Son cotas alcanzadas, no sólo límites de pulsos cada vez más estrechos. Además toda temperatura intermedia se obtiene con \(u_\theta=(1-\theta)u_E+\theta u_L\), \(0\le\theta\le1\): sigue siendo admisible y la respuesta es la misma combinación de los extremos. Por tanto el conjunto de posibilidades es exactamente el intervalo cerrado señalado.
+
+Los extremos valen aproximadamente \(0.08779\) y \(0.14475\). La igualdad de energía normalizada no implica igualdad de temperatura al medir, porque el modelo pierde temperatura durante el tiempo transcurrido. Conocer además cuándo se aportó la energía reduce esa incertidumbre. El cálculo no necesita datos aleatorios, ajuste de parámetros ni teoría de control óptimo.

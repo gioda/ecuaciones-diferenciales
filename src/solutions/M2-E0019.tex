@@ -1,0 +1,15 @@
+\noindent\textbf{(a) Resultado.} $y=x-\dfrac{Ce^{2x}-1}{Ce^{2x}+1}$, donde el denominador no se anula, y $y=x-1$; la familia incluye $y=x+1$ con $C=0$.
+
+\noindent\textit{Desarrollo.} Ponga $v=x-y$. Entonces $v^{\prime}=1-v^2$. Los equilibrios son $v=\pm1$, es decir, $y=x\mp1$. Fuera de ellos, integrar $dv/(1-v^2)=dx$ y absorber el signo en la constante da $v=(Ce^{2x}-1)/(Ce^{2x}+1)$. Esta expresión incluye $v=-1$ con $C=0$; se añade $v=1$. Se toman las componentes de $\{x:Ce^{2x}+1\ne0\}$. Como $v^{\prime}=1-v^2$, se verifica $y^{\prime}=1-v^{\prime}=v^2=(x-y)^2$. El campo es suave, por lo que no hay empalmes adicionales en los equilibrios.
+
+\medskip
+
+\noindent\textbf{(b) Resultado.} $y=x(\ln|x|+C)$ en intervalos contenidos en $x>0$ o $x<0$.
+
+\noindent\textit{Desarrollo.} La ecuación requiere $x\ne0$. Con $y=xv$, $v+xv^{\prime}=v+1$ y $v^{\prime}=1/x$. Así $v=\ln|x|+C$ y $y=x(\ln|x|+C)$. Su derivada es $\ln|x|+C+1$, igual a $(y+x)/x$. No existe una solución de la ecuación explícita cuyo intervalo contenga cero.
+
+\medskip
+
+\noindent\textbf{(c) Resultado.} $y=-\ln(1+Ce^x)$ sobre cualquier componente de $1+Ce^x>0$.
+
+\noindent\textit{Desarrollo.} Tome $z=e^{-y}>0$. Como $z^{\prime}=-e^{-y}y^{\prime}$, la ecuación equivale a $z-z^{\prime}=1$. Por tanto $z=1+Ce^x$ y $y=-\ln(1+Ce^x)$, con la positividad indicada. Directamente $1+y^{\prime}=1/(1+Ce^x)$, cuyo producto con $e^{-y}=1+Ce^x$ es uno. Para $C=0$ aparece la solución constante $y=0$; no se pierde ninguna solución real porque la transformación es invertible en $z>0$.

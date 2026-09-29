@@ -1,0 +1,15 @@
+\noindent\textbf{(a) Resultado.} $V=50+5t$, $S=10t$ para $0\le t\le3$; $V=68-t$, $S=2(68-t)-\dfrac{100}{65^6}(68-t)^6$ para $3\le t<68$. V se mide en litros y S en gramos.
+
+\noindent\textit{Desarrollo.} Antes de la salida, $V^{\prime}=5$ y $S^{\prime}=5\cdot2=10$, con $V(0)=50$, $S(0)=0$. Por ello $V(3)=65$ y $S(3)=30$. Después, $V^{\prime}=5-6=-1$, así $V=68-t$ y el vaciado ocurre en $t=68$. El balance de sal es $S^{\prime}=10-6S/V$. El factor integrante $(68-t)^{-6}$ da, al integrar, $S=2V+CV^6$. El enlace $S(3)=30$ fija $C=(30-130)/65^6=-100/65^6$. Las fórmulas coinciden en t=3 y satisfacen los balances por tramos. La cantidad permanece no negativa mientras hay líquido.
+
+\medskip
+
+\noindent\textbf{(b) Resultado.} $c=\dfrac{2t}{10+t}$ g/L para $0\le t\le3$ y $c=2-\dfrac{100}{65^6}(68-t)^5$ g/L para $3\le t<68$. Cuando $t\to68^-$, $S\to0$ y $c\to2$ g/L; el modelo no define concentración ni evolución posterior en un tanque vacío.
+
+\noindent\textit{Desarrollo.} Dividir S por V da las expresiones indicadas, que coinciden en $c(3)=30/65=6/13$. En el segundo tramo la concentración crece hacia la de entrada, 2 g/L, pues la mezcla inicial más diluida se va sustituyendo. El volumen se hace cero en un tiempo finito; por tanto no existe un régimen de mezcla bien definido para tiempo arbitrariamente grande con los caudales prescritos. El límite lateral $c\to2$ no convierte el cociente $S/V$ en una concentración definida en $t=68$. A partir de allí habría que especificar otro modelo de operación.
+
+\medskip
+
+\noindent\textbf{(c) Resultado.} $V_*=65(13/60)^{1/5}\approx47.8709$ L; $t_*=68-V_*\approx20.1291$ min; $S_*=5V_*/3\approx79.7849$ g.
+
+\noindent\textit{Desarrollo.} En el primer tramo S crece. En el segundo, $S^{\prime}=-2+(600/65^6)V^5$. El único cero cumple $V^5=65^6/300$, equivalente a $V_*=65(13/60)^{1/5}$. Como V decrece desde 65 a 0, la derivada de S pasa de positiva a negativa: es el máximo global. El balance en el máximo exige $10=6S/V$, por lo que $S_*=5V_*/3$. El tiempo es $68-V_*$. La comparación con el punto de cambio S(3)=30 y los extremos S(0)=0, \(S(68^-)=0\) confirma la interpretación.

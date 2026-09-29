@@ -1,0 +1,10 @@
+\noindent\textbf{Resultado.} \(\omega_0=2\,\mathrm{rad/s}\), \(f=1/\pi\,\mathrm{Hz}\), \(A=1/\sqrt2\,\mathrm m\).
+
+\noindent\textit{Desarrollo.} Tomamos \(t=0\) en la liberación y \(x>0\) hacia delante, medido desde el equilibrio posterior del extremo ya fijo. El modelo supone un resorte lineal, masa puntual, ausencia de rozamiento y las condiciones poschoque indicadas; no modela el choque.
+La fuerza recuperadora es \(-kx\), por lo que \(2x''=-8x\), \(x(0)=0.5\), \(x'(0)=1\).
+Es una EDO lineal homogénea con frecuencia angular \(\omega_0=\sqrt{k/m}=2\,\mathrm{s^{-1}}\). La solución con esos datos es
+\[x(t)=\tfrac12\cos(2t)+\tfrac12\sin(2t),\quad t\ge0.\]
+Así \(f=\omega_0/(2\pi)=1/\pi\,\mathrm{Hz}\) y la amplitud vale \(\sqrt{(1/2)^2+(1/2)^2}=1/\sqrt2\,\mathrm m\).
+La sustitución verifica \(x''+4x=0\) y ambos datos. Como comprobación física, la energía inicial es
+\(\tfrac12mv_0^2+\tfrac12kx_0^2=1+1=2\,\mathrm J\); en el extremo es \(kA^2/2=2\,\mathrm J\).
+La oscilación es acotada y persistente en este modelo ideal. La frecuencia depende de \(m,k\), y la amplitud también de los datos iniciales; amortiguamiento o deformación no lineal exigirían otro modelo.

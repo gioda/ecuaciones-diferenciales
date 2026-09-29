@@ -1,0 +1,93 @@
+%
+\subsection*{Simetría y producto escalar}
+\label{CH08-B01}
+En un dominio simétrico, $f$ es par si $f(-x)=f(x)$ e impar si
+$f(-x)=-f(x)$. Para funciones reales de cuadrado integrable, el producto
+escalar y su norma son
+\[
+ \langle f,g\rangle=\int_{-L}^{L}f(x)g(x)\,dx,
+ \qquad \|f\|^2=\langle f,f\rangle.
+\]
+Dos funciones son ortogonales cuando su producto escalar es cero.
+Para $L>0$, la constante $1$, los cosenos y los senos de frecuencias
+$n\pi/L$, $n\ge1$, son mutuamente ortogonales; sus normas al cuadrado
+son $2L$, $L$ y $L$, respectivamente. Puede comprobarse con las
+identidades de producto a suma, por ejemplo
+$2\cos a\cos b=\cos(a-b)+\cos(a+b)$.
+Una función impar integrable integra cero sobre $[-L,L]$.
+Al comparar contribuciones a una aproximación importa el coeficiente
+\emph{y} la norma de su función, no sólo el coeficiente.
+
+%
+\subsection*{Coeficientes, periodo y extensión}
+\label{CH08-B02}
+Para periodo $2L$, usamos la convención
+\[
+ f(x)\sim\frac{a_0}{2}+\sum_{n=1}^\infty
+ \left[a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi x}{L}\right],
+\]
+\[
+ a_n=\frac1L\int_{-L}^{L}f(x)\cos\frac{n\pi x}{L}\,dx
+ \ (n\ge0),\qquad
+ b_n=\frac1L\int_{-L}^{L}f(x)\sin\frac{n\pi x}{L}\,dx.
+\]
+En una función par, $b_n=0$; en una impar, $a_n=0$. Para datos en
+$(0,L)$, una extensión par da coeficientes de coseno mediante
+$\frac2L\int_0^L f\cos(n\pi x/L)\,dx$; una impar da análogamente
+coeficientes de seno. El observable físico decide la extensión: una
+componente con signo y su módulo pueden tener simetrías distintas.
+Compruébense periodo, frecuencia y unidades antes de integrar.
+Consultas: soluciones de \exref{M2-E0051} y \exref{M2-E0345}.
+
+Para interpretar un perfil que también depende del tiempo, una derivada
+parcial mantiene fija la otra variable. En $u(x,t)=A(t)X(x)$,
+$u_t=A'X$ y $u_{xx}=AX''$; sustituir en la ecuación dada permite obtener
+una EDO de amplitud. Temperatura prescrita fija $u$; flujo nulo fija la
+derivada espacial correspondiente cuando el flujo es proporcional a
+$-u_x$. El desarrollo de estos modelos se recoge en el capítulo 10.
+
+%
+\subsection*{Suma de la serie y empalmes}
+\label{CH08-B03}
+Si la extensión periódica es suave a trozos, con límites laterales y un
+número finito de piezas regulares por periodo, su serie de Fourier
+converge en cada punto al promedio
+\[
+ \frac{f(x^-)+f(x^+)}{2}.
+\]
+En un punto de continuidad coincide con $f(x)$. En los extremos de un
+periodo, los límites se leen usando el empalme periódico. Cambiar un
+valor aislado no cambia los coeficientes. Una esquina continua no es un
+salto del valor de la función.
+
+La suma parcial hasta el armónico $N$ puede contener menos de $N$ términos
+no nulos por simetría. Distíngase ese índice del número de componentes
+retenidas. Cerca de un salto, el fenómeno de Gibbs produce oscilaciones
+cuya zona se estrecha al aumentar $N$, sin desaparecer su sobreoscilación
+relativa al salto. No se interprete una gráfica truncada como igualdad
+puntual exacta.
+
+%
+\subsection*{Proyección y error cuadrático}
+\label{CH08-B04}
+Para una familia finita de funciones ortogonales no nulas $\phi_j$, la
+mejor aproximación en el espacio que generan
+respecto del error cuadrático usa
+$c_j=\langle f,\phi_j\rangle/\|\phi_j\|^2$. En la convención anterior,
+para $f$ de cuadrado integrable, Parseval da
+\[
+ \frac1L\int_{-L}^{L}|f|^2\,dx
+ =\frac{a_0^2}{2}+\sum_{n\ge1}(a_n^2+b_n^2),\qquad
+ \frac1L\int_{-L}^{L}|f-S_N|^2\,dx
+ =\sum_{n>N}(a_n^2+b_n^2).
+\]
+Si $g$ es positiva y decreciente,
+$\int_{N+1}^{\infty}g(x)\,dx\le\sum_{n>N}g(n)
+\le\int_N^{\infty}g(x)\,dx$; compruébense esas hipótesis antes de
+acotar una cola. La cota obtenida es integral, no uniforme ni puntual
+cerca de un salto.
+
+La media es $a_0/2$ y el promedio del cuadrado es
+$a_0^2/4+\frac12\sum_{n\ge1}(a_n^2+b_n^2)$; su raíz es el valor
+eficaz o media cuadrática. Un periodo elegido puede ser múltiplo del mínimo: revísense las
+frecuencias realmente presentes. Consulta: solución de \exref{M2-E0348}.

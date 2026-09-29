@@ -1,0 +1,17 @@
+En una prueba sintética, una barra de \(4\,\mathrm{cm}\) tiene difusividad \(\kappa=1\,\mathrm{cm^2/s}\), extremos mantenidos a temperatura de referencia y exceso inicial
+\[
+u(x,0)=8\sin\left(\frac{\pi x}{4\,\mathrm{cm}}\right)\mathrm K.
+\]
+Para \(u_t=\kappa u_{xx}\), use la malla \(x_j=j\,\mathrm{cm}\), \(j=0,\ldots,4\), y \(\Delta t=0.25\,\mathrm s\). El esquema es
+\[
+U_j^{n+1}=U_j^n+r\bigl(U_{j-1}^n-2U_j^n+U_{j+1}^n\bigr),
+\qquad r=\frac{\kappa\Delta t}{(\Delta x)^2},\qquad j=1,2,3,
+\]
+con \(U_0^n=U_4^n=0\) y \(U_j^0=u(x_j,0)\).
+
+Calcule \(r\) y los tres valores interiores tras cada uno de los dos primeros pasos. Compare el resultado en \(t=0.5\,\mathrm s\) con la solución exacta
+\[
+u(x,t)=8e^{-\kappa(\pi/(4\,\mathrm{cm}))^2t}
+\sin\left(\frac{\pi x}{4\,\mathrm{cm}}\right)\mathrm K
+\]
+y obtenga el máximo error absoluto entre los tres nodos interiores. Puede usar calculadora para los valores finales.

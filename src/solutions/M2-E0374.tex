@@ -1,0 +1,26 @@
+\noindent\textbf{Resultado.} Las cotas ajustadas son
+\[
+-\bigl(|\cos2t|+|\sin2t|\bigr)\le x(t)\le
+|\cos2t|+|\sin2t|\quad(\mathrm{mm}).
+\]
+Cada cota se alcanza en cada instante por algún arranque, pero la envolvente superior completa no es una sola trayectoria. Su máximo es \(\sqrt2\,\mathrm{mm}>1.30\,\mathrm{mm}\); no hay garantía de respetar la holgura para todos los arranques.
+
+\noindent\textit{Desarrollo.} Para un arranque fijo \(a=x(0)\), \(v=x'(0)\), la solución completa es
+\[
+x(t)=a\cos2t+\frac v2\sin2t.
+\]
+Se comprueban la ecuación y ambos datos por derivación. En las unidades elegidas, \(a\in[-1,1]\) y \(v/2\in[-1,1]\). Por la desigualdad triangular,
+\[
+|x(t)|\le E(t):=|\cos2t|+|\sin2t|.
+\]
+La cota superior se alcanza en cada instante eligiendo \(a\) con el signo de \(\cos2t\) y \(v/2\) con el de \(\sin2t\); si un coeficiente es cero su dato no afecta al valor. La cota inferior se obtiene cambiando ambos signos. Como cualquier pareja del rectángulo es admisible, las cotas son ajustadas, no sólo estimaciones suficientes.
+
+En el intervalo solicitado, \(\sin2t\ge0\). La envolvente superior es
+\[
+E(t)=\begin{cases}\cos2t+\sin2t,&0\le t\le\pi/4,\\-\cos2t+\sin2t,&\pi/4\le t\le\pi/2.\end{cases}
+\]
+Vale uno en \(0,\pi/4,\pi/2\), y alcanza \(\sqrt2\) en \(\pi/8\) y \(3\pi/8\). La envolvente inferior es su opuesta. Esos valores y tramos determinan el bosquejo.
+
+No hay un único arranque que alcance toda la envolvente superior: en el interior del primer tramo exige \((a,v)=(1,2)\); en el segundo, \((a,v)=(-1,2)\). Los datos de una trayectoria no pueden cambiar al avanzar el tiempo. La esquina de la envolvente en \(t=\pi/4\) tampoco es el comportamiento suave de una solución del oscilador. Se distingue así una optimización en cada instante de la evolución de un único arranque.
+
+La holgura no queda garantizada. El arranque admisible \((a,v)=(1,2)\) alcanza \(x(\pi/8)=\sqrt2>1.30\), un contraejemplo concreto. Esto no significa que todos los arranques incumplan: \((0,0)\) permanece centrado y otros tienen amplitudes menores. Para cualquier arranque, la amplitud es \(\sqrt{a^2+(v/2)^2}\), cuyo máximo sobre el rectángulo es \(\sqrt2\), coherente con la cota uniforme encontrada. No se calcula una probabilidad de incumplimiento.

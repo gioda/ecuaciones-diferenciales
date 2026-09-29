@@ -11,6 +11,7 @@ authors:
     affiliation: "Departamento de Ingeniería Industrial, IQS School of Engineering, Universitat Ramon Llull"
     orcid: "https://orcid.org/0000-0001-6895-9021"
 version: "1.0.0"
+license: "CC-BY-SA-4.0"
 url: "https://github.com/gioda/ecuaciones-diferenciales"
 repository-code: "https://github.com/gioda/ecuaciones-diferenciales"
 keywords:

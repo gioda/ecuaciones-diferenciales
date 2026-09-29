@@ -1,0 +1,37 @@
+\noindent\textbf{Resultado.} Sean \(x(t)\) e \(y(t)\) los volúmenes del primer y segundo depósito, respectivamente. Con \(t\) en minutos y los volúmenes en litros,
+\[
+y''+\frac32y'+\frac12y=\frac12,\qquad y(0)=1,\quad y'(0)=1.
+\]
+\[
+y(t)=1+2e^{-t/2}-2e^{-t},\qquad x(t)=2+2e^{-t/2},\qquad t\ge0.
+\]
+La condición inicial de la derivada procede del balance de caudales.
+
+\noindent\textit{Desarrollo.} Sean \(x\) e \(y\) los volúmenes del primer y segundo depósito. Tomando valores numéricos de tiempos en minutos y volúmenes en litros, los balances son
+\[
+x'=1-\frac x2,\qquad y'=\frac x2-y.
+\]
+Cada derivada tiene unidades de \(\mathrm{L/min}\); los coeficientes \(1/2\) y 1 de las salidas representan tasas en \(\mathrm{min}^{-1}\). De la segunda ecuación se obtiene \(x=2(y'+y)\), con los factores de tiempo correspondientes a las unidades fijadas. Al derivar y sustituir en el primer balance,
+\[
+2(y''+y')=1-(y'+y),\qquad
+ y''+\frac32y'+\frac12y=\frac12.
+\]
+En esta última expresión los coeficientes tienen unidades \(\mathrm{min}^{-1}\) y \(\mathrm{min}^{-2}\), y el término independiente \(\mathrm{L/min}^2\).
+
+La primera condición es \(y(0)=1\). La segunda procede del flujo inicial:
+\[
+y'(0)=\frac{x(0)}2-y(0)=2-1=1\,\mathrm{L/min}.
+\]
+El depósito gana volumen desde el instante inicial porque recibe más caudal del que evacúa.
+
+La solución particular constante es 1. Las raíces de la homogénea son \(-1/2\) y \(-1\), de modo que
+\[
+y=1+Ae^{-t/2}+Be^{-t}.
+\]
+Las condiciones dan \(A+B=0\) y \(-A/2-B=1\); por ello \(A=2\), \(B=-2\). La reconstrucción es
+\[
+x=2(y'+y)=2+2e^{-t/2}.
+\]
+Se comprueba \(x(0)=4\), \(y(0)=1\), \(x'=-e^{-t/2}=1-x/2\) y \(y'=-e^{-t/2}+2e^{-t}=x/2-y\). Ambas cantidades permanecen positivas: \(x\ge2\) y \(y=1+2e^{-t/2}(1-e^{-t/2})\ge1\). Sus límites son 2 y 1 litros, con salidas de \(1\,\mathrm{L/min}\), iguales a la entrada.
+
+Recíprocamente, cualquier solución de la EDO reducida con las condiciones deducidas, al definir \(x=2(y'+y)\), satisface los balances y los dos volúmenes iniciales. Así se mantiene la equivalencia del modelo, no sólo una identidad formal de ecuaciones.

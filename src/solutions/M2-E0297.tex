@@ -1,0 +1,5 @@
+\noindent\textbf{Resultado.} $\lambda_n=n^2$, $\phi_n=\sqrt{2/\pi}\sin(nx)$; $c_n=\sqrt{2\pi}(-1)^{n+1}/n$. Así $x=2\sum_{n\ge1}(-1)^{n+1}\sin(nx)/n$ para $0<x<\pi$ y en $L^2$. En ambos extremos la serie vale 0.
+
+\noindent\textit{Desarrollo.} Si $\lambda=0$, la solución lineal y las dos condiciones sólo permiten la función nula. Para $\lambda<0$, la combinación hiperbólica sometida a las mismas condiciones también es nula. Si $\lambda=\mu^2>0$, la condición en cero deja $A\sin\mu x$ y la condición en $\pi$ exige $\mu=n$, $n\ge1$. Las normas al cuadrado son $\int_0^\pi\sin^2(nx)dx=\pi/2$, dando $\phi_n$. Por partes,
+\[c_n=\sqrt{\frac2\pi}\int_0^\pi x\sin(nx)dx=\sqrt{2\pi}\frac{(-1)^{n+1}}n.\]
+Multiplicar $c_n\phi_n$ produce el término de la serie indicada. Es la serie seno de $x$, equivalente a la serie de su extensión impar y periódica. Converge a $x$ en el intervalo abierto y en $L^2(0,\pi)$; en cero vale 0 y en $\pi$ converge al promedio de los límites de la extensión, también 0. Por tanto no debe afirmarse igualdad puntual con $f(\pi)=\pi$. Los coeficientes no se limitan a índices impares.

@@ -1,0 +1,15 @@
+\noindent\textbf{Resultado.} Una solución particular es
+\[y_p(x)=\frac{2xe^x-(e^x+e^{-x})\log(1+e^{2x})}{4}.
+\]
+
+\noindent\textit{Desarrollo.} La ecuación homogénea tiene las soluciones independientes \(y_1=e^x\) e \(y_2=e^{-x}\), cuyo wronskiano es \(W=-2\). Con \(g(x)=1/(e^x+e^{-x})\), la variación de parámetros exige
+\[u_1'=-\frac{y_2g}{W}=\frac1{2(1+e^{2x})},\qquad
+u_2'=\frac{y_1g}{W}=-\frac{e^{2x}}{2(1+e^{2x})}.\]
+Si \(L(x)=\log(1+e^{2x})\), podemos tomar
+\[u_1=\frac x2-\frac L4,\qquad u_2=-\frac L4.\]
+Entonces \(y_p=u_1e^x+u_2e^{-x}\) da la respuesta. Las constantes de estas primitivas añadirían soluciones homogéneas y no son necesarias para hallar una particular.
+
+Para verificarla, use \(\log(1+e^{2x})=x+\log(2\cosh x)\). Así
+\[y_p=\tfrac12[x\sinh x-\cosh x\log(2\cosh x)],\quad
+y_p'=\tfrac12[x\cosh x-\sinh x\log(2\cosh x)].\]
+Una derivación más da \(y_p''-y_p=1/(2\cosh x)\), como se pedía. Tanto \(2\cosh x\) como \(1+e^{2x}\) son positivos para todo \(x\) real; no hay restricciones adicionales de dominio.

@@ -1,0 +1,37 @@
+\noindent\textbf{Resultado.} Heun evalúa en \((0,0)\) y \((1,2)\), y da \(y_H=1/2\). Los dos pasos de Euler evalúan en \((0,0)\) y \((1/2,1)\), y dan \(y_E=5/4\). La referencia es
+\[
+y(t)=3-t-3e^{-t},\qquad y(1)=2-3/e\approx0.896362.
+\]
+Los errores absolutos son aproximadamente \(0.396362\) para Heun y \(0.353638\) para Euler. Con el criterio y el presupuesto dados se eligen los dos pasos de Euler. El resultado se refiere a este PVI y a estos pasos.
+
+\noindent\textit{Desarrollo.} El segundo miembro es \(f(t,y)=2-t-y\). Ambas opciones usan dos evaluaciones de \(f\) para llegar desde \(t=0\) hasta \(t=1\).
+
+Para Heun, con \(h=1\), la primera evaluación es \(f(0,0)=2\). El predictor vale \(\widetilde y=0+1\cdot2=2\), y la segunda evaluación es \(f(1,2)=-1\). Así,
+\[
+y_H=0+\frac12(2-1)=\frac12.
+\]
+Las dos pendientes corresponden a \((0,0)\) y \((1,2)\); la segunda se toma en un estado predicho, no en la solución exacta al final del paso.
+
+Para Euler, con \(h=1/2\), el primer avance da
+\[
+y_{1/2}=0+\frac12 f(0,0)=1.
+\]
+La siguiente evaluación es \(f(1/2,1)=1/2\), de modo que
+\[
+y_E=1+\frac12\cdot\frac12=\frac54.
+\]
+En esta opción, las dos pendientes se toman en \((0,0)\) y \((1/2,1)\). La mitad del presupuesto se dedica a actualizar el estado en un instante intermedio.
+
+Para la referencia, \(y'+y=2-t\) admite la particular \(3-t\) y la solución homogénea \(Ce^{-t}\). El dato inicial fija \(C=-3\), por lo que
+\[
+y(t)=3-t-3e^{-t}.
+\]
+Su derivada es \(-1+3e^{-t}\), que coincide con \(2-t-y(t)\), y \(y(0)=0\). En \(t=1\), el valor exacto es \(2-3/e\approx0.896361676\), entre \(1/2\) y \(5/4\). Los errores absolutos son
+\[
+E_H=\frac32-\frac3e\approx0.396361676,
+\qquad
+E_E=\frac3e-\frac34\approx0.353638324.
+\]
+Por tanto, \(E_E<E_H\) y se elige Euler con dos medios pasos bajo el criterio solicitado.
+
+La comparación no enfrenta los métodos con un mismo paso: fija un mismo coste de dos evaluaciones y un mismo destino. Los estados y tiempos muestreados son distintos. En este ejemplo, la pendiente de Heun al final se calcula en el predictor \(2\), alejado del valor exacto aproximado \(0.8964\). La segunda evaluación de Euler utiliza un estado ya actualizado en el punto medio. El menor error observado aquí no prueba que Euler sea siempre preferible a Heun con otros PVI, pasos o presupuestos; tampoco una propiedad de orden asintótico establece por sí sola qué error será menor en un paso grueso concreto.

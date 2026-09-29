@@ -1,0 +1,18 @@
+El balance es
+\[
+\frac{dV}{dt}=-Q,\qquad \frac{dm}{dt}=c_sQ-\lambda m,
+\qquad Q=\frac{\alpha V}{R_0+\beta m},
+\qquad (V(0),m(0))=(1\,\mathrm L,0),
+\]
+con \(c_s=1\,\mathrm{g/L}\) y \(\alpha=1\,\mathrm{kPa/L}\). Para los valores numéricos \(v=V/(1\,\mathrm L)\), \(z=m/(1\,\mathrm g)\), \(\tau=t/(1\,\mathrm{min})\), se obtiene
+\[
+v'=-\frac{v}{1+z},\qquad z'=\frac{v}{1+z}-z.
+\]
+Durante \(0\le\tau\le1/2\), \(v\ge e^{-\tau}>0.60\) y \(0\le z\le1-e^{-\tau}<0.40\). Sin embargo,
+\[
+v(1/2)\ge\left(\frac3{4e^{1/2}-1}\right)^{3/4}
+=0.626610\ldots,
+\]
+de modo que se recogen como máximo \(0.373390\,\mathrm L<0.38\,\mathrm L\). El filtro de resistencia variable no cumple la producción. Dos pasos de Heun de \(0.25\,\mathrm{min}\) estiman \(0.34614\,\mathrm L\), sin constituir una cota de error.
+
+El cartucho de resistencia constante sí cumple: \(v=e^{-\tau}\), \(z=\tau e^{-\tau}\), y recoge \(1-e^{-1/2}=0.393469\ldots\,\mathrm L\); sus mínimos y máximos relevantes son \(V_{\min}=0.606530\ldots\,\mathrm L\), \(m_{\max}=0.303265\ldots\,\mathrm g\).
