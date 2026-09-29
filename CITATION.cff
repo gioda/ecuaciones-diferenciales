@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "Para citar esta obra, utilice la referencia bibliográfica indicada."
+title: "Ecuaciones diferenciales: problemas, modelos y métodos"
+authors:
+  - family-names: "Dalmasso"
+    given-names: "Giovanni"
+    affiliation: "Departamento de Matemáticas y Analítica de Datos, IQS School of Engineering, Universitat Ramon Llull"
+    orcid: "https://orcid.org/0000-0002-8586-6027"
+  - family-names: "Menacho"
+    given-names: "Joaquín"
+    affiliation: "Departamento de Ingeniería Industrial, IQS School of Engineering, Universitat Ramon Llull"
+    orcid: "https://orcid.org/0000-0001-6895-9021"
+version: "1.0.0"
+url: "https://github.com/gioda/ecuaciones-diferenciales"
+repository-code: "https://github.com/gioda/ecuaciones-diferenciales"
+keywords:
+  - "ecuaciones diferenciales"
+  - "modelización matemática"
+  - "problemas resueltos"
+  - "ingeniería"
+preferred-citation:
+  type: book
+  title: "Ecuaciones diferenciales: problemas, modelos y métodos"
+  authors:
+    - family-names: "Dalmasso"
+      given-names: "Giovanni"
+      orcid: "https://orcid.org/0000-0002-8586-6027"
+    - family-names: "Menacho"
+      given-names: "Joaquín"
+      orcid: "https://orcid.org/0000-0001-6895-9021"
+  year: 2026
+  version: "1.0.0"
+  url: "https://github.com/gioda/ecuaciones-diferenciales"
+  notes: "Edición del estudiante. Preparación provisional para Biblioteca IQS; registro DAU: [HANDLE DAU PENDIENTE]."

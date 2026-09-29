@@ -1,0 +1,13 @@
+# Licencia del contenido educativo
+
+© 2026 Giovanni Dalmasso y Joaquín Menacho, por sus aportaciones originales.
+
+Salvo las excepciones indicadas en ASSET-RIGHTS.md, el contenido educativo de *Ecuaciones diferenciales: problemas, modelos y métodos*, sus figuras originales y los textos de documentación se ofrecen bajo la licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0).
+
+La licencia comprende únicamente los derechos que sus titulares están facultados para conceder. Para compartir o adaptar el material cubierto, deben conservarse la atribución, el enlace a la licencia y los avisos aplicables, e indicarse las modificaciones. Las adaptaciones se comparten conforme a la condición CompartirIgual. El código legal determina los términos completos: https://creativecommons.org/licenses/by-sa/4.0/legalcode.es
+
+Los retratos de los autores quedan excluidos. El archivo computation/mallas.py se rige por LICENSE-CODE. Las marcas y los derechos de imagen, privacidad u otros derechos ajenos a la concesión conservan su régimen propio.
+
+Cubierta: imagen generada con inteligencia artificial bajo dirección de los autores; composición tipográfica realizada por separado. El aviso CC BY-SA 4.0 comprende los derechos disponibles sobre la cubierta y su composición, sin afirmar exclusividad jurídica sobre la imagen generada.
+
+Las tipografías TeX Gyre Pagella, TeX Gyre Heros, TeX Gyre Pagella Math y Latin Modern Mono empleadas en el PDF conservan su licencia GUST Font License (GFL, basada en LPPL). No se relicencian como contenido propio de la obra. Información y términos: https://ctan.org/license/gfl. No se distribuyen los paquetes de fuentes por separado.
