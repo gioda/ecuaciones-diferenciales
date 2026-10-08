@@ -62,3 +62,9 @@ LICENSES/    licencia del software designado
 ```
 
 SHA256SUMS.txt identifica los archivos distribuidos. Para comunicar una errata, indica la versión del PDF, el capítulo, el ejercicio, la página y una explicación breve. Evita incluir datos personales o copias de material protegido de terceros.
+
+## Derechos, atribuciones y erratas
+
+Canal público para consultas sobre derechos, atribuciones y erratas: [CONTACTO PÚBLICO PARA DERECHOS Y ERRATAS PENDIENTE].
+
+Esta preparación local conserva el marcador DAU indicado arriba. El canal de contacto y el identificador institucional deben completarse antes de la publicación definitiva.

@@ -13,3 +13,9 @@ El banner assets/readme-hero-ec-diff.png fue generado mediante generación de im
 Las fotografías src/publication_assets/giovanni_dalmasso.jpg y src/publication_assets/joaquin_menacho.png se utilizan con autorización y quedan excluidas de la licencia general. No se concede sobre ellas una licencia de reutilización ni se afirma transferencia de derechos. Los avisos específicos de materiales de terceros tienen prioridad sobre la licencia general.
 
 Las tipografías conservan sus licencias. Los límites de las licencias del contenido y del código se recogen en [LICENSES.md](LICENSES.md).
+
+## Derechos y atribuciones
+
+Derechos y atribuciones. Esta obra ha sido elaborada procurando respetar los derechos de autor y reconocer adecuadamente las fuentes utilizadas. Si, pese a las revisiones realizadas, se hubiera producido alguna omisión involuntaria de atribución o alguna persona titular de derechos considera que determinado contenido requiere corrección, atribución adicional o retirada, rogamos que se ponga en contacto con los autores. Cualquier incidencia debidamente identificada será revisada y, cuando corresponda, corregida en ediciones posteriores.
+
+Canal público de contacto: [CONTACTO PÚBLICO PARA DERECHOS Y ERRATAS PENDIENTE].
