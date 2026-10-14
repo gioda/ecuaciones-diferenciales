@@ -18,4 +18,18 @@ Las tipografías conservan sus licencias. Los límites de las licencias del cont
 
 Derechos y atribuciones. Esta obra ha sido elaborada procurando respetar los derechos de autor y reconocer adecuadamente las fuentes utilizadas. Si, pese a las revisiones realizadas, se hubiera producido alguna omisión involuntaria de atribución o alguna persona titular de derechos considera que determinado contenido requiere corrección, atribución adicional o retirada, rogamos que se ponga en contacto con los autores. Cualquier incidencia debidamente identificada será revisada y, cuando corresponda, corregida en ediciones posteriores.
 
-Canal público de contacto: [CONTACTO PÚBLICO PARA DERECHOS Y ERRATAS PENDIENTE].
+Cuando el repositorio sea público, comunica las erratas mediante [GitHub Issues](https://github.com/gioda/ecuaciones-diferenciales/issues). Indica la versión del PDF, el capítulo, el ejercicio, la página y una explicación breve. Las sugerencias y las cuestiones de atribución que puedan tratarse públicamente pueden comunicarse por la misma vía.
+
+Los Issues serán públicos: no equivalen a correspondencia privada. Esta documentación no designa un canal privado para cuestiones confidenciales de derechos; no deben publicarse en Issues datos personales ni documentación reservada.
+
+## Uso de herramientas de inteligencia artificial
+
+Uso de herramientas de inteligencia artificial.
+
+Durante la elaboración de esta obra se han utilizado herramientas de inteligencia artificial generativa como apoyo en el desarrollo preliminar de algunos enunciados, soluciones y materiales, así como en tareas de redacción, revisión, comprobación y edición.
+
+Todo el contenido incluido en la versión final ha sido revisado, corregido y validado por los autores, que asumen la plena responsabilidad sobre su contenido matemático, pedagógico y editorial.
+
+Ningún contenido se ha incorporado automáticamente sin revisión humana, y las herramientas de inteligencia artificial utilizadas no tienen consideración de autoría.
+
+Edición del estudiante v1.0.0: https://hdl.handle.net/20.500.14342/7219. El PDF definitivo se ha entregado a Biblioteca IQS; la publicación no está confirmada.

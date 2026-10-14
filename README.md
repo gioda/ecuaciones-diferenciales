@@ -14,9 +14,11 @@ El recorrido comienza con modelos de primer orden y continúa con ecuaciones lin
 
 ## Libro del estudiante
 
-**[Descargar el PDF del estudiante](books/ecuaciones-diferenciales-v1.0.0-DAU-provisional.pdf)** · versión 1.0.0 · 218 páginas. [Vista de la cubierta](assets/cover-preview.png).
+**[Descargar el PDF del estudiante](books/ecuaciones-diferenciales-v1.0.0-DAU-7219.pdf)** · versión 1.0.0 · 219 páginas. [Vista de la cubierta](assets/cover-preview.png).
 
-Esta copia provisional está preparada para Biblioteca IQS. El PDF contiene por ahora el marcador [HANDLE DAU PENDIENTE]; Biblioteca creará el registro provisional. Una vez asignado el Handle, los autores entregarán el PDF definitivo para sustituirlo en el mismo registro. El repositorio permanece privado durante esta preparación.
+Esta es la edición definitiva del estudiante, entregada a Biblioteca IQS. Su publicación aún no se ha confirmado. Registro institucional DAU: [https://hdl.handle.net/20.500.14342/7219](https://hdl.handle.net/20.500.14342/7219).
+
+SHA-256 del PDF: `62bfd4e5f084162f8d6e4826cf5b6f32efd9a4fa787e0853ea1dbe3802f35505`. Las fuentes corresponden a la revisión editorial aceptada r2 de la versión 1.0.0; esa revisión no cambia la numeración de versión del libro.
 
 ## Fuentes y construcción
 
@@ -41,13 +43,13 @@ La salida es CSV. Las hipótesis, la comprobación y la interpretación forman p
 
 ## Cita
 
-Dalmasso, G. y Menacho, J. (2026). *Ecuaciones diferenciales: problemas, modelos y métodos*. Edición del estudiante, versión 1.0.0. Los datos de cita están en [CITATION.cff](CITATION.cff).
+Dalmasso, G. y Menacho, J. (2026). *Ecuaciones diferenciales: problemas, modelos y métodos*. Edición del estudiante, versión 1.0.0. https://hdl.handle.net/20.500.14342/7219. Los datos de cita están en [CITATION.cff](CITATION.cff).
 
-Repositorio de fuentes y apoyo: https://github.com/gioda/ecuaciones-diferenciales. El identificador institucional se añadirá cuando Biblioteca lo asigne.
+Repositorio de fuentes y apoyo: https://github.com/gioda/ecuaciones-diferenciales. Identificador de la edición del estudiante: [https://hdl.handle.net/20.500.14342/7219](https://hdl.handle.net/20.500.14342/7219).
 
 ## Bibliografía, atribuciones y licencias
 
-Las nueve referencias aprobadas están normalizadas en [BIBLIOGRAPHY.md](BIBLIOGRAPHY.md); los créditos, en [ATTRIBUTION.md](ATTRIBUTION.md). Imagen generada con inteligencia artificial bajo dirección de los autores.
+Las nueve referencias aprobadas están normalizadas en [BIBLIOGRAPHY.md](BIBLIOGRAPHY.md); los créditos y la declaración de uso de herramientas de IA, en [ATTRIBUTION.md](ATTRIBUTION.md). Imagen generada con inteligencia artificial bajo dirección de los autores.
 
 Libro, fuentes LaTeX/TikZ, figuras educativas y documentación: [CC BY-SA 4.0](LICENSE), sobre los derechos disponibles. Software designado: [MIT](LICENSES/MIT.txt). Los retratos y las tipografías mantienen sus exclusiones o condiciones propias. [Alcance y exclusiones](LICENSES.md). La descripción de las imágenes generadas mediante IA no afirma derechos exclusivos sobre ellas.
 
@@ -65,6 +67,6 @@ SHA256SUMS.txt identifica los archivos distribuidos. Para comunicar una errata, 
 
 ## Derechos, atribuciones y erratas
 
-Canal público para consultas sobre derechos, atribuciones y erratas: [CONTACTO PÚBLICO PARA DERECHOS Y ERRATAS PENDIENTE].
+Cuando el repositorio sea público, comunica las erratas mediante [GitHub Issues](https://github.com/gioda/ecuaciones-diferenciales/issues). Indica la versión del PDF, el capítulo, el ejercicio, la página y una explicación breve. Las sugerencias y las cuestiones de atribución que puedan tratarse públicamente pueden comunicarse por la misma vía.
 
-Esta preparación local conserva el marcador DAU indicado arriba. El canal de contacto y el identificador institucional deben completarse antes de la publicación definitiva.
+Los Issues serán públicos: no equivalen a correspondencia privada. Esta documentación no designa un canal privado para cuestiones confidenciales de derechos; no deben publicarse en Issues datos personales ni documentación reservada.

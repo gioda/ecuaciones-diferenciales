@@ -16,7 +16,11 @@ El script adapta el método existente: entra en src/, crea src/build/ y sus cach
 
 Las fuentes y activos requeridos están en src/. Los archivos .aux, .toc, .out y las cachés se generan durante la construcción. Las fuentes tipográficas y paquetes pertenecen a la distribución TeX y conservan sus propias licencias. Los registros .log y .fls permiten comprobar advertencias y entradas; no forman parte del material distribuido.
 
-El PDF de books/ es el candidato provisional para Biblioteca. La fecha de creación y el identificador PDF pueden variar al recompilar; para comprobar el contenido se deben comparar páginas, texto, destinos, enlaces y representación, además del hash. SHA256SUMS.txt identifica las copias distribuidas, no cualquier recompilación posterior.
+El PDF de books/ es la edición definitiva del estudiante v1.0.0, revisión editorial r2, entregada a Biblioteca IQS. Su publicación aún no está confirmada. Registro DAU: https://hdl.handle.net/20.500.14342/7219.
+
+Archivo distribuido: books/ecuaciones-diferenciales-v1.0.0-DAU-7219.pdf. SHA-256: `62bfd4e5f084162f8d6e4826cf5b6f32efd9a4fa787e0853ea1dbe3802f35505`.
+
+La reproducción de referencia conserva todas las páginas, textos, objetos, destinos y enlaces. Al comparar los bytes se normalizan exclusivamente /CreationDate, /ModDate y el /ID del tráiler PDF, tal como se documentó en la verificación anterior. No se permiten otras normalizaciones de contenido. SHA256SUMS.txt identifica las copias distribuidas; el hash bruto de una reconstrucción puede variar por esos metadatos.
 
 ## Ayuda numérica
 

@@ -12,7 +12,7 @@ authors:
     orcid: "https://orcid.org/0000-0001-6895-9021"
 version: "1.0.0"
 license: "CC-BY-SA-4.0"
-url: "https://github.com/gioda/ecuaciones-diferenciales"
+url: "https://hdl.handle.net/20.500.14342/7219"
 repository-code: "https://github.com/gioda/ecuaciones-diferenciales"
 keywords:
   - "ecuaciones diferenciales"
@@ -31,5 +31,5 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0001-6895-9021"
   year: 2026
   version: "1.0.0"
-  url: "https://github.com/gioda/ecuaciones-diferenciales"
-  notes: "Edición del estudiante. Preparación provisional para Biblioteca IQS; registro DAU: [HANDLE DAU PENDIENTE]."
+  url: "https://hdl.handle.net/20.500.14342/7219"
+  notes: "Edición definitiva del estudiante v1.0.0. Entregada a Biblioteca IQS; publicación no confirmada. Registro DAU: 20.500.14342/7219. Licencia general CC BY-SA 4.0 con las exclusiones indicadas en LICENSES.md."
