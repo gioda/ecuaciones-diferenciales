@@ -6,6 +6,10 @@
        width="100%">
 </p>
 
+[![DAU: Handle](https://img.shields.io/badge/DAU-Handle-0B5C7A?style=flat)](https://hdl.handle.net/20.500.14342/7219)
+[![PDF: Estudiante](https://img.shields.io/badge/PDF-Estudiante-167D8D?style=flat)](https://dau.url.edu/bitstream/20.500.14342/7219/4/Ecuaciones_diferenciales_Student.pdf)
+[![Libro: v1.0.0](https://img.shields.io/badge/Libro-v1.0.0-596579?style=flat)](https://hdl.handle.net/20.500.14342/7219)
+
 Libro de problemas en español para el aprendizaje y la práctica autónoma de las ecuaciones diferenciales, con aplicaciones en ciencias e ingeniería. La edición del estudiante reúne 370 ejercicios, respuestas de comprobación, 51 soluciones desarrolladas seleccionadas, nueve pistas y 42 recordatorios teóricos breves.
 
 **Giovanni Dalmasso · Joaquín Menacho**. Departamento de Matemáticas y Analítica de Datos y Departamento de Ingeniería Industrial, respectivamente, IQS School of Engineering, Universitat Ramon Llull. Las afiliaciones son factuales y no implican aval institucional.
@@ -16,7 +20,7 @@ El recorrido comienza con modelos de primer orden y continúa con ecuaciones lin
 
 **[Descargar el PDF del estudiante](books/ecuaciones-diferenciales-v1.0.0-DAU-7219.pdf)** · versión 1.0.0 · 219 páginas. [Vista de la cubierta](assets/cover-preview.png).
 
-Esta es la edición definitiva del estudiante, entregada a Biblioteca IQS. Su publicación aún no se ha confirmado. Registro institucional DAU: [https://hdl.handle.net/20.500.14342/7219](https://hdl.handle.net/20.500.14342/7219).
+Esta es la edición definitiva del estudiante, publicada por Biblioteca IQS en el repositorio institucional DAU: [https://hdl.handle.net/20.500.14342/7219](https://hdl.handle.net/20.500.14342/7219).
 
 SHA-256 del PDF: `62bfd4e5f084162f8d6e4826cf5b6f32efd9a4fa787e0853ea1dbe3802f35505`. Las fuentes corresponden a la revisión editorial aceptada r2 de la versión 1.0.0; esa revisión no cambia la numeración de versión del libro.
 
@@ -63,10 +67,10 @@ scripts/     construcción y ayuda numérica
 LICENSES/    licencia del software designado
 ```
 
-SHA256SUMS.txt identifica los archivos distribuidos. Para comunicar una errata, indica la versión del PDF, el capítulo, el ejercicio, la página y una explicación breve. Evita incluir datos personales o copias de material protegido de terceros.
+[SHA256SUMS.txt](SHA256SUMS.txt) identifica los archivos distribuidos.
 
 ## Derechos, atribuciones y erratas
 
-Cuando el repositorio sea público, comunica las erratas mediante [GitHub Issues](https://github.com/gioda/ecuaciones-diferenciales/issues). Indica la versión del PDF, el capítulo, el ejercicio, la página y una explicación breve. Las sugerencias y las cuestiones de atribución que puedan tratarse públicamente pueden comunicarse por la misma vía.
+Cuando el repositorio sea público, comunica las erratas mediante [GitHub Issues](https://github.com/gioda/ecuaciones-diferenciales/issues), utilizando la [plantilla de erratas](.github/ISSUE_TEMPLATE/errata.md). Indica la versión del PDF, el capítulo o sección, el número de ejercicio o la página y una explicación breve; puedes proponer una corrección. Las sugerencias y las cuestiones de atribución que puedan tratarse públicamente pueden comunicarse por la misma vía. Evita incluir datos personales o copias de material protegido de terceros.
 
 Los Issues serán públicos: no equivalen a correspondencia privada. Esta documentación no designa un canal privado para cuestiones confidenciales de derechos; no deben publicarse en Issues datos personales ni documentación reservada.

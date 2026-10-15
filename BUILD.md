@@ -16,7 +16,7 @@ El script adapta el método existente: entra en src/, crea src/build/ y sus cach
 
 Las fuentes y activos requeridos están en src/. Los archivos .aux, .toc, .out y las cachés se generan durante la construcción. Las fuentes tipográficas y paquetes pertenecen a la distribución TeX y conservan sus propias licencias. Los registros .log y .fls permiten comprobar advertencias y entradas; no forman parte del material distribuido.
 
-El PDF de books/ es la edición definitiva del estudiante v1.0.0, revisión editorial r2, entregada a Biblioteca IQS. Su publicación aún no está confirmada. Registro DAU: https://hdl.handle.net/20.500.14342/7219.
+El PDF de books/ es la edición definitiva del estudiante v1.0.0, revisión editorial r2, publicada por Biblioteca IQS en el repositorio institucional DAU: https://hdl.handle.net/20.500.14342/7219.
 
 Archivo distribuido: books/ecuaciones-diferenciales-v1.0.0-DAU-7219.pdf. SHA-256: `62bfd4e5f084162f8d6e4826cf5b6f32efd9a4fa787e0853ea1dbe3802f35505`.
 

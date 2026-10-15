@@ -32,4 +32,4 @@ Todo el contenido incluido en la versión final ha sido revisado, corregido y va
 
 Ningún contenido se ha incorporado automáticamente sin revisión humana, y las herramientas de inteligencia artificial utilizadas no tienen consideración de autoría.
 
-Edición del estudiante v1.0.0: https://hdl.handle.net/20.500.14342/7219. El PDF definitivo se ha entregado a Biblioteca IQS; la publicación no está confirmada.
+Edición definitiva del estudiante v1.0.0, publicada por Biblioteca IQS en el repositorio institucional DAU: https://hdl.handle.net/20.500.14342/7219.
