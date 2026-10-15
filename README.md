@@ -6,9 +6,26 @@
        width="100%">
 </p>
 
+**Información del libro**
+
+[![Versión: 1.0](https://img.shields.io/badge/Versi%C3%B3n-1.0-596579?style=flat)](https://hdl.handle.net/20.500.14342/7219)
 [![DAU: Handle](https://img.shields.io/badge/DAU-Handle-0B5C7A?style=flat)](https://hdl.handle.net/20.500.14342/7219)
 [![PDF: Estudiante](https://img.shields.io/badge/PDF-Estudiante-167D8D?style=flat)](https://dau.url.edu/bitstream/20.500.14342/7219/4/Ecuaciones_diferenciales_Student.pdf)
-[![Libro: v1.0.0](https://img.shields.io/badge/Libro-v1.0.0-596579?style=flat)](https://hdl.handle.net/20.500.14342/7219)
+[![Contenido: CC BY-SA 4.0](https://img.shields.io/badge/Contenido-CC_BY--SA_4.0-596579?style=flat)](LICENSE)
+[![Código: MIT](https://img.shields.io/badge/C%C3%B3digo-MIT-596579?style=flat)](LICENSES/MIT.txt)
+[![Idioma: español](https://img.shields.io/badge/Idioma-espa%C3%B1ol-596579?style=flat)](https://hdl.handle.net/20.500.14342/7219)
+[![Python: 3](https://img.shields.io/badge/Python-3-3776AB?style=flat)](scripts/mallas.py)
+
+CC BY-SA se aplica al contenido designado, con sus exclusiones; MIT, únicamente a los dos scripts públicos. Consulta los [ámbitos y exclusiones de las licencias](LICENSES.md).
+
+**Actividad en GitHub**
+
+[![Estrellas](https://img.shields.io/github/stars/gioda/ecuaciones-diferenciales?style=flat&label=Estrellas&color=596579)](https://github.com/gioda/ecuaciones-diferenciales/stargazers)
+[![Forks](https://img.shields.io/github/forks/gioda/ecuaciones-diferenciales?style=flat&label=Forks&color=596579)](https://github.com/gioda/ecuaciones-diferenciales/forks)
+[![Incidencias abiertas](https://img.shields.io/github/issues/gioda/ecuaciones-diferenciales?style=flat&label=Incidencias%20abiertas&color=596579)](https://github.com/gioda/ecuaciones-diferenciales/issues)
+[![Contribuidores](https://img.shields.io/github/contributors/gioda/ecuaciones-diferenciales?style=flat&label=Contribuidores&color=596579)](https://github.com/gioda/ecuaciones-diferenciales/graphs/contributors)
+
+Si no hay datos disponibles, los indicadores de actividad no representan un recuento de cero.
 
 Libro de problemas en español para el aprendizaje y la práctica autónoma de las ecuaciones diferenciales, con aplicaciones en ciencias e ingeniería. La edición del estudiante reúne 370 ejercicios, respuestas de comprobación, 51 soluciones desarrolladas seleccionadas, nueve pistas y 42 recordatorios teóricos breves.
 
@@ -71,6 +88,6 @@ LICENSES/    licencia del software designado
 
 ## Derechos, atribuciones y erratas
 
-Cuando el repositorio sea público, comunica las erratas mediante [GitHub Issues](https://github.com/gioda/ecuaciones-diferenciales/issues), utilizando la [plantilla de erratas](.github/ISSUE_TEMPLATE/errata.md). Indica la versión del PDF, el capítulo o sección, el número de ejercicio o la página y una explicación breve; puedes proponer una corrección. Las sugerencias y las cuestiones de atribución que puedan tratarse públicamente pueden comunicarse por la misma vía. Evita incluir datos personales o copias de material protegido de terceros.
+Para comunicar erratas, utiliza [GitHub Issues](https://github.com/gioda/ecuaciones-diferenciales/issues) y la [plantilla de erratas](.github/ISSUE_TEMPLATE/errata.md). Indica la versión del PDF, el capítulo o sección, el número de ejercicio o la página y una explicación breve; puedes proponer una corrección. Las sugerencias y las cuestiones de atribución que puedan tratarse públicamente pueden comunicarse por la misma vía. Evita incluir datos personales o copias de material protegido de terceros.
 
-Los Issues serán públicos: no equivalen a correspondencia privada. Esta documentación no designa un canal privado para cuestiones confidenciales de derechos; no deben publicarse en Issues datos personales ni documentación reservada.
+GitHub Issues no es un canal confidencial para cuestiones de derechos. No publiques allí datos personales ni documentación reservada. Esta documentación no designa un canal privado para esa correspondencia.
