@@ -20,6 +20,7 @@ CC BY-SA se aplica al contenido designado, con sus exclusiones; MIT, únicamente
 
 **Actividad en GitHub**
 
+[![GitHub Release](https://img.shields.io/github/v/release/gioda/ecuaciones-diferenciales?style=flat&label=Release&color=596579)](https://github.com/gioda/ecuaciones-diferenciales/releases/latest)
 [![Estrellas](https://img.shields.io/github/stars/gioda/ecuaciones-diferenciales?style=flat&label=Estrellas&color=596579)](https://github.com/gioda/ecuaciones-diferenciales/stargazers)
 [![Forks](https://img.shields.io/github/forks/gioda/ecuaciones-diferenciales?style=flat&label=Forks&color=596579)](https://github.com/gioda/ecuaciones-diferenciales/forks)
 [![Incidencias abiertas](https://img.shields.io/github/issues/gioda/ecuaciones-diferenciales?style=flat&label=Incidencias%20abiertas&color=596579)](https://github.com/gioda/ecuaciones-diferenciales/issues)
